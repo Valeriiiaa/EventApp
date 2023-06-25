@@ -7,13 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var getCodeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getCodeButtonDidTap(_ sender: Any) {
+    }
+    
+   
+    @IBAction func didNotGetCodeButtondidTap(_ sender: Any) {
+    }
 }
 

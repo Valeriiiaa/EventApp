@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */; };
+		F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */; };
+		F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */; };
+		F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE892A46E4AC00ECFE16 /* DrawerPresentationController.swift */; };
 		F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */; };
 		F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */; };
-		F6DE8DA02A45C7BA0026E1E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9F2A45C7BA0026E1E5 /* ViewController.swift */; };
+		F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */; };
 		F6DE8DA32A45C7BA0026E1E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE8DA12A45C7BA0026E1E5 /* Main.storyboard */; };
 		F6DE8DA52A45C7BB0026E1E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */; };
 		F6DE8DA82A45C7BB0026E1E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE8DA62A45C7BB0026E1E5 /* LaunchScreen.storyboard */; };
 		F6DE8DB32A45C7BB0026E1E5 /* EventAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8DB22A45C7BB0026E1E5 /* EventAppTests.swift */; };
 		F6DE8DBD2A45C7BB0026E1E5 /* EventAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8DBC2A45C7BB0026E1E5 /* EventAppUITests.swift */; };
 		F6DE8DBF2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8DBE2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift */; };
+		F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
+		F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
+		F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
+		F6ABCE892A46E4AC00ECFE16 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		F6DE8D982A45C7BA0026E1E5 /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6DE8D9F2A45C7BA0026E1E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F6DE8DA22A45C7BA0026E1E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6DE8DA72A45C7BB0026E1E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,7 @@
 		F6DE8DB82A45C7BB0026E1E5 /* EventAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE8DBC2A45C7BB0026E1E5 /* EventAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAppUITests.swift; sourceTree = "<group>"; };
 		F6DE8DBE2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE882A46E49700ECFE16 /* DrawerPresentationController */,
+				F6ABCE852A46E46C00ECFE16 /* SlideAnimation */,
+				F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */,
+				F6ABCE802A46E3B300ECFE16 /* DrawerMenuController */,
+			);
+			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
+		F6ABCE802A46E3B300ECFE16 /* DrawerMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */,
+			);
+			path = DrawerMenuController;
+			sourceTree = "<group>";
+		};
+		F6ABCE852A46E46C00ECFE16 /* SlideAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */,
+			);
+			path = SlideAnimation;
+			sourceTree = "<group>";
+		};
+		F6ABCE882A46E49700ECFE16 /* DrawerPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE892A46E4AC00ECFE16 /* DrawerPresentationController.swift */,
+			);
+			path = DrawerPresentationController;
+			sourceTree = "<group>";
+		};
 		F6DE8D8F2A45C7BA0026E1E5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +144,8 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
-				F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */,
-				F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */,
-				F6DE8D9F2A45C7BA0026E1E5 /* ViewController.swift */,
-				F6DE8DA12A45C7BA0026E1E5 /* Main.storyboard */,
-				F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */,
-				F6DE8DA62A45C7BB0026E1E5 /* LaunchScreen.storyboard */,
+				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
+				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
 			);
 			path = EventApp;
@@ -125,6 +166,44 @@
 				F6DE8DBE2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift */,
 			);
 			path = EventAppUITests;
+			sourceTree = "<group>";
+		};
+		F6DE8DCB2A45C9350026E1E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E582802A45DF690041BD38 /* MenuViewControllers */,
+				F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */,
+				F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */,
+				F6DE8DCD2A45C9540026E1E5 /* Resources */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F6DE8DCC2A45C9450026E1E5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE8DA12A45C7BA0026E1E5 /* Main.storyboard */,
+				F6DE8DA62A45C7BB0026E1E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F6DE8DCD2A45C9540026E1E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE8DCC2A45C9450026E1E5 /* Storyboards */,
+				F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */,
+				F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */,
+				F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6E582802A45DF690041BD38 /* MenuViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6DE8DA02A45C7BA0026E1E5 /* ViewController.swift in Sources */,
+				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
+				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
+				F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
+				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
+				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
 				F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */,
+				F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
