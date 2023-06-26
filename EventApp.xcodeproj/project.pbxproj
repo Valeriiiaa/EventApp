@@ -7,10 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F65CE1412A497B05003E4E3F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE1402A497B05003E4E3F /* TextField.swift */; };
+		F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */; };
+		F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C502A497628001FB2E5 /* Montserrat-Light.ttf */; };
+		F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */; };
+		F6800C562A497A0E001FB2E5 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C4F2A497628001FB2E5 /* Montserrat-Regular.ttf */; };
+		F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C512A497628001FB2E5 /* Montserrat-SemiBold.ttf */; };
+		F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C532A497628001FB2E5 /* Montserrat-Bold.ttf */; };
+		F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C522A497628001FB2E5 /* Montserrat-ExtraLight.ttf */; };
 		F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */; };
 		F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */; };
 		F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */; };
 		F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE892A46E4AC00ECFE16 /* DrawerPresentationController.swift */; };
+		F6ABCE8C2A48655B00ECFE16 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE8B2A48655B00ECFE16 /* SettingsViewController.swift */; };
+		F6ABCE902A486F0400ECFE16 /* CustomFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */; };
+		F6ABCE922A486F1100ECFE16 /* SwitcherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */; };
+		F6ABCE942A486F2A00ECFE16 /* SwitcherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE932A486F2A00ECFE16 /* SwitcherCell.swift */; };
+		F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE952A486F3A00ECFE16 /* CustomFieldCell.swift */; };
+		F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */; };
+		F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */; };
+		F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA12A48724200ECFE16 /* SectionModel.swift */; };
+		F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */; };
+		F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */; };
 		F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */; };
 		F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */; };
 		F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */; };
@@ -41,10 +59,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F65CE1402A497B05003E4E3F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
+		F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F6800C4F2A497628001FB2E5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F6800C502A497628001FB2E5 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		F6800C512A497628001FB2E5 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F6800C522A497628001FB2E5 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F6800C532A497628001FB2E5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
 		F6ABCE892A46E4AC00ECFE16 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
+		F6ABCE8B2A48655B00ECFE16 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomFieldCell.xib; sourceTree = "<group>"; };
+		F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitcherCell.xib; sourceTree = "<group>"; };
+		F6ABCE932A486F2A00ECFE16 /* SwitcherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherCell.swift; sourceTree = "<group>"; };
+		F6ABCE952A486F3A00ECFE16 /* CustomFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldCell.swift; sourceTree = "<group>"; };
+		F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderView.xib; sourceTree = "<group>"; };
+		F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		F6ABCEA12A48724200ECFE16 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
+		F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherModel.swift; sourceTree = "<group>"; };
 		F6DE8D982A45C7BA0026E1E5 /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +122,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F65CE13F2A497AF8003E4E3F /* ViewTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F65CE1402A497B05003E4E3F /* TextField.swift */,
+			);
+			path = ViewTextField;
+			sourceTree = "<group>";
+		};
+		F6800C4D2A497600001FB2E5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6800C532A497628001FB2E5 /* Montserrat-Bold.ttf */,
+				F6800C522A497628001FB2E5 /* Montserrat-ExtraLight.ttf */,
+				F6800C502A497628001FB2E5 /* Montserrat-Light.ttf */,
+				F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */,
+				F6800C4F2A497628001FB2E5 /* Montserrat-Regular.ttf */,
+				F6800C512A497628001FB2E5 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +178,59 @@
 			path = DrawerPresentationController;
 			sourceTree = "<group>";
 		};
+		F6ABCE8D2A486EC800ECFE16 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE932A486F2A00ECFE16 /* SwitcherCell.swift */,
+				F6ABCE952A486F3A00ECFE16 /* CustomFieldCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6ABCE8E2A486ED700ECFE16 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */,
+				F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6ABCE972A4870A300ECFE16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCEA32A48727400ECFE16 /* Enums */,
+				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
+				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6ABCE9A2A4870F600ECFE16 /* HeaderFooters */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */,
+			);
+			path = HeaderFooters;
+			sourceTree = "<group>";
+		};
+		F6ABCE9E2A48717100ECFE16 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F65CE13F2A497AF8003E4E3F /* ViewTextField */,
+				F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F6ABCEA32A48727400ECFE16 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		F6DE8D8F2A45C7BA0026E1E5 = {
 			isa = PBXGroup;
 			children = (
@@ -144,9 +254,13 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
-				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
-				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
+				F6ABCE9E2A48717100ECFE16 /* Classes */,
+				F6ABCE9A2A4870F600ECFE16 /* HeaderFooters */,
+				F6ABCE972A4870A300ECFE16 /* Models */,
+				F6ABCE8E2A486ED700ECFE16 /* Cells */,
+				F6ABCE8D2A486EC800ECFE16 /* ViewController */,
+				F6DE8DCD2A45C9540026E1E5 /* Resources */,
 			);
 			path = EventApp;
 			sourceTree = "<group>";
@@ -171,10 +285,10 @@
 		F6DE8DCB2A45C9350026E1E5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F6E582802A45DF690041BD38 /* MenuViewControllers */,
 				F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */,
 				F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */,
-				F6DE8DCD2A45C9540026E1E5 /* Resources */,
+				F6ABCE8B2A48655B00ECFE16 /* SettingsViewController.swift */,
+				F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,19 +305,15 @@
 		F6DE8DCD2A45C9540026E1E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
+				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
 				F6DE8DCC2A45C9450026E1E5 /* Storyboards */,
+				F6800C4D2A497600001FB2E5 /* Fonts */,
 				F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */,
 				F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */,
 				F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F6E582802A45DF690041BD38 /* MenuViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MenuViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +420,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6800C562A497A0E001FB2E5 /* Montserrat-Regular.ttf in Resources */,
+				F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */,
+				F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */,
 				F6DE8DA82A45C7BB0026E1E5 /* LaunchScreen.storyboard in Resources */,
+				F6ABCE922A486F1100ECFE16 /* SwitcherCell.xib in Resources */,
+				F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */,
 				F6DE8DA52A45C7BB0026E1E5 /* Assets.xcassets in Resources */,
+				F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */,
 				F6DE8DA32A45C7BA0026E1E5 /* Main.storyboard in Resources */,
+				F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */,
+				F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */,
+				F6ABCE902A486F0400ECFE16 /* CustomFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,14 +456,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
+				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
+				F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */,
 				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
 				F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */,
+				F65CE1412A497B05003E4E3F /* TextField.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
 				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
+				F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */,
+				F6ABCE942A486F2A00ECFE16 /* SwitcherCell.swift in Sources */,
 				F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */,
 				F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */,
+				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,
+				F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */,
+				F6ABCE8C2A48655B00ECFE16 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +652,8 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -552,6 +682,8 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

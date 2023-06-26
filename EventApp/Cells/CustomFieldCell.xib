@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomFieldCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="135" id="G5s-dh-k7w" customClass="CustomFieldCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G5s-dh-k7w" id="3VF-Vx-qFf">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Joseph Rodriguez" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W9-Kg-xSd">
+                        <rect key="frame" x="20" y="5" width="353" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="rOA-Lg-mJg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9W9-Kg-xSd" secondAttribute="bottom" constant="5" id="713-gG-bAk"/>
+                    <constraint firstAttribute="trailing" secondItem="9W9-Kg-xSd" secondAttribute="trailing" constant="20" id="MJj-Lw-48X"/>
+                    <constraint firstItem="9W9-Kg-xSd" firstAttribute="top" secondItem="3VF-Vx-qFf" secondAttribute="top" constant="5" id="bhm-yJ-eHL"/>
+                    <constraint firstItem="9W9-Kg-xSd" firstAttribute="leading" secondItem="3VF-Vx-qFf" secondAttribute="leading" constant="20" id="csr-wL-xhG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="textField" destination="9W9-Kg-xSd" id="Ijw-GV-cJz"/>
+            </connections>
+            <point key="canvasLocation" x="232.82442748091603" y="4.5774647887323949"/>
+        </tableViewCell>
+    </objects>
+</document>

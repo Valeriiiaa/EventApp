@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SwitcherCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="119" id="eCw-qx-0UK" customClass="SwitcherCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eCw-qx-0UK" id="4at-6q-lP7">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jce-IO-oHU">
+                        <rect key="frame" x="20" y="8" width="353" height="103"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L03-L6-dHt">
+                                <rect key="frame" x="280" y="39" width="51" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ZCo-7E-bsU"/>
+                                </constraints>
+                                <color key="onTintColor" red="0.93333333333333335" green="0.33725490196078434" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-6l-f9y">
+                                <rect key="frame" x="29.999999999999996" y="30" width="54.666666666666657" height="43"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cgZ-6l-f9y" firstAttribute="leading" secondItem="jce-IO-oHU" secondAttribute="leading" constant="30" id="5NA-d4-kO1"/>
+                            <constraint firstAttribute="trailing" secondItem="L03-L6-dHt" secondAttribute="trailing" constant="24" id="FHH-xO-FjH"/>
+                            <constraint firstAttribute="bottom" secondItem="cgZ-6l-f9y" secondAttribute="bottom" constant="30" id="VzH-mq-Paa"/>
+                            <constraint firstItem="cgZ-6l-f9y" firstAttribute="top" secondItem="jce-IO-oHU" secondAttribute="top" constant="30" id="XYz-Ua-oZX"/>
+                            <constraint firstItem="L03-L6-dHt" firstAttribute="centerY" secondItem="cgZ-6l-f9y" secondAttribute="centerY" id="pjr-sM-d6X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jce-IO-oHU" firstAttribute="leading" secondItem="4at-6q-lP7" secondAttribute="leading" constant="20" id="2cx-gS-CLC"/>
+                    <constraint firstAttribute="bottom" secondItem="jce-IO-oHU" secondAttribute="bottom" constant="8" id="VWx-9k-y5y"/>
+                    <constraint firstItem="jce-IO-oHU" firstAttribute="top" secondItem="4at-6q-lP7" secondAttribute="top" constant="8" id="gJb-WK-ZDp"/>
+                    <constraint firstAttribute="trailing" secondItem="jce-IO-oHU" secondAttribute="trailing" constant="20" id="hVE-NN-WQf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundViewSwitcher" destination="jce-IO-oHU" id="sBy-Lc-70R"/>
+                <outlet property="labelNotification" destination="cgZ-6l-f9y" id="b9u-n4-Wbv"/>
+                <outlet property="switcher" destination="cgZ-6l-f9y" id="Kcd-uz-2Wb"/>
+            </connections>
+            <point key="canvasLocation" x="303" y="5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

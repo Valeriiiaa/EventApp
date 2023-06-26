@@ -33,11 +33,11 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             case .askQuestion:
                 return "settings"
             case .archive:
-                return "settings"
+                return "archive"
             case .settings:
                 return "settings"
             case .logOut:
-                return "settings"
+                return "logout"
             }
         }
     }
@@ -72,7 +72,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.backgroundColor = nil
         cell.contentView.backgroundColor = nil
         cell.imageView?.image = UIImage(named: MenuOptions.allCases[indexPath.row].imageName)
-        let font = UIFont.systemFont(ofSize: 25, weight: .light)
+        let font = UIFont(name: "Montserrat-Regular", size: 25)
         cell.textLabel?.font = font
         return cell
     }
@@ -81,5 +81,3 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-
