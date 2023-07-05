@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="MenuHeaderView" id="iN0-l3-epB" customClass="MenuHeaderView" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-gh-itB">
+                    <rect key="frame" x="40" y="59" width="329" height="729"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="29"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-Qn-K2e">
+                    <rect key="frame" x="10" y="808" width="363" height="2"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Y74-oJ-eMg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cUn-gh-itB" secondAttribute="bottom" constant="30" id="4Jb-3Y-siw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cUn-gh-itB" secondAttribute="trailing" constant="24" id="4zp-xQ-hPk"/>
+                <constraint firstItem="cUn-gh-itB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="DDY-2u-GxI"/>
+                <constraint firstAttribute="trailing" secondItem="1EN-Qn-K2e" secondAttribute="trailing" constant="20" id="EuS-Wz-qng"/>
+                <constraint firstItem="1EN-Qn-K2e" firstAttribute="top" secondItem="cUn-gh-itB" secondAttribute="bottom" constant="20" id="GXY-tk-h2g"/>
+                <constraint firstItem="1EN-Qn-K2e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="HJ7-ej-XhC"/>
+                <constraint firstItem="cUn-gh-itB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gQ9-3C-r6w"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerName" destination="cUn-gh-itB" id="xrv-74-rqb"/>
+            </connections>
+            <point key="canvasLocation" x="55.725190839694655" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

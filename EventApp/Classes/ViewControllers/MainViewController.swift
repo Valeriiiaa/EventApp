@@ -7,9 +7,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
 
    
+    @IBOutlet weak var bottomTextFieldConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneTextField: TextField!
     @IBOutlet weak var getCodeButton: UIButton!
    
@@ -19,6 +20,7 @@ class MainViewController: UIViewController {
         phoneTextField.layer.masksToBounds = true
         getCodeButton.layer.cornerRadius = 12
         getCodeButton.layer.masksToBounds = true
+        phoneTextField.delegate = self
         
         let label = UILabel()
         label.text = "Phone"
@@ -26,7 +28,22 @@ class MainViewController: UIViewController {
         label.font = UIFont(name: "Montserrat-Light", size: 20)
         phoneTextField.leftView = label
         phoneTextField.leftViewMode = .always
-       
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+}
+    
+    @objc func dismissKeyboard() {
+       view.endEditing(true)
+}
+    
+    @objc func dismissKeyboardPhone(_ sender: UITapGestureRecognizer) {
+        let textFieldFrame = phoneTextField.convert(phoneTextField.bounds, to: view)
+        let tapLocation = sender.location(in: view)
+        
+        if !textFieldFrame.contains(tapLocation) {
+            view.endEditing(true)
+        }
     }
 
     @IBAction func getCodeButtonDidTap(_ sender: Any) {

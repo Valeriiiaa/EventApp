@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MessageInfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="115" id="mV1-AY-aiu" customClass="MessageInfoCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mV1-AY-aiu" id="7Cn-1A-Lkr">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C92-N2-f56">
+                        <rect key="frame" x="20" y="8" width="353" height="99"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="messageImage" translatesAutoresizingMaskIntoConstraints="NO" id="TSQ-8Z-je0">
+                                <rect key="frame" x="20" y="18" width="57" height="63"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attention!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBA-NE-3Ud">
+                                <rect key="frame" x="100" y="5" width="86" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.93333333330000001" green="0.33725490200000002" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="1 day ago" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8s-Xg-efG">
+                                <rect key="frame" x="100" y="65.666666666666671" width="233" height="28.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.68235294117647061" green="0.72156862745098038" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet,  consectetur adipiscing elit." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCS-od-86F">
+                                <rect key="frame" x="100" y="19.999999999999996" width="233" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.34901960784313724" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K8s-Xg-efG" firstAttribute="leading" secondItem="TSQ-8Z-je0" secondAttribute="trailing" constant="23" id="1J3-2Q-IVe"/>
+                            <constraint firstItem="TSQ-8Z-je0" firstAttribute="leading" secondItem="C92-N2-f56" secondAttribute="leading" constant="20" id="2kD-jQ-ug3"/>
+                            <constraint firstItem="LCS-od-86F" firstAttribute="top" secondItem="qBA-NE-3Ud" secondAttribute="bottom" priority="250" constant="5" id="3kd-8P-HKw"/>
+                            <constraint firstItem="qBA-NE-3Ud" firstAttribute="leading" secondItem="TSQ-8Z-je0" secondAttribute="trailing" constant="23" id="DvH-y6-b6U"/>
+                            <constraint firstAttribute="bottom" secondItem="TSQ-8Z-je0" secondAttribute="bottom" constant="18" id="J0v-hb-fTO"/>
+                            <constraint firstAttribute="trailing" secondItem="K8s-Xg-efG" secondAttribute="trailing" constant="20" id="So0-nH-ugP"/>
+                            <constraint firstItem="TSQ-8Z-je0" firstAttribute="top" secondItem="C92-N2-f56" secondAttribute="top" constant="18" id="TnS-VO-0At"/>
+                            <constraint firstItem="qBA-NE-3Ud" firstAttribute="top" secondItem="C92-N2-f56" secondAttribute="top" constant="5" id="Xu1-Vr-7ba"/>
+                            <constraint firstAttribute="bottom" secondItem="K8s-Xg-efG" secondAttribute="bottom" constant="5" id="Zmk-f4-kzO"/>
+                            <constraint firstItem="LCS-od-86F" firstAttribute="leading" secondItem="TSQ-8Z-je0" secondAttribute="trailing" constant="23" id="bm4-nT-nSR"/>
+                            <constraint firstAttribute="trailing" secondItem="LCS-od-86F" secondAttribute="trailing" constant="20" id="iSi-0m-SH3"/>
+                            <constraint firstItem="LCS-od-86F" firstAttribute="top" secondItem="C92-N2-f56" secondAttribute="top" priority="251" constant="20" id="teW-4A-Gel"/>
+                            <constraint firstItem="K8s-Xg-efG" firstAttribute="top" secondItem="LCS-od-86F" secondAttribute="bottom" constant="5" id="yZi-oJ-6m1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="C92-N2-f56" secondAttribute="trailing" constant="20" id="6i5-jU-H0r"/>
+                    <constraint firstAttribute="bottom" secondItem="C92-N2-f56" secondAttribute="bottom" constant="8" id="UgO-0N-fch"/>
+                    <constraint firstItem="C92-N2-f56" firstAttribute="leading" secondItem="7Cn-1A-Lkr" secondAttribute="leading" constant="20" id="bY7-TA-jDt"/>
+                    <constraint firstItem="C92-N2-f56" firstAttribute="top" secondItem="7Cn-1A-Lkr" secondAttribute="top" constant="8" id="eSG-yW-HC0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundMessageView" destination="C92-N2-f56" id="qng-ex-QVE"/>
+                <outlet property="labelAttention" destination="qBA-NE-3Ud" id="tsS-F1-0QZ"/>
+                <outlet property="meesageTime" destination="K8s-Xg-efG" id="Hsv-6c-iPT"/>
+                <outlet property="messageConstraint" destination="3kd-8P-HKw" id="lYi-gd-hyw"/>
+                <outlet property="messageImage" destination="TSQ-8Z-je0" id="kJJ-ft-08r"/>
+                <outlet property="textMessageView" destination="LCS-od-86F" id="EBT-eb-sQ0"/>
+            </connections>
+            <point key="canvasLocation" x="200.76335877862596" y="39.7887323943662"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="messageImage" width="57" height="57.666667938232422"/>
+    </resources>
+</document>

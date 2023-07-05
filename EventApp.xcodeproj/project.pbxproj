@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
+		F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BC2A49C36300C7C25A /* MenuCellType.swift */; };
+		F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BE2A49C38A00C7C25A /* MenuModel.swift */; };
 		F65CE1412A497B05003E4E3F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE1402A497B05003E4E3F /* TextField.swift */; };
+		F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */; };
 		F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */; };
 		F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C502A497628001FB2E5 /* Montserrat-Light.ttf */; };
 		F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */; };
@@ -15,6 +19,14 @@
 		F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C512A497628001FB2E5 /* Montserrat-SemiBold.ttf */; };
 		F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C532A497628001FB2E5 /* Montserrat-Bold.ttf */; };
 		F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C522A497628001FB2E5 /* Montserrat-ExtraLight.ttf */; };
+		F685E6FE2A5576B100C7F457 /* MessageInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E6FD2A5576B100C7F457 /* MessageInfoCell.swift */; };
+		F685E7012A5576C900C7F457 /* MessageInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F685E7002A5576C800C7F457 /* MessageInfoCell.xib */; };
+		F685E7062A557E0300C7F457 /* MainMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7052A557E0300C7F457 /* MainMessageCell.swift */; };
+		F685E7082A557E1000C7F457 /* MainMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F685E7072A557E1000C7F457 /* MainMessageCell.xib */; };
+		F685E70A2A55899500C7F457 /* MessagesCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7092A55899500C7F457 /* MessagesCellType.swift */; };
+		F685E7102A558BA700C7F457 /* AlertMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E70F2A558BA700C7F457 /* AlertMessagesModel.swift */; };
+		F685E7122A558BCD00C7F457 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7112A558BCD00C7F457 /* MessagesModel.swift */; };
+		F685E7142A559D8500C7F457 /* TextViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7132A559D8500C7F457 /* TextViewMessage.swift */; };
 		F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */; };
 		F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */; };
 		F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */; };
@@ -29,6 +41,10 @@
 		F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA12A48724200ECFE16 /* SectionModel.swift */; };
 		F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */; };
 		F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */; };
+		F6CEEE972A53110F00B2E1EE /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */; };
+		F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE982A53118900B2E1EE /* SelectionModel.swift */; };
+		F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */; };
+		F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */; };
 		F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */; };
 		F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */; };
 		F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */; };
@@ -39,6 +55,10 @@
 		F6DE8DBD2A45C7BB0026E1E5 /* EventAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8DBC2A45C7BB0026E1E5 /* EventAppUITests.swift */; };
 		F6DE8DBF2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8DBE2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift */; };
 		F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */; };
+		F6F71DAA2A4F2C1500BFAED4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F71DA92A4F2C1500BFAED4 /* MenuCell.xib */; };
+		F6F71DAD2A4F2CE300BFAED4 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F71DAC2A4F2CE300BFAED4 /* MenuCell.swift */; };
+		F6F71DB12A530EF400BFAED4 /* SelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F71DB02A530EF400BFAED4 /* SelectionCell.xib */; };
+		F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F71DB22A530FAD00BFAED4 /* SelectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +79,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
+		F655E2BE2A49C38A00C7C25A /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		F65CE1402A497B05003E4E3F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderView.xib; sourceTree = "<group>"; };
 		F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		F6800C4F2A497628001FB2E5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -67,6 +91,14 @@
 		F6800C512A497628001FB2E5 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		F6800C522A497628001FB2E5 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		F6800C532A497628001FB2E5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F685E6FD2A5576B100C7F457 /* MessageInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoCell.swift; sourceTree = "<group>"; };
+		F685E7002A5576C800C7F457 /* MessageInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageInfoCell.xib; sourceTree = "<group>"; };
+		F685E7052A557E0300C7F457 /* MainMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageCell.swift; sourceTree = "<group>"; };
+		F685E7072A557E1000C7F457 /* MainMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMessageCell.xib; sourceTree = "<group>"; };
+		F685E7092A55899500C7F457 /* MessagesCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCellType.swift; sourceTree = "<group>"; };
+		F685E70F2A558BA700C7F457 /* AlertMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessagesModel.swift; sourceTree = "<group>"; };
+		F685E7112A558BCD00C7F457 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		F685E7132A559D8500C7F457 /* TextViewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewMessage.swift; sourceTree = "<group>"; };
 		F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
@@ -81,6 +113,10 @@
 		F6ABCEA12A48724200ECFE16 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
 		F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherModel.swift; sourceTree = "<group>"; };
+		F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		F6CEEE982A53118900B2E1EE /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
+		F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
+		F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		F6DE8D982A45C7BA0026E1E5 /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +131,10 @@
 		F6DE8DBC2A45C7BB0026E1E5 /* EventAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAppUITests.swift; sourceTree = "<group>"; };
 		F6DE8DBE2A45C7BB0026E1E5 /* EventAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F6F71DA92A4F2C1500BFAED4 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		F6F71DAC2A4F2CE300BFAED4 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		F6F71DB02A530EF400BFAED4 /* SelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionCell.xib; sourceTree = "<group>"; };
+		F6F71DB22A530FAD00BFAED4 /* SelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +183,42 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F685E6FF2A5576B900C7F457 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F685E7002A5576C800C7F457 /* MessageInfoCell.xib */,
+				F685E7072A557E1000C7F457 /* MainMessageCell.xib */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F685E7022A5576D400C7F457 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */,
+				F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F685E70B2A558AA500C7F457 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F685E7092A55899500C7F457 /* MessagesCellType.swift */,
+				F685E70F2A558BA700C7F457 /* AlertMessagesModel.swift */,
+				F685E7112A558BCD00C7F457 /* MessagesModel.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F685E7152A559D8C00C7F457 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F685E7132A559D8500C7F457 /* TextViewMessage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,30 +254,41 @@
 			path = DrawerPresentationController;
 			sourceTree = "<group>";
 		};
-		F6ABCE8D2A486EC800ECFE16 /* ViewController */ = {
+		F6ABCE8D2A486EC800ECFE16 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F6F71DAB2A4F2CD100BFAED4 /* MenuCell */,
 				F6ABCE932A486F2A00ECFE16 /* SwitcherCell.swift */,
 				F6ABCE952A486F3A00ECFE16 /* CustomFieldCell.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		F6ABCE8E2A486ED700ECFE16 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */,
-				F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */,
+				F6F71DB22A530FAD00BFAED4 /* SelectionCell.swift */,
+				F685E6FD2A5576B100C7F457 /* MessageInfoCell.swift */,
+				F685E7052A557E0300C7F457 /* MainMessageCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6ABCE8E2A486ED700ECFE16 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F685E7022A5576D400C7F457 /* Settings */,
+				F685E6FF2A5576B900C7F457 /* Messages */,
+				F6F71DAF2A530EE600BFAED4 /* Selection */,
+				F6F71DA82A4F2C0B00BFAED4 /* MenuCell */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F6ABCE972A4870A300ECFE16 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F685E70B2A558AA500C7F457 /* Messages */,
 				F6ABCEA32A48727400ECFE16 /* Enums */,
 				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
 				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
+				F655E2BE2A49C38A00C7C25A /* MenuModel.swift */,
+				F6CEEE982A53118900B2E1EE /* SelectionModel.swift */,
+				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
+				F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */,
+				F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */,
 			);
 			path = HeaderFooters;
 			sourceTree = "<group>";
@@ -217,8 +305,12 @@
 		F6ABCE9E2A48717100ECFE16 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6ABCE8D2A486EC800ECFE16 /* Cells */,
+				F6ABCE972A4870A300ECFE16 /* Models */,
+				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
+				F6F71DAE2A530E6D00BFAED4 /* Headers */,
+				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
 				F65CE13F2A497AF8003E4E3F /* ViewTextField */,
-				F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -227,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */,
+				F655E2BC2A49C36300C7C25A /* MenuCellType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -256,10 +349,6 @@
 			children = (
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
 				F6ABCE9E2A48717100ECFE16 /* Classes */,
-				F6ABCE9A2A4870F600ECFE16 /* HeaderFooters */,
-				F6ABCE972A4870A300ECFE16 /* Models */,
-				F6ABCE8E2A486ED700ECFE16 /* Cells */,
-				F6ABCE8D2A486EC800ECFE16 /* ViewController */,
 				F6DE8DCD2A45C9540026E1E5 /* Resources */,
 			);
 			path = EventApp;
@@ -289,6 +378,7 @@
 				F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */,
 				F6ABCE8B2A48655B00ECFE16 /* SettingsViewController.swift */,
 				F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */,
+				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -305,15 +395,49 @@
 		F6DE8DCD2A45C9540026E1E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
-				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
+				F685E7152A559D8C00C7F457 /* Views */,
+				F6ABCE8E2A486ED700ECFE16 /* Cell */,
 				F6DE8DCC2A45C9450026E1E5 /* Storyboards */,
 				F6800C4D2A497600001FB2E5 /* Fonts */,
+				F6ABCE9A2A4870F600ECFE16 /* HeaderFooters */,
 				F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */,
 				F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */,
 				F6DE8DA42A45C7BB0026E1E5 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6F71DA82A4F2C0B00BFAED4 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6F71DA92A4F2C1500BFAED4 /* MenuCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		F6F71DAB2A4F2CD100BFAED4 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6F71DAC2A4F2CE300BFAED4 /* MenuCell.swift */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		F6F71DAE2A530E6D00BFAED4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */,
+				F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F6F71DAF2A530EE600BFAED4 /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				F6F71DB02A530EF400BFAED4 /* SelectionCell.xib */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +545,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6800C562A497A0E001FB2E5 /* Montserrat-Regular.ttf in Resources */,
+				F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */,
+				F6F71DAA2A4F2C1500BFAED4 /* MenuCell.xib in Resources */,
 				F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */,
+				F6F71DB12A530EF400BFAED4 /* SelectionCell.xib in Resources */,
+				F685E7012A5576C900C7F457 /* MessageInfoCell.xib in Resources */,
+				F685E7082A557E1000C7F457 /* MainMessageCell.xib in Resources */,
 				F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */,
 				F6DE8DA82A45C7BB0026E1E5 /* LaunchScreen.storyboard in Resources */,
 				F6ABCE922A486F1100ECFE16 /* SwitcherCell.xib in Resources */,
@@ -459,19 +588,34 @@
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
 				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
 				F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */,
+				F685E7122A558BCD00C7F457 /* MessagesModel.swift in Sources */,
+				F6CEEE972A53110F00B2E1EE /* SelectionViewController.swift in Sources */,
 				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
+				F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
 				F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */,
+				F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */,
 				F65CE1412A497B05003E4E3F /* TextField.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
+				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
 				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
+				F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */,
+				F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */,
 				F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */,
+				F685E7062A557E0300C7F457 /* MainMessageCell.swift in Sources */,
+				F685E6FE2A5576B100C7F457 /* MessageInfoCell.swift in Sources */,
+				F6F71DAD2A4F2CE300BFAED4 /* MenuCell.swift in Sources */,
+				F685E7142A559D8500C7F457 /* TextViewMessage.swift in Sources */,
 				F6ABCE942A486F2A00ECFE16 /* SwitcherCell.swift in Sources */,
 				F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */,
 				F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */,
 				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,
+				F685E7102A558BA700C7F457 /* AlertMessagesModel.swift in Sources */,
+				F685E70A2A55899500C7F457 /* MessagesCellType.swift in Sources */,
 				F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */,
+				F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */,
+				F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */,
 				F6ABCE8C2A48655B00ECFE16 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 class DrawerPresentationController: UIPresentationController {
 
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        return CGSize(width: parentSize.width * 0.8, height: parentSize.height)
+        return CGSize(width: parentSize.width * 0.9, height: parentSize.height)
     }
 
     override var frameOfPresentedViewInContainerView: CGRect {
@@ -35,6 +35,7 @@ class DrawerPresentationController: UIPresentationController {
             view.addGestureRecognizer(tapRecognizer)
         return view
     }()
+    
     @objc private func dismissPresentedController() {
         presentedViewController.dismiss(animated: true)
     }

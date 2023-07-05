@@ -1,18 +1,17 @@
 //
-//  SettingsHeaderView.swift
+//  MenuHeaderView.swift
 //  EventApp
 //
-//  Created by Valeriya Chernyak on 25.06.2023.
+//  Created by Valeriya Chernyak on 26.06.2023.
 //
 
 import UIKit
 
-class SettingsHeaderView: UITableViewHeaderFooterView {
+class MenuHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var headerName: UILabel!
     
     func configure(name: String) {
         headerName.text = name
-        }
-
+    }
 }
