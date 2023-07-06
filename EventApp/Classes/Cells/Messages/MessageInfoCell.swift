@@ -44,5 +44,7 @@ class MessageInfoCell: UITableViewCell {
         } else {
             messageConstraint.priority = .defaultLow
         }
+        layoutIfNeeded()
+        layoutSubviews()
     }
 }

@@ -33,10 +33,7 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         textViewMessage.delegate = self
         
         setupOverlayView()
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-//        textViewMessage.addGestureRecognizer(tapGesture)
-        
-    }
+}
 
     func setupOverlayView() {
             overlayView = OverlayView(frame: textViewWriteMessage.bounds)
@@ -106,7 +103,8 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     
     @IBAction func didTapMenu(_ sender: Any) {
         let drawerController = DrawerMenuViewController()
-        present(drawerController, animated: true)
+        let navigation = UINavigationController(rootViewController: drawerController)
+        present(navigation, animated: true)
     }
     
    @IBAction func backButtonDidTap(_ sender: Any) {
