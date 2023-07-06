@@ -103,8 +103,8 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     
     @IBAction func didTapMenu(_ sender: Any) {
         let drawerController = DrawerMenuViewController()
-        let navigation = UINavigationController(rootViewController: drawerController)
-        present(navigation, animated: true)
+//        let navigation = UINavigationController(rootViewController: drawerController)
+        present(drawerController, animated: true)
     }
     
    @IBAction func backButtonDidTap(_ sender: Any) {

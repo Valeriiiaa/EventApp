@@ -19,7 +19,7 @@ enum MenuOptions: String, CaseIterable {
         case .home:
             return "home"
         case .askQuestion:
-            return "settings"
+            return "askQuestion"
         case .archive:
             return "archive"
         case .settings:

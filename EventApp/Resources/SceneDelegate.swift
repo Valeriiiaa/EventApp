@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let archiveViewController = storyboard.instantiateViewController(withIdentifier: "MessagesViewController")
+        let archiveViewController = storyboard.instantiateViewController(withIdentifier: "AskQuestionViewController")
         let navController = UINavigationController(rootViewController: archiveViewController)
         navController.navigationBar.isHidden = true
 
