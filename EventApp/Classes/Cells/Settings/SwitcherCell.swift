@@ -19,6 +19,8 @@ class SwitcherCell: UITableViewCell {
         backgroundViewSwitcher.layer.cornerRadius = 12
         backgroundViewSwitcher.layer.masksToBounds = true
         
+       
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,6 +28,8 @@ class SwitcherCell: UITableViewCell {
 
         
     }
+    
+    
    
     func configure(text: String) {
         labelNotification.text = text

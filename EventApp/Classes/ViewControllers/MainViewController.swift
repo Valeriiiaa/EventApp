@@ -8,12 +8,13 @@
 import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
-
-   
-    @IBOutlet weak var bottomTextFieldConstraint: NSLayoutConstraint!
+    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var phoneTextField: TextField!
     @IBOutlet weak var getCodeButton: UIButton!
-   
+    @IBOutlet var bottomContainerConstraint: NSLayoutConstraint!
+    @IBOutlet var logoTopConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneTextField.layer.cornerRadius = 12
@@ -22,18 +23,49 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         getCodeButton.layer.masksToBounds = true
         phoneTextField.delegate = self
         
-        let label = UILabel()
+        phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
+    
+           
+        
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
+        
+        let number = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: phoneTextField.frame.height))
+        number.text = "+1"
+        number.font = UIFont(name: "Montserrat-Light", size: 20)
+        leftView.addSubview(number)
+       
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         label.text = "Phone"
         label.textColor = UIColor(red: 152/255, green: 152/255, blue: 152/255, alpha: 152/255)
         label.font = UIFont(name: "Montserrat-Light", size: 20)
-        phoneTextField.leftView = label
+        leftView.addSubview(label)
+        
+        phoneTextField.leftView = leftView
         phoneTextField.leftViewMode = .always
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
-}
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+   
+    @objc func keyboardWillShow(notification: NSNotification) {
+        bottomContainerConstraint.constant = 200
+        logoTopConstraint.constant = -200
+        self.view.layoutIfNeeded()
+        self.view.layoutSubviews()
+    }
     
-    @objc func dismissKeyboard() {
+    @objc func keyboardWillHide(notification: NSNotification) {
+        bottomContainerConstraint.constant = 0
+        logoTopConstraint.constant = 15
+        self.view.layoutIfNeeded()
+        self.view.layoutSubviews()
+    }
+    
+    
+            @objc func dismissKeyboard() {
        view.endEditing(true)
 }
     
@@ -45,6 +77,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             view.endEditing(true)
         }
     }
+    
+    
 
     @IBAction func getCodeButtonDidTap(_ sender: Any) {
     }

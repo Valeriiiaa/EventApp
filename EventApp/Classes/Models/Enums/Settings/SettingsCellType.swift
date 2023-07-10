@@ -8,7 +8,7 @@
 import Foundation
 
 enum SettingsCellType {
-    case textField
+    case textField(TextFieldModel)
     case switcher(SwitcherModel)
     
     var reusedId: String {

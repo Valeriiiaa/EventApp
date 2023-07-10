@@ -32,8 +32,8 @@
                                 <color key="onTintColor" red="0.93333333333333335" green="0.33725490196078434" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgZ-6l-f9y">
-                                <rect key="frame" x="29.999999999999996" y="30" width="54.666666666666657" height="43"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                <rect key="frame" x="29.999999999999996" y="30" width="46.666666666666657" height="43"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var itemsSection = [SectionModel(titleHeader: "Personal Information", itemsInside: [.textField, .textField]), SectionModel(titleHeader: "Notification", itemsInside: [.switcher(SwitcherModel(title: "Information messenges")), .switcher(SwitcherModel(title: "Attention messanges")), .switcher(SwitcherModel(title: "Warning messages"))])]
+    var itemsSection = [SectionModel(titleHeader: "Personal Information", itemsInside: [.textField(TextFieldModel(text: "Name", keyboardType: .default)), .textField(TextFieldModel(text: "Login", keyboardType: .numberPad))]), SectionModel(titleHeader: "Notification", itemsInside: [.switcher(SwitcherModel(title: "Information messenges")), .switcher(SwitcherModel(title: "Attention messanges")), .switcher(SwitcherModel(title: "Warning messages"))])]
 
     @IBOutlet weak var tableView: UITableView!
    
@@ -20,19 +20,22 @@ class SettingsViewController: UIViewController {
         tableView.register(UINib(nibName: "SwitcherCell" , bundle: nil), forCellReuseIdentifier: "SwitcherCell")
         tableView.register(UINib(nibName: "CustomFieldCell" , bundle: nil), forCellReuseIdentifier: "CustomFieldCell")
         tableView.register(UINib(nibName: "SettingsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "SettingsHeaderView")
-       
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
-
+    @objc func dismissKeyboard() {
+       view.endEditing(true)
+}
+    
     @IBAction func didTapMenu(_ sender: Any) {
         let drawerController = DrawerMenuViewController()
             present(drawerController, animated: true)
     }
+   
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
-    
-
 }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,7 +66,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         switch model {
         case .switcher(let switcherModel):
             (cell as? SwitcherCell)?.configure(text: switcherModel.title)
-        case .textField: break
+        case .textField(let textFieldModel):
+            (cell as? CustomFieldCell)?.configure(text: textFieldModel.text, keyboardType: textFieldModel.keyboardType)
         }
         return cell
         }

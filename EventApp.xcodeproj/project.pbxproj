@@ -36,6 +36,7 @@
 		F685E72A2A55FE7400C7F457 /* ArchiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7292A55FE7400C7F457 /* ArchiveModel.swift */; };
 		F685E72C2A55FEC000C7F457 /* InformationMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E72B2A55FEC000C7F457 /* InformationMessageModel.swift */; };
 		F685E72E2A55FF1600C7F457 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E72D2A55FF1600C7F457 /* MessageModel.swift */; };
+		F685E7362A5889C800C7F457 /* TextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7352A5889C800C7F457 /* TextFieldModel.swift */; };
 		F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */; };
 		F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */; };
 		F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */; };
@@ -117,6 +118,7 @@
 		F685E7292A55FE7400C7F457 /* ArchiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveModel.swift; sourceTree = "<group>"; };
 		F685E72B2A55FEC000C7F457 /* InformationMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageModel.swift; sourceTree = "<group>"; };
 		F685E72D2A55FF1600C7F457 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		F685E7352A5889C800C7F457 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
 		F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				F6ABCEA32A48727400ECFE16 /* Enums */,
 				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
 				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
+				F685E7352A5889C800C7F457 /* TextFieldModel.swift */,
 				F655E2BE2A49C38A00C7C25A /* MenuModel.swift */,
 				F6CEEE982A53118900B2E1EE /* SelectionModel.swift */,
 				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
@@ -703,6 +706,7 @@
 				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,
 				F685E72C2A55FEC000C7F457 /* InformationMessageModel.swift in Sources */,
 				F685E7102A558BA700C7F457 /* AlertMessagesModel.swift in Sources */,
+				F685E7362A5889C800C7F457 /* TextFieldModel.swift in Sources */,
 				F685E70A2A55899500C7F457 /* MessagesCellType.swift in Sources */,
 				F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */,
 				F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */,

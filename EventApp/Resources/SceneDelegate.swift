@@ -17,16 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let archiveViewController = storyboard.instantiateViewController(withIdentifier: "AskQuestionViewController")
-        let navController = UINavigationController(rootViewController: archiveViewController)
-        navController.navigationBar.isHidden = true
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let archiveViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
+//        let navController = UINavigationController(rootViewController: archiveViewController)
+//        navController.navigationBar.isHidden = true
 
         // create a basic UIWindow and activate it
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
-        
+//        window = UIWindow(windowScene: windowScene)
+//        window?.rootViewController = navController
+//        window?.makeKeyAndVisible()
+//        
         
         
     }

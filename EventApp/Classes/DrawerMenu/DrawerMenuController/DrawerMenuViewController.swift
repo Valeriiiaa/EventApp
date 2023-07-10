@@ -86,8 +86,5 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = UIStoryboard(name: "Archive", bundle: nil).instantiateViewController(identifier: "ArchiveViewController")
-//        navigationController!.pushViewController(vc, animated: true)
-        
     }
 }
