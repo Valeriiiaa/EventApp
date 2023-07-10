@@ -387,8 +387,8 @@
 		F6ABCE9E2A48717100ECFE16 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F685E7152A559D8C00C7F457 /* Views */,
 				F6ABCE8D2A486EC800ECFE16 /* Cells */,
-				F6ABCE972A4870A300ECFE16 /* Models */,
 				F6ABCE7F2A46E3A100ECFE16 /* DrawerMenu */,
 				F6F71DAE2A530E6D00BFAED4 /* Headers */,
 				F6DE8DCB2A45C9350026E1E5 /* ViewControllers */,
@@ -432,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
+				F6ABCE972A4870A300ECFE16 /* Models */,
 				F6ABCE9E2A48717100ECFE16 /* Classes */,
 				F6DE8DCD2A45C9540026E1E5 /* Resources */,
 			);
@@ -462,8 +463,8 @@
 				F6E5827C2A45D9720041BD38 /* MessagesViewController.swift */,
 				F6ABCE8B2A48655B00ECFE16 /* SettingsViewController.swift */,
 				F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */,
-				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
 				F685E7182A55F74E00C7F457 /* ArchiveViewController.swift */,
+				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -481,7 +482,6 @@
 		F6DE8DCD2A45C9540026E1E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F685E7152A559D8C00C7F457 /* Views */,
 				F6ABCE8E2A486ED700ECFE16 /* Cell */,
 				F6DE8DCC2A45C9450026E1E5 /* Storyboards */,
 				F6800C4D2A497600001FB2E5 /* Fonts */,

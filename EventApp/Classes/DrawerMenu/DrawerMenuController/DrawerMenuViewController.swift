@@ -8,7 +8,13 @@
 import UIKit
 
 class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    static let shared = DrawerMenuViewController()
+    
+    public weak var drawerNavigationController: UINavigationController?
+    
+    private var previousVC: UIViewController?
+    
     let transitionManager = DrawerTransitionManager()
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -55,6 +61,10 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         closeButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
+    public func back() {
+        drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = CGRect(x: 30, y: view.safeAreaInsets.top + 60, width: view.bounds.size.width - 30, height: view.bounds.size.height)
@@ -84,7 +94,65 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+        previousVC = drawerNavigationController?.viewControllers.last
+        switch indexPath.row {
+        case 0: openHomeVC()
+        case 1: openAskQuestionVC()
+        case 2: openArchiveVC()
+        case 3: openSettingsVC()
+        case 4: openMainVC()
+        default: print("pizdec")
+        }
     }
+    
+    private func openAskQuestionVC() {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AskQuestionViewController")
+        guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
+    private func openHomeVC() {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesViewController")
+        guard !(drawerNavigationController?.viewControllers.last is MessagesViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
+    private func openArchiveVC() {
+        let entrance = UIStoryboard(name: "Archive", bundle: nil).instantiateViewController(withIdentifier: "ArchiveViewController")
+        guard !(drawerNavigationController?.viewControllers.last is ArchiveViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
+    private func openSettingsVC() {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
+        guard !(drawerNavigationController?.viewControllers.last is SettingsViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
+    private func openMainVC() {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
+        guard !(drawerNavigationController?.viewControllers.last is MainViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
 }

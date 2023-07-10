@@ -31,8 +31,8 @@ class MessagesViewController: UIViewController {
     }
     
     @IBAction func didTapMenu(_ sender: Any) {
-        let drawerController = DrawerMenuViewController()
-            present(drawerController, animated: true)
+        let drawerController = DrawerMenuViewController.shared
+        present(drawerController, animated: true)
     }
     
 }

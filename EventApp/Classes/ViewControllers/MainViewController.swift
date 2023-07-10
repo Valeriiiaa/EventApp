@@ -81,6 +81,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func getCodeButtonDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesViewController")
+        DrawerMenuViewController.shared.drawerNavigationController = navigationController
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
    

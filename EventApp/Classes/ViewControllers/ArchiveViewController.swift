@@ -18,6 +18,7 @@ class ArchiveViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MessageInfoCell", bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
             tableView.register(UINib(nibName: "WarningMessagesCell", bundle: nil), forCellReuseIdentifier: "WarningMessagesCell")
+        tableView.register(UINib(nibName: "InformationMessagesCell", bundle: nil), forCellReuseIdentifier: "InformationMessagesCell")
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -26,10 +27,15 @@ class ArchiveViewController: UIViewController {
     
 
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        DrawerMenuViewController.shared.back()
     }
     
-
+    @IBAction func didTapMenu(_ sender: Any) {
+        let drawerController = DrawerMenuViewController.shared
+        present(drawerController, animated: true)
+    }
+    
+    
 }
 extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
    

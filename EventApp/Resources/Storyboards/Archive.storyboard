@@ -72,6 +72,9 @@
                                 <rect key="frame" x="33" y="69" width="31" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="leftPopUp"/>
+                                <connections>
+                                    <action selector="didTapMenu:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wYc-XC-AG3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joseph Rodriguez " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eg-Wx-FBR">
                                 <rect key="frame" x="232.33333333333337" y="74.333333333333329" width="146.66666666666663" height="19.333333333333329"/>

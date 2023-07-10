@@ -29,12 +29,12 @@ class SettingsViewController: UIViewController {
 }
     
     @IBAction func didTapMenu(_ sender: Any) {
-        let drawerController = DrawerMenuViewController()
+        let drawerController = DrawerMenuViewController.shared
             present(drawerController, animated: true)
     }
    
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        DrawerMenuViewController.shared.back()
     }
 }
 
