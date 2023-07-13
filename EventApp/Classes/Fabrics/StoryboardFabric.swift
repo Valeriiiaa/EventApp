@@ -23,7 +23,7 @@ class StoryboardFabric {
     static func getStoryboard(by name: String) -> UIStoryboard {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
-            return UIStoryboard(name: "\(name)-iphone", bundle: nil)
+            return UIStoryboard(name: "\(name)", bundle: nil)
             
         default: return UIStoryboard(name: "\(name)-ipad", bundle: nil)
         }

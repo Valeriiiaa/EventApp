@@ -15,6 +15,10 @@
 		F659EFD12A60079D00ECE98A /* MessageInfoCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD02A60079D00ECE98A /* MessageInfoCell-iPad.xib */; };
 		F659EFD32A6007AB00ECE98A /* MainMessageCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD22A6007AB00ECE98A /* MainMessageCell-iPad.xib */; };
 		F659EFD82A600C5B00ECE98A /* StoryboardFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659EFD72A600C5B00ECE98A /* StoryboardFabric.swift */; };
+		F659EFDB2A60173E00ECE98A /* GetCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFDA2A60173E00ECE98A /* GetCodeView.xib */; };
+		F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFDD2A60186400ECE98A /* SGCodeTextField */; };
+		F659EFE02A60198800ECE98A /* GetCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659EFDF2A60198800ECE98A /* GetCodeView.swift */; };
+		F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFE52A601CEB00ECE98A /* SwiftEntryKit */; };
 		F65CE1412A497B05003E4E3F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE1402A497B05003E4E3F /* TextField.swift */; };
 		F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */; };
 		F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */; };
@@ -56,6 +60,8 @@
 		F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA12A48724200ECFE16 /* SectionModel.swift */; };
 		F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */; };
 		F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */; };
+		F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */; };
+		F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */; };
 		F6CEEE972A53110F00B2E1EE /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */; };
 		F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE982A53118900B2E1EE /* SelectionModel.swift */; };
 		F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */; };
@@ -101,6 +107,8 @@
 		F659EFD02A60079D00ECE98A /* MessageInfoCell-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MessageInfoCell-iPad.xib"; sourceTree = "<group>"; };
 		F659EFD22A6007AB00ECE98A /* MainMessageCell-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainMessageCell-iPad.xib"; sourceTree = "<group>"; };
 		F659EFD72A600C5B00ECE98A /* StoryboardFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFabric.swift; sourceTree = "<group>"; };
+		F659EFDA2A60173E00ECE98A /* GetCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetCodeView.xib; sourceTree = "<group>"; };
+		F659EFDF2A60198800ECE98A /* GetCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCodeView.swift; sourceTree = "<group>"; };
 		F65CE1402A497B05003E4E3F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderView.xib; sourceTree = "<group>"; };
 		F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +150,8 @@
 		F6ABCEA12A48724200ECFE16 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
 		F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherModel.swift; sourceTree = "<group>"; };
+		F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRequest.swift; sourceTree = "<group>"; };
 		F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		F6CEEE982A53118900B2E1EE /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
@@ -171,7 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */,
 				F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */,
+				F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +218,14 @@
 				F659EFD72A600C5B00ECE98A /* StoryboardFabric.swift */,
 			);
 			path = Fabrics;
+			sourceTree = "<group>";
+		};
+		F659EFD92A60172B00ECE98A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F659EFDA2A60173E00ECE98A /* GetCodeView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F65CE13F2A497AF8003E4E3F /* ViewTextField */ = {
@@ -263,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				F685E7132A559D8500C7F457 /* TextViewMessage.swift */,
+				F659EFDF2A60198800ECE98A /* GetCodeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,14 +412,9 @@
 		F6ABCE972A4870A300ECFE16 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6C5ADCB2A6045790058C8AF /* Models */,
 				F6ABCEA32A48727400ECFE16 /* Enums */,
-				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
-				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
-				F685E7352A5889C800C7F457 /* TextFieldModel.swift */,
-				F655E2BE2A49C38A00C7C25A /* MenuModel.swift */,
-				F6CEEE982A53118900B2E1EE /* SelectionModel.swift */,
-				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
-				F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */,
+				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,6 +453,28 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		F6C5ADC82A603CBA0058C8AF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F6C5ADCB2A6045790058C8AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
+				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
+				F685E7352A5889C800C7F457 /* TextFieldModel.swift */,
+				F655E2BE2A49C38A00C7C25A /* MenuModel.swift */,
+				F6CEEE982A53118900B2E1EE /* SelectionModel.swift */,
+				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
+				F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F6DE8D8F2A45C7BA0026E1E5 = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
+				F6C5ADC82A603CBA0058C8AF /* Managers */,
 				F6ABCE972A4870A300ECFE16 /* Models */,
 				F6ABCE9E2A48717100ECFE16 /* Classes */,
 				F6DE8DCD2A45C9540026E1E5 /* Resources */,
@@ -512,6 +551,7 @@
 		F6DE8DCD2A45C9540026E1E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F659EFD92A60172B00ECE98A /* Views */,
 				F6ABCE8E2A486ED700ECFE16 /* Cell */,
 				F6DE8DCC2A45C9450026E1E5 /* Storyboards */,
 				F6800C4D2A497600001FB2E5 /* Fonts */,
@@ -574,6 +614,8 @@
 			name = EventApp;
 			packageProductDependencies = (
 				F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */,
+				F659EFDD2A60186400ECE98A /* SGCodeTextField */,
+				F659EFE52A601CEB00ECE98A /* SwiftEntryKit */,
 			);
 			productName = EventApp;
 			productReference = F6DE8D982A45C7BA0026E1E5 /* EventApp.app */;
@@ -649,6 +691,8 @@
 			mainGroup = F6DE8D8F2A45C7BA0026E1E5;
 			packageReferences = (
 				F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
+				F659EFDC2A60186400ECE98A /* XCRemoteSwiftPackageReference "SGCodeTextField" */,
+				F659EFE42A601CEB00ECE98A /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
 			);
 			productRefGroup = F6DE8D992A45C7BA0026E1E5 /* Products */;
 			projectDirPath = "";
@@ -680,6 +724,7 @@
 				F685E7172A55F5D700C7F457 /* Archive.storyboard in Resources */,
 				F6ABCE922A486F1100ECFE16 /* SwitcherCell.xib in Resources */,
 				F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */,
+				F659EFDB2A60173E00ECE98A /* GetCodeView.xib in Resources */,
 				F6DE8DA52A45C7BB0026E1E5 /* Assets.xcassets in Resources */,
 				F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */,
 				F6DE8DA32A45C7BA0026E1E5 /* Main.storyboard in Resources */,
@@ -712,6 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */,
 				F685E71F2A55F7B200C7F457 /* ArchiveMessagesCell.swift in Sources */,
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
 				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
@@ -738,6 +784,7 @@
 				F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */,
 				F685E7062A557E0300C7F457 /* MainMessageCell.swift in Sources */,
 				F685E6FE2A5576B100C7F457 /* MessageInfoCell.swift in Sources */,
+				F659EFE02A60198800ECE98A /* GetCodeView.swift in Sources */,
 				F6F71DAD2A4F2CE300BFAED4 /* MenuCell.swift in Sources */,
 				F685E7142A559D8500C7F457 /* TextViewMessage.swift in Sources */,
 				F6ABCE942A486F2A00ECFE16 /* SwitcherCell.swift in Sources */,
@@ -752,6 +799,7 @@
 				F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */,
 				F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */,
 				F6ABCE8C2A48655B00ECFE16 /* SettingsViewController.swift in Sources */,
+				F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */,
 				F685E7232A55FAFB00C7F457 /* InformationMessagesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1108,6 +1156,22 @@
 				minimumVersion = 0.1.8;
 			};
 		};
+		F659EFDC2A60186400ECE98A /* XCRemoteSwiftPackageReference "SGCodeTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grigorievs/SGCodeTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		F659EFE42A601CEB00ECE98A /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1115,6 +1179,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
 			productName = IHProgressHUD;
+		};
+		F659EFDD2A60186400ECE98A /* SGCodeTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F659EFDC2A60186400ECE98A /* XCRemoteSwiftPackageReference "SGCodeTextField" */;
+			productName = SGCodeTextField;
+		};
+		F659EFE52A601CEB00ECE98A /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F659EFE42A601CEB00ECE98A /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
