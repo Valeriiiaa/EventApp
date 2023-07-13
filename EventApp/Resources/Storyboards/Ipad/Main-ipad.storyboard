@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Y6W-OH-hqX" customClass="MainViewController" customModule="EventApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c07-MZ-7pf">
+                                <rect key="frame" x="0.0" y="274.5" width="834" height="919.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EFFECTIVE HOME CARE MASSAGER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz3-kp-VYx">
+                                        <rect key="frame" x="20" y="15" width="794" height="49"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="40"/>
+                                        <color key="textColor" name="LabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="nhJ-qG-ccs">
+                                        <rect key="frame" x="127.5" y="104" width="579" height="386"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nhJ-qG-ccs" secondAttribute="height" multiplier="3:2" id="MtO-kb-SeH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SA6-uH-4h1" customClass="TextField" customModule="EventApp" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="515" width="714" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="gwn-X9-0iN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-ZP-HZS">
+                                        <rect key="frame" x="60" y="639" width="714" height="110"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="7cj-8y-Ov0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="35"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Get the code">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getCodeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gVk-n0-CqY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eie-hW-iHr">
+                                        <rect key="frame" x="50" y="757" width="734" height="49"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Didn`t get the code. Send it again">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didNotGetCodeButtondidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HwF-RW-CVd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundView"/>
+                                <constraints>
+                                    <constraint firstItem="nhJ-qG-ccs" firstAttribute="top" secondItem="Rz3-kp-VYx" secondAttribute="bottom" constant="40" id="38m-44-2qD"/>
+                                    <constraint firstItem="Eie-hW-iHr" firstAttribute="top" secondItem="wPd-ZP-HZS" secondAttribute="bottom" constant="8" id="84b-xR-XCm"/>
+                                    <constraint firstItem="wPd-ZP-HZS" firstAttribute="top" secondItem="SA6-uH-4h1" secondAttribute="bottom" constant="14" id="CbZ-Jb-a4p"/>
+                                    <constraint firstAttribute="trailing" secondItem="SA6-uH-4h1" secondAttribute="trailing" constant="60" id="Fvy-Ir-mkf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rz3-kp-VYx" secondAttribute="trailing" constant="20" id="KOy-Xi-dH8"/>
+                                    <constraint firstItem="Rz3-kp-VYx" firstAttribute="leading" secondItem="c07-MZ-7pf" secondAttribute="leading" constant="20" id="L4f-lV-FPi"/>
+                                    <constraint firstItem="Rz3-kp-VYx" firstAttribute="top" secondItem="c07-MZ-7pf" secondAttribute="top" constant="15" id="Lc2-nl-07i"/>
+                                    <constraint firstItem="nhJ-qG-ccs" firstAttribute="centerX" secondItem="c07-MZ-7pf" secondAttribute="centerX" id="Ldt-8A-5XZ"/>
+                                    <constraint firstItem="SA6-uH-4h1" firstAttribute="top" secondItem="nhJ-qG-ccs" secondAttribute="bottom" constant="25" id="NLL-bv-amN"/>
+                                    <constraint firstItem="wPd-ZP-HZS" firstAttribute="leading" secondItem="c07-MZ-7pf" secondAttribute="leading" constant="60" id="Vve-Jn-1he"/>
+                                    <constraint firstItem="nhJ-qG-ccs" firstAttribute="height" secondItem="c07-MZ-7pf" secondAttribute="height" multiplier="0.42" id="Xlu-IN-PB9"/>
+                                    <constraint firstItem="SA6-uH-4h1" firstAttribute="leading" secondItem="c07-MZ-7pf" secondAttribute="leading" constant="60" id="YCu-jk-L0X"/>
+                                    <constraint firstAttribute="trailing" secondItem="wPd-ZP-HZS" secondAttribute="trailing" constant="60" id="aVO-jg-ilq"/>
+                                    <constraint firstItem="Eie-hW-iHr" firstAttribute="leading" secondItem="c07-MZ-7pf" secondAttribute="leading" constant="50" id="dth-d2-uNm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eie-hW-iHr" secondAttribute="trailing" constant="50" id="siD-TN-ggJ"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-9R-zor">
+                                <rect key="frame" x="70" y="49" width="694" height="210.5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lX3-9R-zor" secondAttribute="trailing" constant="70" id="83I-3c-Fwz"/>
+                            <constraint firstItem="c07-MZ-7pf" firstAttribute="top" secondItem="lX3-9R-zor" secondAttribute="bottom" constant="15" id="B7X-6Q-Fho"/>
+                            <constraint firstItem="c07-MZ-7pf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KlL-Fq-Kee"/>
+                            <constraint firstItem="lX3-9R-zor" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="Lo4-Pt-uH8"/>
+                            <constraint firstAttribute="bottom" secondItem="c07-MZ-7pf" secondAttribute="bottom" id="a02-Ne-pG9"/>
+                            <constraint firstItem="lX3-9R-zor" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="nYC-Rs-gfy"/>
+                            <constraint firstItem="c07-MZ-7pf" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.770101" id="pow-Ax-6Oj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c07-MZ-7pf" secondAttribute="trailing" id="qM1-vV-cJi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getCodeButton" destination="wPd-ZP-HZS" id="Bxy-wW-zNT"/>
+                        <outlet property="imageView" destination="nhJ-qG-ccs" id="YQs-5R-7WR"/>
+                        <outlet property="labelText" destination="Rz3-kp-VYx" id="asg-cL-ejG"/>
+                        <outlet property="phoneTextField" destination="SA6-uH-4h1" id="Jni-ZB-NiU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="450" height="306"/>
+        <image name="Logo" width="366" height="97"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundView">
+            <color red="0.67500001192092896" green="0.81199997663497925" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelColor">
+            <color red="0.0" green="0.36470588235294116" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

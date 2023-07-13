@@ -88,11 +88,13 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VzO-mY-J9V" secondAttribute="bottom" id="1Ty-YY-p1s"/>
                             <constraint firstItem="7S0-8s-k8B" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="65C-4l-JbL"/>
+                            <constraint firstItem="yt2-gC-yak" firstAttribute="top" secondItem="1eg-Wx-FBR" secondAttribute="bottom" constant="0.33000000000000002" id="AVP-sp-OYa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1eg-Wx-FBR" secondAttribute="trailing" constant="14" id="B8f-QY-UfA"/>
                             <constraint firstItem="1eg-Wx-FBR" firstAttribute="centerY" secondItem="7S0-8s-k8B" secondAttribute="centerY" id="D1m-K8-Cti"/>
                             <constraint firstItem="7S0-8s-k8B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="UIT-4Z-rwy"/>
                             <constraint firstItem="VzO-mY-J9V" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.77" id="WS1-4K-R4f"/>
                             <constraint firstItem="yt2-gC-yak" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="cDX-TQ-WZi"/>
+                            <constraint firstItem="1eg-Wx-FBR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15.33" id="fZp-XG-Acn"/>
                             <constraint firstItem="VzO-mY-J9V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iik-ru-OWF"/>
                             <constraint firstItem="VzO-mY-J9V" firstAttribute="top" secondItem="yt2-gC-yak" secondAttribute="bottom" constant="5" id="rDr-l7-l0N"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yt2-gC-yak" secondAttribute="trailing" constant="70" id="ux3-rj-xd5"/>

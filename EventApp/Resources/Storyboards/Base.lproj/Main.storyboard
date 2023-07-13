@@ -101,6 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JuW-XO-g7f" firstAttribute="top" secondItem="f6I-97-89m" secondAttribute="bottom" constant="25" id="10A-gk-JGu"/>
                             <constraint firstItem="f6I-97-89m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Ann-Ih-35J"/>
                             <constraint firstItem="pCm-Oz-QNa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.264085" id="EN8-cf-14c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JuW-XO-g7f" secondAttribute="trailing" id="Pcp-1h-dzt"/>
@@ -182,6 +183,8 @@
                         <constraints>
                             <constraint firstItem="K6d-m7-7Nh" firstAttribute="leading" secondItem="id6-c5-crt" secondAttribute="leading" constant="70" id="0KD-HZ-ejQ"/>
                             <constraint firstItem="id6-c5-crt" firstAttribute="trailing" secondItem="K6d-m7-7Nh" secondAttribute="trailing" constant="70" id="3Qc-jJ-sw6"/>
+                            <constraint firstItem="K6d-m7-7Nh" firstAttribute="top" secondItem="TxY-5P-k9Z" secondAttribute="bottom" constant="0.33000000000000002" id="MSx-Lv-fmZ"/>
+                            <constraint firstItem="TxY-5P-k9Z" firstAttribute="top" secondItem="id6-c5-crt" secondAttribute="top" constant="15.33" id="OCC-os-Hki"/>
                             <constraint firstItem="mLr-c8-uHt" firstAttribute="height" secondItem="pdk-wW-zKW" secondAttribute="height" multiplier="0.77" id="URW-N0-Zk8"/>
                             <constraint firstItem="mLr-c8-uHt" firstAttribute="leading" secondItem="id6-c5-crt" secondAttribute="leading" id="bFB-uV-74W"/>
                             <constraint firstItem="c3Y-w6-xUh" firstAttribute="leading" secondItem="id6-c5-crt" secondAttribute="leading" constant="33" id="cn4-D1-qYU"/>
@@ -272,12 +275,14 @@
                             <constraint firstItem="A6R-rd-xCH" firstAttribute="trailing" secondItem="Fhz-1W-vx3" secondAttribute="trailing" constant="70" id="73t-GN-CN5"/>
                             <constraint firstItem="Fhz-1W-vx3" firstAttribute="leading" secondItem="A6R-rd-xCH" secondAttribute="leading" constant="70" id="94x-Be-YFC"/>
                             <constraint firstAttribute="bottom" secondItem="8gv-yM-fsL" secondAttribute="bottom" id="BkY-cF-7QR"/>
+                            <constraint firstItem="b36-b7-LxE" firstAttribute="top" secondItem="A6R-rd-xCH" secondAttribute="top" constant="15.67" id="FDh-gU-JrZ"/>
                             <constraint firstItem="8gv-yM-fsL" firstAttribute="top" secondItem="Fhz-1W-vx3" secondAttribute="bottom" constant="5" id="GOo-IB-NhS"/>
                             <constraint firstItem="A6R-rd-xCH" firstAttribute="trailing" secondItem="8gv-yM-fsL" secondAttribute="trailing" id="S6l-vY-H9o"/>
                             <constraint firstItem="b36-b7-LxE" firstAttribute="centerY" secondItem="lxq-Yc-Bqm" secondAttribute="centerY" id="eg3-vR-Gnf"/>
                             <constraint firstItem="8gv-yM-fsL" firstAttribute="leading" secondItem="A6R-rd-xCH" secondAttribute="leading" id="f8S-F7-zX3"/>
                             <constraint firstItem="A6R-rd-xCH" firstAttribute="trailing" secondItem="b36-b7-LxE" secondAttribute="trailing" constant="14" id="fhK-Rd-Da3"/>
                             <constraint firstItem="lxq-Yc-Bqm" firstAttribute="leading" secondItem="A6R-rd-xCH" secondAttribute="leading" constant="33" id="jlb-4d-mba"/>
+                            <constraint firstItem="Fhz-1W-vx3" firstAttribute="top" secondItem="b36-b7-LxE" secondAttribute="bottom" constant="0.67000000000000004" id="pwY-1s-h3A"/>
                             <constraint firstItem="8gv-yM-fsL" firstAttribute="height" secondItem="bFO-Mb-Lqf" secondAttribute="height" multiplier="0.77" id="r7K-ca-fLu"/>
                         </constraints>
                     </view>

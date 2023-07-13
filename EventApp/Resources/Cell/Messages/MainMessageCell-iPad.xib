@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="233" id="hhq-qL-ggk" customClass="MainMessageCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="233"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hhq-qL-ggk" id="mFD-sx-b9b">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dct-Ss-NEk">
+                        <rect key="frame" x="10" y="10" width="373" height="213"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messages" translatesAutoresizingMaskIntoConstraints="NO" id="O7Q-1z-alf">
+                                <rect key="frame" x="23" y="28" width="107" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O7Q-1z-alf" secondAttribute="height" multiplier="76:71" id="5k9-0X-ezh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have new" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orv-sJ-Oce">
+                                <rect key="frame" x="145" y="59.666666666666671" width="208.33333333333337" height="36.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCZ-SS-gUd">
+                                <rect key="frame" x="70.000000000000014" y="144" width="233.33333333333337" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O7Q-1z-alf" firstAttribute="top" secondItem="dct-Ss-NEk" secondAttribute="top" constant="28" id="4Wn-A3-tvf"/>
+                            <constraint firstAttribute="bottom" secondItem="CCZ-SS-gUd" secondAttribute="bottom" constant="20" id="6dA-no-FlY"/>
+                            <constraint firstItem="orv-sJ-Oce" firstAttribute="centerY" secondItem="O7Q-1z-alf" secondAttribute="centerY" id="6p9-3t-MuI"/>
+                            <constraint firstItem="CCZ-SS-gUd" firstAttribute="top" secondItem="O7Q-1z-alf" secondAttribute="bottom" constant="16" id="LCr-Fe-pVI"/>
+                            <constraint firstItem="O7Q-1z-alf" firstAttribute="height" secondItem="dct-Ss-NEk" secondAttribute="height" multiplier="0.47" id="TOl-Cc-jz5"/>
+                            <constraint firstItem="O7Q-1z-alf" firstAttribute="leading" secondItem="dct-Ss-NEk" secondAttribute="leading" constant="23" id="a5d-fa-stg"/>
+                            <constraint firstItem="orv-sJ-Oce" firstAttribute="leading" secondItem="O7Q-1z-alf" secondAttribute="trailing" constant="15" id="a7B-8l-hc6"/>
+                            <constraint firstItem="CCZ-SS-gUd" firstAttribute="centerX" secondItem="dct-Ss-NEk" secondAttribute="centerX" id="wfP-PY-ga8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dct-Ss-NEk" secondAttribute="trailing" constant="10" id="8Zv-KH-H7c"/>
+                    <constraint firstItem="dct-Ss-NEk" firstAttribute="leading" secondItem="mFD-sx-b9b" secondAttribute="leading" constant="10" id="9t3-4m-yEo"/>
+                    <constraint firstItem="dct-Ss-NEk" firstAttribute="top" secondItem="mFD-sx-b9b" secondAttribute="top" constant="10" id="AmL-ah-B6P"/>
+                    <constraint firstAttribute="bottom" secondItem="dct-Ss-NEk" secondAttribute="bottom" constant="10" id="qq6-ZL-h2l"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountMessages" destination="CCZ-SS-gUd" id="MOa-cu-PAc"/>
+                <outlet property="backgroundMessagesView" destination="dct-Ss-NEk" id="3qP-Ns-bXX"/>
+            </connections>
+            <point key="canvasLocation" x="190.07633587786259" y="71.478873239436624"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="messages" width="92" height="90"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

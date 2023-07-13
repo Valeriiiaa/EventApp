@@ -13,23 +13,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = scene as? UIWindowScene else {
-            return
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: windowScene)
+            
+            
+            
+            let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
+            let navigationController = UINavigationController(rootViewController: splashStoryboard)
+            navigationController.isNavigationBarHidden = true
+            navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
         }
-
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let archiveViewController = storyboard.instantiateViewController(withIdentifier: "SettingsViewController")
-//        let navController = UINavigationController(rootViewController: archiveViewController)
-//        navController.navigationBar.isHidden = true
-
-        // create a basic UIWindow and activate it
-//        window = UIWindow(windowScene: windowScene)
-//        window?.rootViewController = navController
-//        window?.makeKeyAndVisible()
-//        
+    
         
-        
-    }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

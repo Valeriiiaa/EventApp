@@ -83,9 +83,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func getCodeButtonDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesViewController")
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MessagesViewController")
         DrawerMenuViewController.shared.drawerNavigationController = navigationController
-        navigationController?.pushViewController(entrance, animated: true)
+        navigationController!.pushViewController(entrance, animated: true)
         IHProgressHUD.show()
         IHProgressHUD.set(HudViewCustomBlurEffec: UIBlurEffect(style: .light))
         IHProgressHUD.setHUD(backgroundColor: UIColor.white)

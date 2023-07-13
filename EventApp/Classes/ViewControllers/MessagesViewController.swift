@@ -18,8 +18,8 @@ class MessagesViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "MessageInfoCell", bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
-            tableView.register(UINib(nibName: "MainMessageCell", bundle: nil), forCellReuseIdentifier: "MainMessageCell")
+            tableView.register(UINib(nibName: "MessageInfoCell" , bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
+            tableView.register(UINib(nibName: "MainMessageCell" , bundle: nil), forCellReuseIdentifier: "MainMessageCell")
         tableView.dataSource = self
         tableView.delegate = self
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
