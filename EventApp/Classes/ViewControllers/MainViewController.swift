@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import IHProgressHUD
+
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelText: UILabel!
@@ -84,6 +86,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesViewController")
         DrawerMenuViewController.shared.drawerNavigationController = navigationController
         navigationController?.pushViewController(entrance, animated: true)
+        IHProgressHUD.show()
+        IHProgressHUD.set(HudViewCustomBlurEffec: UIBlurEffect(style: .light))
+        IHProgressHUD.setHUD(backgroundColor: UIColor.white)
+        IHProgressHUD.dismissWithDelay(0.5)
+        
     }
     
    

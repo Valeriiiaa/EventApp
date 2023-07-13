@@ -10,6 +10,7 @@
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
 		F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BC2A49C36300C7C25A /* MenuCellType.swift */; };
 		F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BE2A49C38A00C7C25A /* MenuModel.swift */; };
+		F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */; };
 		F65CE1412A497B05003E4E3F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE1402A497B05003E4E3F /* TextField.swift */; };
 		F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */; };
 		F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */; };
@@ -162,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +544,9 @@
 			dependencies = (
 			);
 			name = EventApp;
+			packageProductDependencies = (
+				F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */,
+			);
 			productName = EventApp;
 			productReference = F6DE8D982A45C7BA0026E1E5 /* EventApp.app */;
 			productType = "com.apple.product-type.application";
@@ -614,6 +619,9 @@
 				Base,
 			);
 			mainGroup = F6DE8D8F2A45C7BA0026E1E5;
+			packageReferences = (
+				F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
+			);
 			productRefGroup = F6DE8D992A45C7BA0026E1E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1058,6 +1066,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
+			productName = IHProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6DE8D902A45C7BA0026E1E5 /* Project object */;
 }
