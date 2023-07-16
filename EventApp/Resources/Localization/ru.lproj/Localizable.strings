@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  EventApp
+
+  Created by Valeriya Chernyak on 14.07.2023.
+  
+*/
+"effectiveHomeCareMassager" = "ЭФФЕКТИВНЫЙ ДОМАШНИЙ МАССАЖЕР";
+"Phone" = "Телефон";
+"getTheCode" = "Получить код";
+"didn'tGetTheCode" = "Не получил код.Отправить снова.";
+"YouHaveNew" = "У нас новых";
+"messages" = "Сообщений";
+"JosephRodriguez" = "Joseph Rodriguez";
+"gooWebsite" = "Перейти на вебсайт";
+"menu" = "МЕНЮ";
+"homw" = "Дом";
+"AskQestion" = "Задать вопрос";
+"archive" = "Архив";
+"settings" = "Настройки";
+"logOut" = "Выйти";
+"back" = "Назад";
+"personalInformation" = "Персональная информация";
+"name" = "Имя";
+"login" = "Логин";
+"notification" = "Уведомления";
+"informationMessanges" = "Информационные сообщения";
+"attentionMessanges" = "Важные сообщения";
+"warningMessanges" = "Предупреждающие сообщения";
+"attention" = "Внимание!";
+"youHaveReceived" = "Вы получили";
+"information message" = "Информационное сообщение.";
+"thisVeryImrotantMessage" = "Это очень важное сообщение!Прочитайте сейчас!";
+"type" = "Тип";
+"language" = "Язык";
+"writeMessage" = "Напишите сообщение";
+"sendMessage" = "Отправить сообщение";
+"InvalidVerificationCode" = "Неправильный код";

@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
             window?.rootViewController = navigationController
             window?.makeKeyAndVisible()
+        DrawerMenuViewController.shared.drawerNavigationController = navigationController
         }
     
         

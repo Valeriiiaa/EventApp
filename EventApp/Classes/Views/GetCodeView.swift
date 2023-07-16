@@ -12,6 +12,7 @@ import IHProgressHUD
 
 class GetCodeView: UIView {
     
+    @IBOutlet weak var invalidCodeLabel: UILabel!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var pidCodeView: SGCodeTextField!
     
@@ -44,15 +45,23 @@ class GetCodeView: UIView {
             pidCodeView.layoutSubviews()
             return
         }
+        
         pidCodeView?.layer.borderWidth = 0
         
-        guard pidCodeView.text?.isEmpty == false,
+        guard pidCodeView.text?.count == 6  else {
+            pidCodeView?.layer.borderColor = UIColor.red.cgColor
+            pidCodeView?.layer.borderWidth = 1
+            return
+        }
+            guard pidCodeView.text?.isEmpty == false,
               let pidCodeView = pidCodeView.text else {
             return
         }
+        
         IHProgressHUD.show()
         okDidTap?()
     }
+   
 }
 
 

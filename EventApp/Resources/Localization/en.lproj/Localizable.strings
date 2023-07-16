@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  EventApp
+
+  Created by Valeriya Chernyak on 14.07.2023.
+  
+*/
+"effectiveHomeCareMassager" = "EFFECTIVE HOME CARE MASSAGER";
+"Phone" = "Phone";
+"getTheCode" = "Get the code";
+"didn'tGetTheCode" = "Didn`t get the code. Send it again";
+"YouHaveNew" = "You have new";
+"messages" = "Messages";
+"JosephRodriguez" = "Joseph Rodriguez";
+"gooWebsite" = "Go to the website";
+"menu" = "MENU";
+"homw" = "Home";
+"AskQestion" = "Ask a Question";
+"archive" = "Archive";
+"settings" = "Settings";
+"logOut" = "Log Out";
+"back" = "Back";
+"personalInformation" = "Personal Information";
+"name" = "Name";
+"login" = "Login";
+"notification" = "Notification";
+"informationMessanges" = "Information messages";
+"attentionMessanges" = "Attention messages";
+"warningMessanges" = "Warning messages";
+"attention" = "Attention!";
+"youHaveReceived" = "You have received an";
+"information message" = "Information message.";
+"thisVeryImrotantMessage" = "This is a very important message! Read it now!";
+"type" = "Type";
+"language" = "Language";
+"writeMessage" = "Write your message";
+"sendMessage" = "Send a message";
+"InvalidVerificationCode" = "Invalid verification code";
+

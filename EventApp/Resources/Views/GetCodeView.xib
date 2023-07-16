@@ -48,6 +48,12 @@
                         <action selector="okButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="a1T-na-5ql"/>
                     </connections>
                 </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid verification code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-wn-GZx">
+                    <rect key="frame" x="20" y="701" width="161.33333333333334" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,11 +64,14 @@
                 <constraint firstItem="mBR-s4-Hk8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8Yo-aV-u5B"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OPa-CO-WNH" secondAttribute="bottom" constant="27" id="BoQ-gK-17A"/>
                 <constraint firstItem="mBR-s4-Hk8" firstAttribute="top" secondItem="eSc-U4-cyr" secondAttribute="bottom" constant="35" id="DEj-yz-D4u"/>
+                <constraint firstItem="IOs-wn-GZx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FLX-6N-DP7"/>
                 <constraint firstAttribute="trailing" secondItem="eSc-U4-cyr" secondAttribute="trailing" constant="21" id="f8e-cd-Tmg"/>
                 <constraint firstItem="eSc-U4-cyr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="g1w-Nl-oH5"/>
+                <constraint firstItem="IOs-wn-GZx" firstAttribute="top" secondItem="mBR-s4-Hk8" secondAttribute="bottom" constant="5" id="kjq-Ay-eWO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="invalidCodeLabel" destination="IOs-wn-GZx" id="wmZ-VD-Rhg"/>
                 <outlet property="okButton" destination="OPa-CO-WNH" id="z7R-XO-ibH"/>
                 <outlet property="pidCodeView" destination="mBR-s4-Hk8" id="UIP-GU-hXZ"/>
             </connections>

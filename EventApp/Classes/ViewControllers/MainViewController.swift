@@ -27,8 +27,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         phoneTextField.delegate = self
         
         phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
-    
-           
+        
+        
         
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         
@@ -36,7 +36,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         number.text = "+1"
         number.font = UIFont(name: "Montserrat-Light", size: 20)
         leftView.addSubview(number)
-       
+        
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         label.text = "Phone"
         label.textColor = UIColor(red: 152/255, green: 152/255, blue: 152/255, alpha: 152/255)
@@ -55,18 +55,24 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     private func showPopup() {
         let view = GetCodeView.fromNib()
-        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true 
+        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
         view.translatesAutoresizingMaskIntoConstraints = false
         view.okDidTap = {[weak self] in
-            let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MessagesViewController")
-            DrawerMenuViewController.shared.drawerNavigationController = self?.navigationController
-//            self?.navigationController!.pushViewController(entrance, animated: true)
-                           IHProgressHUD.show()
-                           IHProgressHUD.set(HudViewCustomBlurEffec: UIBlurEffect(style: .light))
-                           IHProgressHUD.setHUD(backgroundColor: UIColor.white)
-                           IHProgressHUD.dismissWithDelay(0.5)
-            SwiftEntryKit.dismiss()
+            
+            NetworkManager.shared.requestWithCode(phone: self!.phoneTextField.text!, code: view.pidCodeView.text!, comletion: { data in
+                if data == false {
+                    DispatchQueue.main.async {
+                        view.invalidCodeLabel.isHidden = false
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self?.pushMessageController()
+                    }
+                    
+                }
+            })
         }
+        
         var attributes = EKAttributes.centerFloat
         attributes.displayDuration = .infinity
         attributes.screenInteraction = .dismiss
@@ -74,6 +80,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
         SwiftEntryKit.display(entry: view, using: attributes)
     }
+
    
     @objc func keyboardWillShow(notification: NSNotification) {
         bottomContainerConstraint.constant = 200
@@ -88,6 +95,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         self.view.layoutIfNeeded()
         self.view.layoutSubviews()
     }
+    
+    func pushMessageController() {
+        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MessagesViewController")
+        navigationController?.pushViewController(entrance, animated: true)
+        
+    }
+
     
     
             @objc func dismissKeyboard() {
@@ -116,19 +130,22 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func getCode() {
         guard let text = phoneTextField.text else { return }
-        view.endEditing(true)
-        IHProgressHUD.show()
-        NetworkManager.shared.requestCode(phone: text, completion: { data in
-            IHProgressHUD.dismiss()
-            if data == true {
-                DispatchQueue.main.async {
-                    self.showPopup()
+        if text.isEmpty == false {
+            view.endEditing(true)
+            IHProgressHUD.show()
+            NetworkManager.shared.requestCode(phone: text, completion: { data in
+                IHProgressHUD.dismiss()
+                if data == true {
+                    DispatchQueue.main.async {
+                        self.showPopup()
+                    }
+                } else {
+                    print("[test] error")
                 }
-                
-            } else {
-                print("[test] error")
-            }
-        })
+            })
+        } else {
+            
+        }
     }
 }
 

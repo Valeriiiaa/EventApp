@@ -29,6 +29,50 @@ class NetworkManager {
         })
         urlSession.resume()
     }
+    
+    func requestWithCode(phone: String, code: String, comletion: @escaping(Bool) -> Void) {
+        var url = URLRequest(url: URL(string: serverURL + "verify-code")!)
+        url.httpMethod = "POST"
+        url.httpBody = try! JSONEncoder().encode(CodeRequestVerify(phone: phone, verification_code: code))
+        url .setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            
+            guard let responseData = data else {
+                print("No response data")
+                return
+            }
+            do {
+                
+                let serverResponse = try JSONDecoder().decode(ServerResponse.self, from: responseData)
+                
+                
+                if serverResponse.status == "error" {
+                    comletion(false)
+                   
+                } else {
+                    comletion(true)
+                }
+            } catch {
+              
+            }
+        }
+        
+        
+        task.resume()
+    }
 }
+
+
+
+
+
 
 
