@@ -498,8 +498,8 @@
                         <viewLayoutGuide key="safeArea" id="GDW-hI-eOI"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3pi-MN-YDY" secondAttribute="bottom" id="Ala-FH-osL"/>
                             <constraint firstItem="GDW-hI-eOI" firstAttribute="trailing" secondItem="3pi-MN-YDY" secondAttribute="trailing" id="BfH-j1-oAA"/>
-                            <constraint firstAttribute="bottom" secondItem="3pi-MN-YDY" secondAttribute="bottom" id="EtI-Ic-BDw"/>
                             <constraint firstItem="3pi-MN-YDY" firstAttribute="leading" secondItem="GDW-hI-eOI" secondAttribute="leading" id="xrT-UN-Id6"/>
                             <constraint firstItem="3pi-MN-YDY" firstAttribute="top" secondItem="GDW-hI-eOI" secondAttribute="top" id="zuo-PG-LBv"/>
                         </constraints>

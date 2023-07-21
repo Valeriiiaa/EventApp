@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
 		F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BC2A49C36300C7C25A /* MenuCellType.swift */; };
 		F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BE2A49C38A00C7C25A /* MenuModel.swift */; };
@@ -191,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */,
+				F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */,
 				F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */,
 				F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */,
 			);
@@ -636,6 +638,7 @@
 				F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */,
 				F659EFDD2A60186400ECE98A /* SGCodeTextField */,
 				F659EFE52A601CEB00ECE98A /* SwiftEntryKit */,
+				F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */,
 			);
 			productName = EventApp;
 			productReference = F6DE8D982A45C7BA0026E1E5 /* EventApp.app */;
@@ -716,6 +719,7 @@
 				F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 				F659EFDC2A60186400ECE98A /* XCRemoteSwiftPackageReference "SGCodeTextField" */,
 				F659EFE42A601CEB00ECE98A /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+				F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = F6DE8D992A45C7BA0026E1E5 /* Products */;
 			projectDirPath = "";
@@ -1187,6 +1191,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
@@ -1214,6 +1226,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F659EFCA2A5FFE0C00ECE98A /* XCRemoteSwiftPackageReference "IHProgressHUD" */;

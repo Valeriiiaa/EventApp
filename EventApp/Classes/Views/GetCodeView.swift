@@ -29,38 +29,33 @@ class GetCodeView: UIView {
         pidCodeView.digitBackgroundColor = .clear
         pidCodeView.digitBackgroundColorEmpty = .clear
         pidCodeView.textColor = .label
-        
-        
-        
     }
     
     @IBAction func cancelButtonDidTap(_ sender: Any) {
         SwiftEntryKit.dismiss()
     }
+    
    
     @IBAction func okButtonDidTap(_ sender: Any) {
+      
         guard pidCodeView.text?.isEmpty == false else {
             pidCodeView?.layer.borderColor = UIColor.red.cgColor
             pidCodeView?.layer.borderWidth = 1
-            pidCodeView.layoutSubviews()
+            
             return
         }
-        
-        pidCodeView?.layer.borderWidth = 0
         
         guard pidCodeView.text?.count == 6  else {
             pidCodeView?.layer.borderColor = UIColor.red.cgColor
             pidCodeView?.layer.borderWidth = 1
-            return
+           
+           return
         }
-            guard pidCodeView.text?.isEmpty == false,
-              let pidCodeView = pidCodeView.text else {
-            return
-        }
-        
+           
         IHProgressHUD.show()
         okDidTap?()
     }
+
    
 }
 

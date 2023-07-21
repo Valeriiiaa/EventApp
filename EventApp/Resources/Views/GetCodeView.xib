@@ -71,7 +71,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="invalidCodeLabel" destination="IOs-wn-GZx" id="wmZ-VD-Rhg"/>
+                <outlet property="invalidCodeLabel" destination="IOs-wn-GZx" id="H52-FY-1nG"/>
                 <outlet property="okButton" destination="OPa-CO-WNH" id="z7R-XO-ibH"/>
                 <outlet property="pidCodeView" destination="mBR-s4-Hk8" id="UIP-GU-hXZ"/>
             </connections>

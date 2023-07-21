@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
             
-            let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
+            let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
             let navigationController = UINavigationController(rootViewController: splashStoryboard)
             navigationController.isNavigationBarHidden = true
             navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
