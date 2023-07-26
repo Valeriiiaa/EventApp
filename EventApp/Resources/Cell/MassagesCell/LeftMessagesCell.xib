@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LeftMessagesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="v1x-U5-0s7" customClass="LeftMessagesCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1x-U5-0s7" id="1XL-dS-n9j">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y6-Ld-oOP">
+                        <rect key="frame" x="0.0" y="0.0" width="73" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-E5-y89">
+                                <rect key="frame" x="10" y="10" width="33" height="70"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xb-hf-RV9">
+                                <rect key="frame" x="47.333333333333336" y="41" width="20.666666666666664" height="12.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.80392156862745101" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Nj-E5-y89" secondAttribute="trailing" constant="30" id="0p4-u9-SLd"/>
+                            <constraint firstAttribute="bottom" secondItem="4Nj-E5-y89" secondAttribute="bottom" constant="10" id="2kx-al-Nbx"/>
+                            <constraint firstAttribute="bottom" secondItem="0Xb-hf-RV9" secondAttribute="bottom" constant="36.670000000000002" id="GaH-h2-0aj"/>
+                            <constraint firstItem="4Nj-E5-y89" firstAttribute="top" secondItem="0y6-Ld-oOP" secondAttribute="top" constant="10" id="IjL-K0-bbp"/>
+                            <constraint firstAttribute="trailing" secondItem="0Xb-hf-RV9" secondAttribute="trailing" constant="5" id="Y42-Bv-dUq"/>
+                            <constraint firstItem="4Nj-E5-y89" firstAttribute="leading" secondItem="0y6-Ld-oOP" secondAttribute="leading" constant="10" id="r82-WQ-dRj"/>
+                            <constraint firstItem="0Xb-hf-RV9" firstAttribute="top" secondItem="0y6-Ld-oOP" secondAttribute="top" constant="41" id="ulc-jg-fM1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0y6-Ld-oOP" secondAttribute="trailing" constant="20" id="3Fd-CY-yDQ"/>
+                    <constraint firstItem="0y6-Ld-oOP" firstAttribute="leading" secondItem="1XL-dS-n9j" secondAttribute="leading" id="3TW-ny-tTF"/>
+                    <constraint firstAttribute="bottom" secondItem="0y6-Ld-oOP" secondAttribute="bottom" id="60w-2F-2iy"/>
+                    <constraint firstItem="0y6-Ld-oOP" firstAttribute="top" secondItem="1XL-dS-n9j" secondAttribute="top" id="AXt-Hx-e1t"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundMessageView" destination="0y6-Ld-oOP" id="T1V-Ew-1wg"/>
+                <outlet property="messageText" destination="4Nj-E5-y89" id="7Co-VK-rYq"/>
+                <outlet property="timeLabel" destination="0Xb-hf-RV9" id="Kfk-Sd-BUz"/>
+            </connections>
+            <point key="canvasLocation" x="190.07633587786259" y="34.507042253521128"/>
+        </tableViewCell>
+    </objects>
+</document>

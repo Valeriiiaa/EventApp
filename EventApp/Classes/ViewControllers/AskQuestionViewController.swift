@@ -9,6 +9,8 @@ import UIKit
 
 class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var textFieldMessage: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backgroundLanguageView: UIView!
     @IBOutlet weak var backgroundTypeView: UIView!
@@ -19,6 +21,17 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     
     private var type = [TypeModel]()
     private var language = [LanguageModel]()
+    
+    private var tableViewMessages: UITableView = {
+        let table = UITableView()
+        table.register(UINib(nibName: "RightMessagesCell" , bundle: nil), forCellReuseIdentifier: "RightMessagesCell")
+        table.register(UINib(nibName: "LeftMessagesCell" , bundle: nil), forCellReuseIdentifier: "LeftMessagesCell")
+        table.backgroundColor = nil
+        table.separatorColor = .clear
+        return table
+    }()
+    
+    var messagesModel = [ChatModel(textMessaging: "Hello", id: 1, time: "17:57", isMe: true), ChatModel(textMessaging: "Hello there", id: 2, time: "17:58", isMe: false), ChatModel(textMessaging: "How are you?", id: 1, time: "17:58", isMe: true), ChatModel(textMessaging: "Good!", id: 2, time: "18:00", isMe: false)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +46,24 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         textViewWriteMessage.delegate = self
         scrollView.delegate = self
         setupOverlayView()
-}
-        
-        func setupOverlayView() {
-            overlayView = OverlayView(frame: textViewWriteMessage.bounds)
-            overlayView.isUserInteractionEnabled = false
-            textViewWriteMessage.addSubview(overlayView)
-        }
+        tableViewMessages.dataSource = self
+        tableViewMessages.delegate = self
+        textFieldMessage.layer.cornerRadius = 15
+        textFieldMessage.layer.masksToBounds = true
+        textFieldMessage.text = "Write a message"
+        textFieldMessage.textColor = UIColor(red: 210/255, green: 212/255, blue: 214/255, alpha: 1)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableViewMessages.frame = CGRect(x: 50, y: view.safeAreaInsets.top, width: view.bounds.size.width, height: view.bounds.size.height)
+    }
+    
+    func setupOverlayView() {
+        overlayView = OverlayView(frame: textViewWriteMessage.bounds)
+        overlayView.isUserInteractionEnabled = false
+        textViewWriteMessage.addSubview(overlayView)
+    }
     
     func showOverlayView(_ show: Bool) {
         overlayView.isHidden = !show
@@ -49,11 +73,11 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
             textViewWriteMessage.sendSubviewToBack(overlayView)
         }
     }
-
+    
     @objc func dismissKeyboard() {
         textViewWriteMessage.resignFirstResponder()
     }
-
+    
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -61,13 +85,13 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
             showOverlayView(false)
         }
         return true
-}
+    }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         view.gestureRecognizers?.forEach {
             if let tapGesture = $0 as? UITapGestureRecognizer {
                 view.removeGestureRecognizer(tapGesture)
-    }
+            }
             if textViewWriteMessage.text.isEmpty {
                 showOverlayView(true)
             }
@@ -84,9 +108,9 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         (vc as? SelectionViewController)?.dataDidSelect = { [weak self] selectedData in
             guard let self else { return }
             guard let type = self.type.first(where: { $0.key == selectedData.key }) else { return }
-           
+            
         }
-       present(vc, animated: true)
+        present(vc, animated: true)
     }
     
     @objc
@@ -97,7 +121,7 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         (vc as? SelectionViewController)?.dataDidSelect = { [weak self] selectedData in
             guard let self else { return }
             guard let language = self.language.first(where: { $0.key == selectedData.key }) else { return }
-}
+        }
         present(vc, animated: true)
     }
     
@@ -106,10 +130,34 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         present(drawerController, animated: true)
     }
     
-   @IBAction func backButtonDidTap(_ sender: Any) {
-       DrawerMenuViewController.shared.back()
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        DrawerMenuViewController.shared.back()
     }
     
     @IBAction func sendMessageButtonDidTap(_ sender: Any) {
+    }
+}
+
+extension AskQuestionViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messagesModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = messagesModel[indexPath.row]
+        if model.isMe {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RightMessagesCell", for: indexPath)
+            (cell as? RightMessagesCell)?.configure(text: model.textMessaging, time: model.time)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LefttMessagesCell", for: indexPath)
+            (cell as? LeftMessagesCell)?.configure(text: model.textMessaging, time: model.time)
+            return cell
+        }
     }
 }

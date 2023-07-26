@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
+		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
 		F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BC2A49C36300C7C25A /* MenuCellType.swift */; };
 		F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BE2A49C38A00C7C25A /* MenuModel.swift */; };
@@ -22,6 +23,10 @@
 		F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFE52A601CEB00ECE98A /* SwiftEntryKit */; };
 		F65CE1412A497B05003E4E3F /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE1402A497B05003E4E3F /* TextField.swift */; };
 		F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */; };
+		F67741722A7168B0001A1D63 /* LeftMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67741712A7168B0001A1D63 /* LeftMessagesCell.xib */; };
+		F67741742A7168BE001A1D63 /* RightMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F67741732A7168BE001A1D63 /* RightMessagesCell.xib */; };
+		F67741772A7168EC001A1D63 /* LeftMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67741762A7168EC001A1D63 /* LeftMessagesCell.swift */; };
+		F67741792A7168F8001A1D63 /* RightMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67741782A7168F8001A1D63 /* RightMessagesCell.swift */; };
 		F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */; };
 		F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C502A497628001FB2E5 /* Montserrat-Light.ttf */; };
 		F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */; };
@@ -104,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
 		F655E2BE2A49C38A00C7C25A /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -115,6 +121,10 @@
 		F659EFDF2A60198800ECE98A /* GetCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCodeView.swift; sourceTree = "<group>"; };
 		F65CE1402A497B05003E4E3F /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeaderView.xib; sourceTree = "<group>"; };
+		F67741712A7168B0001A1D63 /* LeftMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMessagesCell.xib; sourceTree = "<group>"; };
+		F67741732A7168BE001A1D63 /* RightMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightMessagesCell.xib; sourceTree = "<group>"; };
+		F67741762A7168EC001A1D63 /* LeftMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessagesCell.swift; sourceTree = "<group>"; };
+		F67741782A7168F8001A1D63 /* RightMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessagesCell.swift; sourceTree = "<group>"; };
 		F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionViewController.swift; sourceTree = "<group>"; };
 		F6800C4E2A497628001FB2E5 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		F6800C4F2A497628001FB2E5 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -215,6 +225,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61B8DE92A6A9B6F006CF069 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		F659EFCD2A60023500ECE98A /* Ipad */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +262,24 @@
 				F65CE1402A497B05003E4E3F /* TextField.swift */,
 			);
 			path = ViewTextField;
+			sourceTree = "<group>";
+		};
+		F67741702A7168A0001A1D63 /* MassagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				F67741712A7168B0001A1D63 /* LeftMessagesCell.xib */,
+				F67741732A7168BE001A1D63 /* RightMessagesCell.xib */,
+			);
+			path = MassagesCell;
+			sourceTree = "<group>";
+		};
+		F67741752A7168D6001A1D63 /* MessagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				F67741762A7168EC001A1D63 /* LeftMessagesCell.swift */,
+				F67741782A7168F8001A1D63 /* RightMessagesCell.swift */,
+			);
+			path = MessagesCell;
 			sourceTree = "<group>";
 		};
 		F6800C4D2A497600001FB2E5 /* Fonts */ = {
@@ -399,6 +434,7 @@
 		F6ABCE8D2A486EC800ECFE16 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F67741752A7168D6001A1D63 /* MessagesCell */,
 				F685E7252A55FDB700C7F457 /* Settings */,
 				F685E7242A55FCA400C7F457 /* Messages */,
 				F685E71D2A55F7A400C7F457 /* Archive */,
@@ -411,6 +447,7 @@
 		F6ABCE8E2A486ED700ECFE16 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F67741702A7168A0001A1D63 /* MassagesCell */,
 				F685E71A2A55F78800C7F457 /* Archive */,
 				F685E7022A5576D400C7F457 /* Settings */,
 				F685E6FF2A5576B900C7F457 /* Messages */,
@@ -428,6 +465,7 @@
 				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
 				F6C5ADD72A631DAA0058C8AF /* ServerResponse.swift */,
 				F6C5ADD92A6320700058C8AF /* CodeRequestVerify.swift */,
+				F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -519,6 +557,7 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
+				F61B8DE92A6A9B6F006CF069 /* Extention */,
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
 				F6C5ADC82A603CBA0058C8AF /* Managers */,
 				F6ABCE972A4870A300ECFE16 /* Models */,
@@ -753,7 +792,9 @@
 				F6C5ADD12A617BBD0058C8AF /* Localizable.strings in Resources */,
 				F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */,
 				F659EFDB2A60173E00ECE98A /* GetCodeView.xib in Resources */,
+				F67741722A7168B0001A1D63 /* LeftMessagesCell.xib in Resources */,
 				F6DE8DA52A45C7BB0026E1E5 /* Assets.xcassets in Resources */,
+				F67741742A7168BE001A1D63 /* RightMessagesCell.xib in Resources */,
 				F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */,
 				F6DE8DA32A45C7BA0026E1E5 /* Main.storyboard in Resources */,
 				F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */,
@@ -793,7 +834,9 @@
 				F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */,
 				F685E7122A558BCD00C7F457 /* MessagesModel.swift in Sources */,
 				F6CEEE972A53110F00B2E1EE /* SelectionViewController.swift in Sources */,
+				F67741792A7168F8001A1D63 /* RightMessagesCell.swift in Sources */,
 				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
+				F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */,
 				F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
 				F6C5ADDA2A6320700058C8AF /* CodeRequestVerify.swift in Sources */,
@@ -818,6 +861,7 @@
 				F6F71DAD2A4F2CE300BFAED4 /* MenuCell.swift in Sources */,
 				F685E7142A559D8500C7F457 /* TextViewMessage.swift in Sources */,
 				F6ABCE942A486F2A00ECFE16 /* SwitcherCell.swift in Sources */,
+				F67741772A7168EC001A1D63 /* LeftMessagesCell.swift in Sources */,
 				F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */,
 				F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */,
 				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,

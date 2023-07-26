@@ -101,7 +101,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         case 2: openArchiveVC()
         case 3: openSettingsVC()
         case 4: openMainVC()
-        default: print("pizdec")
+        default: print("ppp")
         }
     }
     
