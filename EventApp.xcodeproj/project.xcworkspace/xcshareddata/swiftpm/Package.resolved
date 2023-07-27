@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "keychain-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/keychain-swift.git",
+      "state" : {
+        "revision" : "d108a1fa6189e661f91560548ef48651ed8d93b9",
+        "version" : "20.0.0"
+      }
+    },
+    {
       "identity" : "sgcodetextfield",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/grigorievs/SGCodeTextField.git",
@@ -34,6 +43,15 @@
       "state" : {
         "revision" : "5ad36cccf0c4b9fea32f4e9b17a8e38f07563ef0",
         "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
+        "version" : "2.8.3"
       }
     }
   ],

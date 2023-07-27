@@ -7,15 +7,23 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    static let contaienr = Container()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        registerDependency()
         return true
+    }
+    
+    private func registerDependency() {
+        Self.contaienr.register(Storage.self) { r in
+            SecuredStorage()
+        }
     }
 
     // MARK: UISceneSession Lifecycle

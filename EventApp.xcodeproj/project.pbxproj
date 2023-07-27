@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11769E182A7289B6008237D6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E172A7289B6008237D6 /* String+Localization.swift */; };
+		11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */; };
+		11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1D2A728F3E008237D6 /* UserManager.swift */; };
+		11769E212A72900C008237D6 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11769E202A72900C008237D6 /* KeychainSwift */; };
+		11769E242A72927E008237D6 /* SecuredStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E232A72927E008237D6 /* SecuredStorage.swift */; };
+		11769E262A72928A008237D6 /* LocalStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E252A72928A008237D6 /* LocalStorageKey.swift */; };
+		11769E292A72979A008237D6 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 11769E282A72979A008237D6 /* Swinject */; };
+		11769E2B2A729A79008237D6 /* ProfileModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */; };
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
@@ -109,6 +117,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11769E172A7289B6008237D6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyResponse.swift; sourceTree = "<group>"; };
+		11769E1D2A728F3E008237D6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		11769E232A72927E008237D6 /* SecuredStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredStorage.swift; sourceTree = "<group>"; };
+		11769E252A72928A008237D6 /* LocalStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKey.swift; sourceTree = "<group>"; };
+		11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelResponse.swift; sourceTree = "<group>"; };
 		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
@@ -203,8 +217,10 @@
 			files = (
 				F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */,
 				F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */,
+				11769E212A72900C008237D6 /* KeychainSwift in Frameworks */,
 				F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */,
 				F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */,
+				11769E292A72979A008237D6 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,11 +241,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F61B8DE92A6A9B6F006CF069 /* Extention */ = {
+		11769E162A7289AB008237D6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				11769E172A7289B6008237D6 /* String+Localization.swift */,
 			);
-			path = Extention;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11769E192A728DAC008237D6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C5ADD92A6320700058C8AF /* CodeRequestVerify.swift */,
+				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		11769E1A2A728DB5008237D6 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */,
+				11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		11769E222A729275008237D6 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				11769E232A72927E008237D6 /* SecuredStorage.swift */,
+				11769E252A72928A008237D6 /* LocalStorageKey.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		F659EFCD2A60023500ECE98A /* Ipad */ = {
@@ -460,11 +504,11 @@
 		F6ABCE972A4870A300ECFE16 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11769E1A2A728DB5008237D6 /* Responses */,
+				11769E192A728DAC008237D6 /* Requests */,
 				F6C5ADCB2A6045790058C8AF /* Models */,
 				F6ABCEA32A48727400ECFE16 /* Enums */,
-				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
 				F6C5ADD72A631DAA0058C8AF /* ServerResponse.swift */,
-				F6C5ADD92A6320700058C8AF /* CodeRequestVerify.swift */,
 				F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */,
 			);
 			path = Models;
@@ -508,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */,
+				11769E1D2A728F3E008237D6 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -557,7 +602,8 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
-				F61B8DE92A6A9B6F006CF069 /* Extention */,
+				11769E222A729275008237D6 /* Storage */,
+				11769E162A7289AB008237D6 /* Extensions */,
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
 				F6C5ADC82A603CBA0058C8AF /* Managers */,
 				F6ABCE972A4870A300ECFE16 /* Models */,
@@ -678,6 +724,8 @@
 				F659EFDD2A60186400ECE98A /* SGCodeTextField */,
 				F659EFE52A601CEB00ECE98A /* SwiftEntryKit */,
 				F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */,
+				11769E202A72900C008237D6 /* KeychainSwift */,
+				11769E282A72979A008237D6 /* Swinject */,
 			);
 			productName = EventApp;
 			productReference = F6DE8D982A45C7BA0026E1E5 /* EventApp.app */;
@@ -759,6 +807,8 @@
 				F659EFDC2A60186400ECE98A /* XCRemoteSwiftPackageReference "SGCodeTextField" */,
 				F659EFE42A601CEB00ECE98A /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
 				F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				11769E1F2A72900C008237D6 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				11769E272A72979A008237D6 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = F6DE8D992A45C7BA0026E1E5 /* Products */;
 			projectDirPath = "";
@@ -839,12 +889,14 @@
 				F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */,
 				F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
+				11769E262A72928A008237D6 /* LocalStorageKey.swift in Sources */,
 				F6C5ADDA2A6320700058C8AF /* CodeRequestVerify.swift in Sources */,
 				F685E72A2A55FE7400C7F457 /* ArchiveModel.swift in Sources */,
 				F659EFD82A600C5B00ECE98A /* StoryboardFabric.swift in Sources */,
 				F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */,
 				F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */,
 				F65CE1412A497B05003E4E3F /* TextField.swift in Sources */,
+				11769E182A7289B6008237D6 /* String+Localization.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
 				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
 				F685E7192A55F74E00C7F457 /* ArchiveViewController.swift in Sources */,
@@ -853,6 +905,7 @@
 				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
 				F685E72E2A55FF1600C7F457 /* MessageModel.swift in Sources */,
 				F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */,
+				11769E2B2A729A79008237D6 /* ProfileModelResponse.swift in Sources */,
 				F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */,
 				F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */,
 				F685E7062A557E0300C7F457 /* MainMessageCell.swift in Sources */,
@@ -867,12 +920,15 @@
 				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,
 				F685E72C2A55FEC000C7F457 /* InformationMessageModel.swift in Sources */,
 				F685E7102A558BA700C7F457 /* AlertMessagesModel.swift in Sources */,
+				11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */,
 				F685E7362A5889C800C7F457 /* TextFieldModel.swift in Sources */,
 				F685E70A2A55899500C7F457 /* MessagesCellType.swift in Sources */,
 				F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */,
+				11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */,
 				F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */,
 				F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */,
 				F6ABCE8C2A48655B00ECFE16 /* SettingsViewController.swift in Sources */,
+				11769E242A72927E008237D6 /* SecuredStorage.swift in Sources */,
 				F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */,
 				F685E7232A55FAFB00C7F457 /* InformationMessagesCell.swift in Sources */,
 			);
@@ -1235,6 +1291,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		11769E1F2A72900C008237D6 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+		11769E272A72979A008237D6 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -1270,6 +1342,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		11769E202A72900C008237D6 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11769E1F2A72900C008237D6 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		11769E282A72979A008237D6 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11769E272A72979A008237D6 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;

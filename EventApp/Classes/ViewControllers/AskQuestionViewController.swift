@@ -12,7 +12,6 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var textFieldMessage: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var backgroundLanguageView: UIView!
     @IBOutlet weak var backgroundTypeView: UIView!
     @IBOutlet weak var textViewWriteMessage: UITextView!
     @IBOutlet weak var sendMessageButton: UIButton!
@@ -39,8 +38,6 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         sendMessageButton.layer.masksToBounds = true
         textViewWriteMessage.layer.cornerRadius = 12
         textViewWriteMessage.layer.masksToBounds = true
-        backgroundLanguageView.layer.cornerRadius = 12
-        backgroundLanguageView.layer.masksToBounds = true
         backgroundTypeView.layer.cornerRadius = 12
         backgroundTypeView.layer.masksToBounds = true
         textViewWriteMessage.delegate = self

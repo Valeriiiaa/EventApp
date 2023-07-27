@@ -8,7 +8,7 @@
 import UIKit
 import IHProgressHUD
 import SwiftEntryKit
-
+import Swinject
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelText: UILabel!
@@ -27,8 +27,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         phoneTextField.delegate = self
         
         phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
-        
-        
         
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         
@@ -57,18 +55,21 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let view = GetCodeView.fromNib()
         view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.okDidTap = {[weak self] in
-            
-            NetworkManager.shared.requestWithCode(phone: self!.phoneTextField.text!, code: view.pidCodeView.text!, comletion: { data in
-                if data == false {
+        view.okDidTap = { [weak self, weak view] in
+            guard let view else { return }
+            guard let self else { return }
+            NetworkManager.shared.requestWithCode(phone: self.phoneTextField.text!, code: view.pidCodeView.text!, comletion: { data in
+                switch data {
+                case .success(let success):
+                    self.registerDependency(token: success)
+                    DispatchQueue.main.async {
+                        SwiftEntryKit.dismiss()
+                        self.pushMessageController()
+                    }
+                case .failure(let failure):
                     DispatchQueue.main.async {
                         view.invalidCodeLabel.isHidden = false
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        self?.pushMessageController()
-                    }
-                    
                 }
             })
         }
@@ -80,8 +81,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
         SwiftEntryKit.display(entry: view, using: attributes)
     }
-
-   
+    
+    private func registerDependency(token: String) {
+        let container = AppDelegate.contaienr
+        container.register(UserManager.self, factory: { r in
+            print("registered")
+            return UserManager(token: token)
+        }).inObjectScope(.graph)
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         bottomContainerConstraint.constant = 200
         logoTopConstraint.constant = -200
@@ -99,14 +107,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func pushMessageController() {
         let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MessagesViewController")
         navigationController?.pushViewController(entrance, animated: true)
-        
     }
-
     
-    
-            @objc func dismissKeyboard() {
-       view.endEditing(true)
-}
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     @objc func dismissKeyboardPhone(_ sender: UITapGestureRecognizer) {
         let textFieldFrame = phoneTextField.convert(phoneTextField.bounds, to: view)
@@ -117,34 +122,30 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-
     @IBAction func getCodeButtonDidTap(_ sender: Any) {
         getCode()
     }
     
-   
     @IBAction func didNotGetCodeButtondidTap(_ sender: Any) {
         getCode()
     }
     
     func getCode() {
         guard let text = phoneTextField.text else { return }
-        if text.isEmpty == false {
+        if !text.isEmpty {
             view.endEditing(true)
             IHProgressHUD.show()
-            NetworkManager.shared.requestCode(phone: text, completion: { data in
+            NetworkManager.shared.requestCode(phone: text, completion: { [weak self] data in
+                guard let self else { return }
                 IHProgressHUD.dismiss()
                 if data == true {
                     DispatchQueue.main.async {
                         self.showPopup()
                     }
                 } else {
-                    print("[test] error")
                 }
             })
         } else {
-            
         }
     }
 }

@@ -6,23 +6,40 @@
 //
 
 import UIKit
-
+import Swinject
+import Combine
 
 class MessagesViewController: UIViewController {
-    
     @IBOutlet weak var goToWebsiteButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-   
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    private var subscriptions = Set<AnyCancellable>()
+    
+    lazy var userManager: UserManager? = {
+        let container = AppDelegate.contaienr
+        return container.resolve(UserManager.self)
+    }()
     
     var messages = [MessagesModel(itemsInside: [.mainMessageCell]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "2 min ago"))]),MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "attentionMessage", label: true, text: "Lorem ipsum dolor sit amet,consectetur adipiscing elit.", data: "1 day ago"))]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "1 day ago"))]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "attentionMessage", label: true, text: "Lorem ipsum dolor sit amet,consectetur adipiscing elit.", data: "2 day ago"))])]
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-            tableView.register(UINib(nibName: "MessageInfoCell" , bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
-            tableView.register(UINib(nibName: "MainMessageCell" , bundle: nil), forCellReuseIdentifier: "MainMessageCell")
+        tableView.register(UINib(nibName: "MessageInfoCell" , bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
+        tableView.register(UINib(nibName: "MainMessageCell" , bundle: nil), forCellReuseIdentifier: "MainMessageCell")
         tableView.dataSource = self
         tableView.delegate = self
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
+        fetchProfile()
+        bind()
+    }
+    
+    private func bind() {
+        userManager?.$userModel.receive(on: RunLoop.main).sink(receiveValue: { [weak self] model in
+            guard let self else { return }
+            guard let model else { return }
+            self.nameLabel.text = "\(model.name_first) \(model.name_last)"
+        }).store(in: &subscriptions)
     }
     
     @objc
@@ -35,6 +52,17 @@ class MessagesViewController: UIViewController {
         present(drawerController, animated: true)
     }
     
+    private func fetchProfile() {
+        NetworkManager.shared.getProfile(completion: { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let success):
+                self.userManager?.userModel = success
+            case .failure(let failure):
+                print("[test] \(failure.localizedDescription)")
+            }
+        })
+    }
 }
 
 extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
