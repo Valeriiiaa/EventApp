@@ -14,6 +14,21 @@ enum MenuOptions: String, CaseIterable {
     case settings = "Settings"
     case logOut = "Log Out"
     
+    var description: String {
+        switch self {
+        case .home:
+            return "home".localized
+        case .askQuestion:
+            return "askQestion".localized
+        case .archive:
+            return "archive".localized
+        case .settings:
+            return "settings".localized
+        case .logOut:
+            return "logOut".localized
+        }
+    }
+    
     var imageName: String {
         switch self {
         case .home:

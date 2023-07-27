@@ -19,11 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
             
-<<<<<<< Updated upstream
-            let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
-=======
+
             let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
->>>>>>> Stashed changes
             let navigationController = UINavigationController(rootViewController: splashStoryboard)
             navigationController.isNavigationBarHidden = true
             navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
