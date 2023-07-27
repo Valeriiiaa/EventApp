@@ -11,15 +11,16 @@ class SettingsViewController: UIViewController {
     
     var itemsSection = [SectionModel(titleHeader: "Personal Information", itemsInside: [.textField(TextFieldModel(text: "Name", keyboardType: .default)), .textField(TextFieldModel(text: "Login", keyboardType: .numberPad))]), SectionModel(titleHeader: "Notification", itemsInside: [.switcher(SwitcherModel(title: "Information messenges")), .switcher(SwitcherModel(title: "Attention messanges")), .switcher(SwitcherModel(title: "Warning messages"))])]
 
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "SwitcherCell" , bundle: nil), forCellReuseIdentifier: "SwitcherCell")
-        tableView.register(UINib(nibName: "CustomFieldCell" , bundle: nil), forCellReuseIdentifier: "CustomFieldCell")
-        tableView.register(UINib(nibName: "SettingsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "SettingsHeaderView")
+        tableView.register(UINib(nibName: CellManager.getCell(by: "SwitcherCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "SwitcherCell"))
+        tableView.register(UINib(nibName: CellManager.getCell(by: "CustomFieldCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "CustomFieldCell"))
+        tableView.register(UINib(nibName: HeaderManager.getHeader(by: "SettingsHeaderView"), bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderManager.getHeader(by: "SettingsHeaderView"))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
     }
@@ -50,7 +51,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let itemSection = itemsSection[section]
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SettingsHeaderView")
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CellManager.getCell(by: "SettingsHeaderView"))
         (header as? SettingsHeaderView)?.configure(name: itemSection.titleHeader)
         return header
     }

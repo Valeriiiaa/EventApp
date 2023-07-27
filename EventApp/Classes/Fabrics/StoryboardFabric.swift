@@ -14,7 +14,29 @@ class CellManager {
         case .phone:
             return "\(name)"
             
-        default: return "\(name)-iPad"
+        default: return "\(name)-ipad"
+        }
+    }
+}
+
+class ImageManager {
+    static func getImage(by name: String) -> String {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return "\(name)"
+            
+        default: return "\(name)-ipad"
+        }
+    }
+}
+
+class HeaderManager {
+    static func getHeader(by name: String) -> String {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            return "\(name)"
+            
+        default: return "\(name)-ipad"
         }
     }
 }

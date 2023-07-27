@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SwitcherCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="119" id="0Kb-kI-rdZ" customClass="SwitcherCell" customModule="EventApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Kb-kI-rdZ" id="Uh9-Px-BFL">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQr-nY-IGW">
+                        <rect key="frame" x="20" y="8" width="353" height="103"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQl-Tb-oMz">
+                                <rect key="frame" x="280" y="34" width="51" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="sOH-8p-Ttg"/>
+                                </constraints>
+                                <color key="onTintColor" red="0.93333333330000001" green="0.33725490200000002" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-8b-KlM">
+                                <rect key="frame" x="30" y="30" width="74" height="43"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AXz-8b-KlM" firstAttribute="top" secondItem="BQr-nY-IGW" secondAttribute="top" constant="30" id="GsH-1v-if6"/>
+                            <constraint firstItem="AXz-8b-KlM" firstAttribute="leading" secondItem="BQr-nY-IGW" secondAttribute="leading" constant="30" id="eh0-2c-O7p"/>
+                            <constraint firstAttribute="trailing" secondItem="nQl-Tb-oMz" secondAttribute="trailing" constant="24" id="h1p-SH-pfj"/>
+                            <constraint firstAttribute="bottom" secondItem="AXz-8b-KlM" secondAttribute="bottom" constant="30" id="mIP-Zg-LtD"/>
+                            <constraint firstItem="nQl-Tb-oMz" firstAttribute="centerY" secondItem="AXz-8b-KlM" secondAttribute="centerY" id="o0M-2L-a6z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BQr-nY-IGW" firstAttribute="leading" secondItem="Uh9-Px-BFL" secondAttribute="leading" constant="20" id="1Kr-eJ-YtM"/>
+                    <constraint firstAttribute="trailing" secondItem="BQr-nY-IGW" secondAttribute="trailing" constant="20" id="A26-Tz-Exv"/>
+                    <constraint firstItem="BQr-nY-IGW" firstAttribute="top" secondItem="Uh9-Px-BFL" secondAttribute="top" constant="8" id="Dxy-ZJ-IIg"/>
+                    <constraint firstAttribute="bottom" secondItem="BQr-nY-IGW" secondAttribute="bottom" constant="8" id="v06-SF-Dg1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundViewSwitcher" destination="BQr-nY-IGW" id="Tyq-xQ-6PX"/>
+                <outlet property="labelNotification" destination="AXz-8b-KlM" id="rwl-oP-Jj4"/>
+                <outlet property="switcher" destination="AXz-8b-KlM" id="SDF-JS-KRH"/>
+            </connections>
+            <point key="canvasLocation" x="303" y="5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

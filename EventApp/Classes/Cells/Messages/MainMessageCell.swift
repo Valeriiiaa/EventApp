@@ -9,12 +9,20 @@ import UIKit
 
 class MainMessageCell: UITableViewCell {
 
+    @IBOutlet weak var youHaveMessagesLabel: UILabel!
     @IBOutlet weak var amountMessages: UILabel!
     @IBOutlet weak var backgroundMessagesView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundMessagesView.layer.cornerRadius = 12
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: backgroundMessagesView.layer.cornerRadius = 12
+            
+            default: backgroundMessagesView.layer.cornerRadius = 24
+                
+        }
+        
         backgroundMessagesView.layer.masksToBounds = true
         
     }

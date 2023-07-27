@@ -11,6 +11,8 @@ import SwiftEntryKit
 import Swinject
 
 class MainViewController: UIViewController, UITextFieldDelegate {
+   
+    @IBOutlet weak var didNotGetCodeButton: UIButton!
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var phoneTextField: TextField!
@@ -20,13 +22,23 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneTextField.layer.cornerRadius = 12
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            phoneTextField.layer.cornerRadius = 12
+            getCodeButton.layer.cornerRadius = 12
+            
+        default: phoneTextField.layer.cornerRadius = 24
+                 getCodeButton.layer.cornerRadius = 24
+        }
+      
         phoneTextField.layer.masksToBounds = true
-        getCodeButton.layer.cornerRadius = 12
         getCodeButton.layer.masksToBounds = true
         phoneTextField.delegate = self
         
         phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
+        didNotGetCodeButton.setTitle("didGetTheCode"., for: .normal)
+        labelText
         
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         

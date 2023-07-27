@@ -8,7 +8,7 @@
 "effectiveHomeCareMassager" = "ЭФФЕКТИВНЫЙ ДОМАШНИЙ МАССАЖЕР";
 "Phone" = "Телефон";
 "getTheCode" = "Получить код";
-"didn'tGetTheCode" = "Не получил код.Отправить снова.";
+"didGetTheCode" = "Не получил код.Отправить снова.";
 "YouHaveNew" = "У нас новых";
 "messages" = "Сообщений";
 "JosephRodriguez" = "Joseph Rodriguez";

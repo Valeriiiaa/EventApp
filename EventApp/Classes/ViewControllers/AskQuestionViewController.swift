@@ -9,6 +9,8 @@ import UIKit
 
 class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var askQuestionLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var textFieldMessage: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -23,8 +25,8 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     
     private var tableViewMessages: UITableView = {
         let table = UITableView()
-        table.register(UINib(nibName: "RightMessagesCell" , bundle: nil), forCellReuseIdentifier: "RightMessagesCell")
-        table.register(UINib(nibName: "LeftMessagesCell" , bundle: nil), forCellReuseIdentifier: "LeftMessagesCell")
+        table.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
+        table.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))
         table.backgroundColor = nil
         table.separatorColor = .clear
         return table
@@ -34,11 +36,20 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sendMessageButton.layer.cornerRadius = 12
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            sendMessageButton.layer.cornerRadius = 12
+            textViewWriteMessage.layer.cornerRadius = 12
+            backgroundTypeView.layer.cornerRadius = 12
+            
+        default: sendMessageButton.layer.cornerRadius = 24
+                 textViewWriteMessage.layer.cornerRadius = 24
+                 backgroundTypeView.layer.cornerRadius = 24
+        }
+       
         sendMessageButton.layer.masksToBounds = true
-        textViewWriteMessage.layer.cornerRadius = 12
         textViewWriteMessage.layer.masksToBounds = true
-        backgroundTypeView.layer.cornerRadius = 12
         backgroundTypeView.layer.masksToBounds = true
         textViewWriteMessage.delegate = self
         scrollView.delegate = self
@@ -113,7 +124,7 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
     @objc
     @IBAction private func languageDidTap(_ sender: UIGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SelectionViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: CellManager.getCell(by: "SelectionViewController"))
         (vc as? SelectionViewController)?.allItems = language.map({ .init(key: $0.key, name: $0.text, isSelected: false) })
         (vc as? SelectionViewController)?.dataDidSelect = { [weak self] selectedData in
             guard let self else { return }
@@ -148,11 +159,11 @@ extension AskQuestionViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = messagesModel[indexPath.row]
         if model.isMe {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RightMessagesCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
             (cell as? RightMessagesCell)?.configure(text: model.textMessaging, time: model.time)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LefttMessagesCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LefttMessagesCell"), for: indexPath)
             (cell as? LeftMessagesCell)?.configure(text: model.textMessaging, time: model.time)
             return cell
         }

@@ -29,7 +29,7 @@ class SelectionViewController: UIViewController {
         super.viewDidLoad()
         selectionTableView.dataSource = self
         selectionTableView.delegate = self
-        selectionTableView.register(UINib(nibName: SelectionCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: SelectionCell.reuseIdentifier)
+        selectionTableView.register(UINib(nibName: CellManager.getCell(by: SelectionCell.reuseIdentifier), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: SelectionCell.reuseIdentifier))
         searchBar.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -50,7 +50,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 }
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: SelectionCell.reuseIdentifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: SelectionCell.reuseIdentifier), for: indexPath)
     let item = items[indexPath.row]
     (cell as? SelectionCell)?.configure(isSelected: item.isSelected, selectionName: item.name)
     return cell

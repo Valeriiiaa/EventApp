@@ -22,8 +22,8 @@
 		F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BE2A49C38A00C7C25A /* MenuModel.swift */; };
 		F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFCB2A5FFE0C00ECE98A /* IHProgressHUD */; };
 		F659EFCF2A60024400ECE98A /* Main-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659EFCE2A60024400ECE98A /* Main-ipad.storyboard */; };
-		F659EFD12A60079D00ECE98A /* MessageInfoCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD02A60079D00ECE98A /* MessageInfoCell-iPad.xib */; };
-		F659EFD32A6007AB00ECE98A /* MainMessageCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD22A6007AB00ECE98A /* MainMessageCell-iPad.xib */; };
+		F659EFD12A60079D00ECE98A /* MessageInfoCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD02A60079D00ECE98A /* MessageInfoCell-ipad.xib */; };
+		F659EFD32A6007AB00ECE98A /* MainMessageCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFD22A6007AB00ECE98A /* MainMessageCell-ipad.xib */; };
 		F659EFD82A600C5B00ECE98A /* StoryboardFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659EFD72A600C5B00ECE98A /* StoryboardFabric.swift */; };
 		F659EFDB2A60173E00ECE98A /* GetCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F659EFDA2A60173E00ECE98A /* GetCodeView.xib */; };
 		F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */ = {isa = PBXBuildFile; productRef = F659EFDD2A60186400ECE98A /* SGCodeTextField */; };
@@ -83,6 +83,15 @@
 		F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE982A53118900B2E1EE /* SelectionModel.swift */; };
 		F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */; };
 		F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */; };
+		F6D5D9672A72913D00A8053B /* InformationMessagesCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9662A72913D00A8053B /* InformationMessagesCell-ipad.xib */; };
+		F6D5D9692A72932F00A8053B /* SwitcherCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9682A72932F00A8053B /* SwitcherCell-ipad.xib */; };
+		F6D5D96B2A72936400A8053B /* CustomFieldCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D96A2A72936400A8053B /* CustomFieldCell-ipad.xib */; };
+		F6D5D96D2A72943000A8053B /* SelectionCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D96C2A72943000A8053B /* SelectionCell-ipad.xib */; };
+		F6D5D96F2A72945000A8053B /* MenuCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D96E2A72945000A8053B /* MenuCell-ipad.xib */; };
+		F6D5D9712A7294AD00A8053B /* Archive-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9702A7294AD00A8053B /* Archive-ipad.storyboard */; };
+		F6D5D9732A72972C00A8053B /* SettingsHeaderView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9722A72972B00A8053B /* SettingsHeaderView-ipad.xib */; };
+		F6D5D9752A72975000A8053B /* MenuHeaderView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9742A72975000A8053B /* MenuHeaderView-ipad.xib */; };
+		F6D5D9772A729A1600A8053B /* GetCodeView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9762A729A1600A8053B /* GetCodeView-ipad.xib */; };
 		F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */; };
 		F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */; };
 		F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE8D9F2A45C7BA0026E1E5 /* MainViewController.swift */; };
@@ -128,8 +137,8 @@
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
 		F655E2BE2A49C38A00C7C25A /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		F659EFCE2A60024400ECE98A /* Main-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Main-ipad.storyboard"; sourceTree = "<group>"; };
-		F659EFD02A60079D00ECE98A /* MessageInfoCell-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MessageInfoCell-iPad.xib"; sourceTree = "<group>"; };
-		F659EFD22A6007AB00ECE98A /* MainMessageCell-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainMessageCell-iPad.xib"; sourceTree = "<group>"; };
+		F659EFD02A60079D00ECE98A /* MessageInfoCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MessageInfoCell-ipad.xib"; sourceTree = "<group>"; };
+		F659EFD22A6007AB00ECE98A /* MainMessageCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainMessageCell-ipad.xib"; sourceTree = "<group>"; };
 		F659EFD72A600C5B00ECE98A /* StoryboardFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFabric.swift; sourceTree = "<group>"; };
 		F659EFDA2A60173E00ECE98A /* GetCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GetCodeView.xib; sourceTree = "<group>"; };
 		F659EFDF2A60198800ECE98A /* GetCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCodeView.swift; sourceTree = "<group>"; };
@@ -190,6 +199,15 @@
 		F6CEEE982A53118900B2E1EE /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
 		F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		F6D5D9662A72913D00A8053B /* InformationMessagesCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "InformationMessagesCell-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D9682A72932F00A8053B /* SwitcherCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SwitcherCell-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D96A2A72936400A8053B /* CustomFieldCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CustomFieldCell-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D96C2A72943000A8053B /* SelectionCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SelectionCell-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D96E2A72945000A8053B /* MenuCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MenuCell-ipad.xib"; path = "../Ipad/MenuCell-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D9702A7294AD00A8053B /* Archive-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Archive-ipad.storyboard"; sourceTree = "<group>"; };
+		F6D5D9722A72972B00A8053B /* SettingsHeaderView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SettingsHeaderView-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D9742A72975000A8053B /* MenuHeaderView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MenuHeaderView-ipad.xib"; sourceTree = "<group>"; };
+		F6D5D9762A729A1600A8053B /* GetCodeView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "GetCodeView-ipad.xib"; sourceTree = "<group>"; };
 		F6DE8D982A45C7BA0026E1E5 /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE8D9B2A45C7BA0026E1E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE8D9D2A45C7BA0026E1E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -280,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				F659EFCE2A60024400ECE98A /* Main-ipad.storyboard */,
+				F6D5D9702A7294AD00A8053B /* Archive-ipad.storyboard */,
 			);
 			path = Ipad;
 			sourceTree = "<group>";
@@ -296,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				F659EFDA2A60173E00ECE98A /* GetCodeView.xib */,
+				F6D5D9762A729A1600A8053B /* GetCodeView-ipad.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,9 +363,9 @@
 			isa = PBXGroup;
 			children = (
 				F685E7002A5576C800C7F457 /* MessageInfoCell.xib */,
-				F659EFD02A60079D00ECE98A /* MessageInfoCell-iPad.xib */,
+				F659EFD02A60079D00ECE98A /* MessageInfoCell-ipad.xib */,
 				F685E7072A557E1000C7F457 /* MainMessageCell.xib */,
-				F659EFD22A6007AB00ECE98A /* MainMessageCell-iPad.xib */,
+				F659EFD22A6007AB00ECE98A /* MainMessageCell-ipad.xib */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -354,7 +374,9 @@
 			isa = PBXGroup;
 			children = (
 				F6ABCE912A486F1100ECFE16 /* SwitcherCell.xib */,
+				F6D5D9682A72932F00A8053B /* SwitcherCell-ipad.xib */,
 				F6ABCE8F2A486F0400ECFE16 /* CustomFieldCell.xib */,
+				F6D5D96A2A72936400A8053B /* CustomFieldCell-ipad.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -382,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				F685E7202A55FAE800C7F457 /* InformationMessagesCell.xib */,
+				F6D5D9662A72913D00A8053B /* InformationMessagesCell-ipad.xib */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -491,6 +514,7 @@
 		F6ABCE8E2A486ED700ECFE16 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F6D5D9652A7290A800A8053B /* Ipad */,
 				F67741702A7168A0001A1D63 /* MassagesCell */,
 				F685E71A2A55F78800C7F457 /* Archive */,
 				F685E7022A5576D400C7F457 /* Settings */,
@@ -519,6 +543,8 @@
 			children = (
 				F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */,
 				F65CE1422A49C11B003E4E3F /* MenuHeaderView.xib */,
+				F6D5D9722A72972B00A8053B /* SettingsHeaderView-ipad.xib */,
+				F6D5D9742A72975000A8053B /* MenuHeaderView-ipad.xib */,
 			);
 			path = HeaderFooters;
 			sourceTree = "<group>";
@@ -577,6 +603,13 @@
 				F6C5ADD32A617BBD0058C8AF /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		F6D5D9652A7290A800A8053B /* Ipad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ipad;
 			sourceTree = "<group>";
 		};
 		F6DE8D8F2A45C7BA0026E1E5 = {
@@ -673,6 +706,7 @@
 		F6F71DA82A4F2C0B00BFAED4 /* MenuCell */ = {
 			isa = PBXGroup;
 			children = (
+				F6D5D96E2A72945000A8053B /* MenuCell-ipad.xib */,
 				F6F71DA92A4F2C1500BFAED4 /* MenuCell.xib */,
 			);
 			path = MenuCell;
@@ -698,6 +732,7 @@
 		F6F71DAF2A530EE600BFAED4 /* Selection */ = {
 			isa = PBXGroup;
 			children = (
+				F6D5D96C2A72943000A8053B /* SelectionCell-ipad.xib */,
 				F6F71DB02A530EF400BFAED4 /* SelectionCell.xib */,
 			);
 			path = Selection;
@@ -826,29 +861,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F659EFD32A6007AB00ECE98A /* MainMessageCell-iPad.xib in Resources */,
+				F659EFD32A6007AB00ECE98A /* MainMessageCell-ipad.xib in Resources */,
 				F6800C562A497A0E001FB2E5 /* Montserrat-Regular.ttf in Resources */,
+				F6D5D9692A72932F00A8053B /* SwitcherCell-ipad.xib in Resources */,
 				F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */,
 				F6F71DAA2A4F2C1500BFAED4 /* MenuCell.xib in Resources */,
 				F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */,
+				F6D5D96F2A72945000A8053B /* MenuCell-ipad.xib in Resources */,
+				F6D5D9772A729A1600A8053B /* GetCodeView-ipad.xib in Resources */,
 				F6F71DB12A530EF400BFAED4 /* SelectionCell.xib in Resources */,
 				F685E7012A5576C900C7F457 /* MessageInfoCell.xib in Resources */,
 				F685E7082A557E1000C7F457 /* MainMessageCell.xib in Resources */,
 				F659EFCF2A60024400ECE98A /* Main-ipad.storyboard in Resources */,
 				F6800C542A497A09001FB2E5 /* Montserrat-Light.ttf in Resources */,
+				F6D5D9672A72913D00A8053B /* InformationMessagesCell-ipad.xib in Resources */,
 				F6DE8DA82A45C7BB0026E1E5 /* LaunchScreen.storyboard in Resources */,
 				F685E7172A55F5D700C7F457 /* Archive.storyboard in Resources */,
 				F6ABCE922A486F1100ECFE16 /* SwitcherCell.xib in Resources */,
 				F6C5ADD12A617BBD0058C8AF /* Localizable.strings in Resources */,
 				F6800C572A497A0E001FB2E5 /* Montserrat-SemiBold.ttf in Resources */,
+				F6D5D9732A72972C00A8053B /* SettingsHeaderView-ipad.xib in Resources */,
 				F659EFDB2A60173E00ECE98A /* GetCodeView.xib in Resources */,
+				F6D5D96D2A72943000A8053B /* SelectionCell-ipad.xib in Resources */,
 				F67741722A7168B0001A1D63 /* LeftMessagesCell.xib in Resources */,
 				F6DE8DA52A45C7BB0026E1E5 /* Assets.xcassets in Resources */,
 				F67741742A7168BE001A1D63 /* RightMessagesCell.xib in Resources */,
+				F6D5D96B2A72936400A8053B /* CustomFieldCell-ipad.xib in Resources */,
 				F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */,
+				F6D5D9752A72975000A8053B /* MenuHeaderView-ipad.xib in Resources */,
 				F6DE8DA32A45C7BA0026E1E5 /* Main.storyboard in Resources */,
 				F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */,
-				F659EFD12A60079D00ECE98A /* MessageInfoCell-iPad.xib in Resources */,
+				F6D5D9712A7294AD00A8053B /* Archive-ipad.storyboard in Resources */,
+				F659EFD12A60079D00ECE98A /* MessageInfoCell-ipad.xib in Resources */,
 				F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */,
 				F685E7212A55FAE800C7F457 /* InformationMessagesCell.xib in Resources */,
 				F6ABCE902A486F0400ECFE16 /* CustomFieldCell.xib in Resources */,

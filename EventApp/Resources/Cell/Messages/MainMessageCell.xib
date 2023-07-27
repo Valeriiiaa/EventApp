@@ -28,13 +28,13 @@
                                 <rect key="frame" x="28" y="23" width="92" height="60"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have new" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-Ng-vJX">
-                                <rect key="frame" x="135" y="39.666666666666664" width="152.66666666666663" height="26.999999999999993"/>
+                                <rect key="frame" x="135" y="40.333333333333336" width="136.66666666666663" height="25.666666666666664"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-L5-wSx">
-                                <rect key="frame" x="89" y="88.333333333333329" width="175" height="36.666666666666671"/>
+                                <rect key="frame" x="95.666666666666686" y="90" width="162" height="35"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,6 +65,7 @@
             <connections>
                 <outlet property="amountMessages" destination="vyn-L5-wSx" id="wMZ-Qb-34A"/>
                 <outlet property="backgroundMessagesView" destination="icg-lJ-icG" id="qH8-SQ-9RS"/>
+                <outlet property="youHaveMessagesLabel" destination="aQ4-Ng-vJX" id="OHT-VH-DhL"/>
             </connections>
             <point key="canvasLocation" x="183.96946564885496" y="-2.8169014084507045"/>
         </tableViewCell>

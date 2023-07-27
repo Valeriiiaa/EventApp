@@ -8,7 +8,7 @@
 "effectiveHomeCareMassager" = "MASAJEADOR EFECTIVO PARA EL CUIDADO EN EL HOGAR";
 "Phone" = "Teléfono";
 "getTheCode" = "Obtener el código";
-"didn'tGetTheCode" = "No recibí el código. Envíalo de nuevo.";
+"didGetTheCode" = "No recibí el código. Envíalo de nuevo.";
 "YouHaveNew" = "Tienes nuevos";
 "messages" = "Mensajes";
 "JosephRodriguez" = "Joseph Rodriguez";

@@ -25,8 +25,8 @@ class MessagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "MessageInfoCell" , bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
-        tableView.register(UINib(nibName: "MainMessageCell" , bundle: nil), forCellReuseIdentifier: "MainMessageCell")
+        tableView.register(UINib(nibName: CellManager.getCell(by: "MessageInfoCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MessageInfoCell"))
+        tableView.register(UINib(nibName: CellManager.getCell(by: "MainMessageCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MainMessageCell"))
         tableView.dataSource = self
         tableView.delegate = self
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
@@ -78,11 +78,11 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         let item = messages[indexPath.row]
         switch item.itemsInside.first {
         case .messageInfoCell(let messagesModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MessageInfoCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
             (cell as? MessageInfoCell)?.configure(data: messagesModel.data, text: messagesModel.text, labelAttention: messagesModel.label, image: messagesModel.image)
             return cell
         case .mainMessageCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainMessageCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MainMessageCell"), for: indexPath)
             return cell
         default: return UITableViewCell()
         }

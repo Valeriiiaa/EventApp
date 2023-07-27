@@ -20,7 +20,14 @@ class MessageInfoCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundMessageView.layer.cornerRadius = 12
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: backgroundMessageView.layer.cornerRadius = 12
+            
+            default: backgroundMessageView.layer.cornerRadius = 12
+                
+        }
+       
         backgroundMessageView.layer.masksToBounds = true
         
 

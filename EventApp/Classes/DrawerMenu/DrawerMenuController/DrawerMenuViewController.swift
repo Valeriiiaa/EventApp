@@ -27,8 +27,8 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(UINib(nibName: "MenuCell" , bundle: nil), forCellReuseIdentifier: "MenuCell")
-        table.register(UINib(nibName: "MenuHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "MenuHeaderView")
+        table.register(UINib(nibName: CellManager.getCell(by: "MenuCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MenuCell"))
+        table.register(UINib(nibName:HeaderManager.getHeader(by: "MenuHeaderView"), bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderManager.getHeader(by: "MenuHeaderView"))
         table.backgroundColor = nil
         table.separatorColor = .clear
         return table
@@ -75,7 +75,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MenuCell"), for: indexPath)
         let item = menuItems[indexPath.section].itemsInside[indexPath.row]
         (cell as? MenuCell)?.configure(label: item.rawValue, picture: item.imageName)
         cell.backgroundColor = nil
@@ -106,7 +106,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openAskQuestionVC() {
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AskQuestionViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
         guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
             dismiss(animated: true)
             return
@@ -116,7 +116,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openHomeVC() {
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
         guard !(drawerNavigationController?.viewControllers.last is MessagesViewController) else {
             dismiss(animated: true)
             return
@@ -126,7 +126,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openArchiveVC() {
-        let entrance = UIStoryboard(name: "Archive", bundle: nil).instantiateViewController(withIdentifier: "ArchiveViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Archive").instantiateViewController(withIdentifier: "ArchiveViewController")
         guard !(drawerNavigationController?.viewControllers.last is ArchiveViewController) else {
             dismiss(animated: true)
             return
@@ -136,7 +136,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openSettingsVC() {
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "SettingsViewController")
         guard !(drawerNavigationController?.viewControllers.last is SettingsViewController) else {
             dismiss(animated: true)
             return
@@ -146,7 +146,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openMainVC() {
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
         guard !(drawerNavigationController?.viewControllers.last is MainViewController) else {
             dismiss(animated: true)
             return

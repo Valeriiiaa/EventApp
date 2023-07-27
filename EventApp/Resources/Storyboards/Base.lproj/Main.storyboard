@@ -115,6 +115,7 @@
                     <navigationItem key="navigationItem" id="A6q-Hz-NDO"/>
                     <connections>
                         <outlet property="bottomContainerConstraint" destination="oSI-Wv-78R" id="HT1-J2-Ots"/>
+                        <outlet property="didNotGetCodeButton" destination="uma-bF-n1u" id="XtR-a4-O11"/>
                         <outlet property="getCodeButton" destination="1BS-cA-qXe" id="t45-ZP-RKd"/>
                         <outlet property="imageView" destination="pCm-Oz-QNa" id="0x6-UQ-fut"/>
                         <outlet property="labelText" destination="Rdg-Vw-Uf6" id="apJ-OL-gc5"/>
@@ -287,12 +288,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="XxF-5Y-fGx" id="geA-Lh-IfP"/>
                         <outlet property="tableView" destination="GTr-gb-fGn" id="w9c-4t-dLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKm-8C-1u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2965.6488549618321" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2915" y="-2"/>
         </scene>
         <!--Ask Question View Controller-->
         <scene sceneID="Iza-OK-dgw">
@@ -498,6 +500,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="askQuestionLabel" destination="glb-uw-XgC" id="1oM-aR-Fqh"/>
+                        <outlet property="backButton" destination="WI6-1l-bvi" id="GcO-b3-yQE"/>
                         <outlet property="backgroundTypeView" destination="TlC-KM-6hb" id="qRu-rH-pHf"/>
                         <outlet property="scrollView" destination="3pi-MN-YDY" id="tSq-e9-QCm"/>
                         <outlet property="sendButton" destination="xed-wX-NvE" id="hDW-Ep-oDF"/>

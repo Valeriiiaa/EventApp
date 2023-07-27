@@ -8,7 +8,7 @@
 "effectiveHomeCareMassager" = "EFFECTIVE HOME CARE MASSAGER";
 "Phone" = "Phone";
 "getTheCode" = "Get the code";
-"didn'tGetTheCode" = "Didn`t get the code. Send it again";
+"didGetTheCode" = "Didn`t get the code. Send it again";
 "YouHaveNew" = "You have new";
 "messages" = "Messages";
 "JosephRodriguez" = "Joseph Rodriguez";

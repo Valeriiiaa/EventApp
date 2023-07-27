@@ -16,9 +16,9 @@ class ArchiveViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "MessageInfoCell", bundle: nil), forCellReuseIdentifier: "MessageInfoCell")
-            tableView.register(UINib(nibName: "WarningMessagesCell", bundle: nil), forCellReuseIdentifier: "WarningMessagesCell")
-        tableView.register(UINib(nibName: "InformationMessagesCell", bundle: nil), forCellReuseIdentifier: "InformationMessagesCell")
+        tableView.register(UINib(nibName: CellManager.getCell(by: "MessageInfoCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MessageInfoCell"))
+        tableView.register(UINib(nibName: CellManager.getCell(by: "WarningMessagesCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "WarningMessagesCell"))
+        tableView.register(UINib(nibName: CellManager.getCell(by: "InformationMessagesCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "InformationMessagesCell"))
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -51,11 +51,11 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
         let item = messages[indexPath.row]
         switch item.itemsInside.first {
         case .archiveMessage(let archiveModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MessageInfoCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
             (cell as? MessageInfoCell)?.configure(data: archiveModel.data, text: archiveModel.text, labelAttention: archiveModel.label, image: archiveModel.image)
             return cell
         case .warningMessage(let warningModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: "InformationMessagesCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "InformationMessagesCell"), for: indexPath)
             (cell as? InformationMessagesCell)?.configure(data: warningModel.data, image: warningModel.image, text: warningModel.text, infoMessage: warningModel.info)
             return cell
         default: return UITableViewCell()
