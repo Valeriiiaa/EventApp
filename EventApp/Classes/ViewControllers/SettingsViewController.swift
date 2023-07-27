@@ -23,6 +23,8 @@ class SettingsViewController: UIViewController {
         tableView.register(UINib(nibName: HeaderManager.getHeader(by: "SettingsHeaderView"), bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderManager.getHeader(by: "SettingsHeaderView"))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
+        
+        backButton.setTitle("back".localized, for: .normal)
     }
     
     @objc func dismissKeyboard() {

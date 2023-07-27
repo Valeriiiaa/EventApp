@@ -37,8 +37,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         phoneTextField.delegate = self
         
         phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
-        didNotGetCodeButton.setTitle("didGetTheCode"., for: .normal)
-        labelText
+        didNotGetCodeButton.setTitle("didGetTheCode".localized, for: .normal)
+        labelText.text = "effectiveHomeCareMassager".localized
+        getCodeButton.setTitle("getTheCode".localized, for: .normal)
         
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
         

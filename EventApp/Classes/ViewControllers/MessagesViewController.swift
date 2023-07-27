@@ -32,6 +32,8 @@ class MessagesViewController: UIViewController {
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
         fetchProfile()
         bind()
+        
+        goToWebsiteButton.setTitle("gooWebsite".localized, for: .normal)
     }
     
     private func bind() {

@@ -60,6 +60,13 @@ class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFie
         textFieldMessage.layer.masksToBounds = true
         textFieldMessage.text = "Write a message"
         textFieldMessage.textColor = UIColor(red: 210/255, green: 212/255, blue: 214/255, alpha: 1)
+        
+        askQuestionLabel.text = "askQestion".localized
+        backButton.setTitle("back".localized, for: .normal)
+        sendButton.setTitle("".localized, for: .normal)
+        sendMessageButton.setTitle("sendMessage".localized, for: .normal)
+        
+        
     }
     
     override func viewDidLayoutSubviews() {

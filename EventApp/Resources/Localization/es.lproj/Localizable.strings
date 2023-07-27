@@ -15,7 +15,7 @@
 "gooWebsite" = "Ir al sitio web";
 "menu" = "Menú";
 "homw" = "Home";
-"AskQestion" = "Hacer una pregunta";
+"askQestion" = "Hacer una pregunta";
 "archive" = "Archivo";
 "settings" = "Settings";
 "logOut" = "Cerrar sesión";

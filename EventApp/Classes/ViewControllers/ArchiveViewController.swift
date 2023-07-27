@@ -22,7 +22,7 @@ class ArchiveViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        
+        backButton.setTitle("back".localized, for: .normal)
     }
     
 
