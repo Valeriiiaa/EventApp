@@ -47,6 +47,19 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            tableView.beginUpdates()
+            messages.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .none)
+            tableView.endUpdates()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = messages[indexPath.row]
         switch item.itemsInside.first {

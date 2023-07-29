@@ -514,7 +514,6 @@
 		F6ABCE8E2A486ED700ECFE16 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F6D5D9652A7290A800A8053B /* Ipad */,
 				F67741702A7168A0001A1D63 /* MassagesCell */,
 				F685E71A2A55F78800C7F457 /* Archive */,
 				F685E7022A5576D400C7F457 /* Settings */,
@@ -603,13 +602,6 @@
 				F6C5ADD32A617BBD0058C8AF /* Localizable.strings */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		F6D5D9652A7290A800A8053B /* Ipad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Ipad;
 			sourceTree = "<group>";
 		};
 		F6DE8D8F2A45C7BA0026E1E5 = {

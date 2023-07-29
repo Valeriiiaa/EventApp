@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXU-eo-p9d">
-                        <rect key="frame" x="8" y="0.0" width="618" height="134"/>
+                        <rect key="frame" x="20" y="0.0" width="594" height="134"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attentionMessage" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-gG-epR">
                                 <rect key="frame" x="10" y="10" width="57" height="114"/>
@@ -58,9 +58,9 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="CXU-eo-p9d" secondAttribute="trailing" constant="8" id="OAf-8p-Vcb"/>
+                    <constraint firstAttribute="trailing" secondItem="CXU-eo-p9d" secondAttribute="trailing" constant="20" id="OAf-8p-Vcb"/>
                     <constraint firstItem="CXU-eo-p9d" firstAttribute="top" secondItem="xFD-e0-dls" secondAttribute="top" id="b9x-9H-Oko"/>
-                    <constraint firstItem="CXU-eo-p9d" firstAttribute="leading" secondItem="xFD-e0-dls" secondAttribute="leading" constant="8" id="el1-5K-FZu"/>
+                    <constraint firstItem="CXU-eo-p9d" firstAttribute="leading" secondItem="xFD-e0-dls" secondAttribute="leading" constant="20" id="el1-5K-FZu"/>
                     <constraint firstAttribute="bottom" secondItem="CXU-eo-p9d" secondAttribute="bottom" id="mFS-Lw-MrR"/>
                 </constraints>
             </tableViewCellContentView>
