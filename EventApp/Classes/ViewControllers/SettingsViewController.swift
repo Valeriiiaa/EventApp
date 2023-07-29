@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var itemsSection = [SectionModel(titleHeader: "Personal Information", itemsInside: [.textField(TextFieldModel(text: "Name", keyboardType: .default)), .textField(TextFieldModel(text: "Login", keyboardType: .numberPad))]), SectionModel(titleHeader: "Notification", itemsInside: [.switcher(SwitcherModel(title: "Information messenges")), .switcher(SwitcherModel(title: "Attention messanges")), .switcher(SwitcherModel(title: "Warning messages"))])]
+    var itemsSection = [SectionModel(titleHeader: "personalInformation".localized, itemsInside: [.textField(TextFieldModel(text: "name".localized, keyboardType: .default)), .textField(TextFieldModel(text: "login".localized, keyboardType: .numberPad))]), SectionModel(titleHeader: "notification".localized, itemsInside: [.switcher(SwitcherModel(title: "informationMessanges".localized)), .switcher(SwitcherModel(title: "attentionMessanges".localized)), .switcher(SwitcherModel(title: "warningMessanges".localized))])]
 
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!

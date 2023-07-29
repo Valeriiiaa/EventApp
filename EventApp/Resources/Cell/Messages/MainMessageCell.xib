@@ -28,27 +28,38 @@
                                 <rect key="frame" x="28" y="23" width="92" height="60"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have new" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-Ng-vJX">
-                                <rect key="frame" x="135" y="40.333333333333336" width="136.66666666666663" height="25.666666666666664"/>
+                                <rect key="frame" x="135" y="39.666666666666664" width="152.66666666666663" height="26.999999999999993"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-L5-wSx">
-                                <rect key="frame" x="95.666666666666686" y="90" width="162" height="35"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-87-AnX">
+                                <rect key="frame" x="84" y="98.333333333333329" width="185" height="36.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cku-5U-UxR">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-L5-wSx">
+                                        <rect key="frame" x="30" y="0.0" width="155" height="36.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aQ4-Ng-vJX" firstAttribute="leading" secondItem="vzb-Hr-eSY" secondAttribute="trailing" constant="15" id="O24-DV-NdJ"/>
-                            <constraint firstAttribute="bottom" secondItem="vyn-L5-wSx" secondAttribute="bottom" constant="25" id="WeB-gj-zWQ"/>
+                            <constraint firstAttribute="bottom" secondItem="uPj-87-AnX" secondAttribute="bottom" constant="15" id="TyC-vZ-EDd"/>
                             <constraint firstItem="vzb-Hr-eSY" firstAttribute="top" secondItem="icg-lJ-icG" secondAttribute="top" constant="23" id="biD-En-Avi"/>
+                            <constraint firstItem="uPj-87-AnX" firstAttribute="centerX" secondItem="icg-lJ-icG" secondAttribute="centerX" id="cKy-aE-WFO"/>
                             <constraint firstItem="vzb-Hr-eSY" firstAttribute="leading" secondItem="icg-lJ-icG" secondAttribute="leading" constant="28" id="dFq-Po-EtX"/>
                             <constraint firstItem="aQ4-Ng-vJX" firstAttribute="centerY" secondItem="vzb-Hr-eSY" secondAttribute="centerY" id="eK4-rr-8gS"/>
                             <constraint firstItem="vzb-Hr-eSY" firstAttribute="height" secondItem="icg-lJ-icG" secondAttribute="height" multiplier="0.4" id="ljS-9e-d68"/>
-                            <constraint firstItem="vyn-L5-wSx" firstAttribute="centerX" secondItem="icg-lJ-icG" secondAttribute="centerX" id="otB-33-xrM"/>
                             <constraint firstAttribute="height" constant="150" id="zKx-vo-Qc5"/>
                         </constraints>
                     </view>

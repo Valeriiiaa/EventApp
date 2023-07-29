@@ -14,7 +14,7 @@
 "JosephRodriguez" = "Joseph Rodriguez";
 "gooWebsite" = "Перейти на вебсайт";
 "menu" = "МЕНЮ";
-"home" = "Дом";
+"home" = "Главная";
 "askQestion" = "Задать вопрос";
 "archive" = "Архив";
 "settings" = "Настройки";
@@ -24,9 +24,9 @@
 "name" = "Имя";
 "login" = "Логин";
 "notification" = "Уведомления";
-"informationMessanges" = "Информационные сообщения";
+"informationMessanges" = "Информационные\nсообщения";
 "attentionMessanges" = "Важные сообщения";
-"warningMessanges" = "Предупреждающие сообщения";
+"warningMessanges" = "Предупреждающие\nсообщения";
 "attention" = "Внимание!";
 "youHaveReceived" = "Вы получили";
 "information message" = "Информационное сообщение.";
@@ -35,4 +35,4 @@
 "language" = "Язык";
 "writeMessage" = "Напишите сообщение";
 "sendMessage" = "Отправить сообщение";
-"InvalidVerificationCode" = "Неправильный код";
+"invalidVerificationCode" = "Неправильный код";

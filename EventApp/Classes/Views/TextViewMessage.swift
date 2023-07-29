@@ -11,7 +11,7 @@ class OverlayView: UIView {
     let messageLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.black
-        label.text = "Write your message"
+        label.text = "writeMessage".localized
         label.font = UIFont(name: "Montserrat", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

@@ -70,7 +70,7 @@
                                         <rect key="frame" x="34" y="508.33333333333337" width="319" height="33"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Didn`t get the code. Send it again">
+                                        <state key="normal" title="Didn`t get the code.  Send it again">
                                             <color key="titleColor" red="1" green="0.098039215686274508" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>

@@ -35,5 +35,5 @@
 "language" = "Language";
 "writeMessage" = "Write your message";
 "sendMessage" = "Send a message";
-"InvalidVerificationCode" = "Invalid verification code";
+"invalidVerificationCode" = "Invalid verification code";
 

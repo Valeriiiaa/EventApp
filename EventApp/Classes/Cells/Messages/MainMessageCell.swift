@@ -15,6 +15,8 @@ class MainMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        youHaveMessagesLabel.text = "YouHaveNew".localized
+        amountMessages.text = "messages".localized
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone: backgroundMessagesView.layer.cornerRadius = 12

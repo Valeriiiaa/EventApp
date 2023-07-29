@@ -11,6 +11,11 @@ class MenuHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var headerName: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        headerName.text = "menu".localized
+    }
+    
     func configure(name: String) {
         headerName.text = name
     }

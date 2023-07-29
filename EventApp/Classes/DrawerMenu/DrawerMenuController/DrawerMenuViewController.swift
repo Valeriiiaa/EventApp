@@ -77,7 +77,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MenuCell"), for: indexPath)
         let item = menuItems[indexPath.section].itemsInside[indexPath.row]
-        (cell as? MenuCell)?.configure(label: item.rawValue, picture: item.imageName)
+        (cell as? MenuCell)?.configure(label: item.description, picture: item.imageName)
         cell.backgroundColor = nil
         cell.contentView.backgroundColor = nil
         return cell

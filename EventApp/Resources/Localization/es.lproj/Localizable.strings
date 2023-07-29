@@ -35,4 +35,4 @@
 "language" = "Iidioma";
 "writeMessage" = "Escribe tu mensaje";
 "sendMessage" = "Enviar un mensaje";
-"InvalidVerificationCode" = "Código de verificación no válido";
+"invalidVerificationCode" = "Código de verificación no válido";

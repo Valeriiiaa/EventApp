@@ -29,6 +29,8 @@ class GetCodeView: UIView {
         pidCodeView.digitBackgroundColor = .clear
         pidCodeView.digitBackgroundColorEmpty = .clear
         pidCodeView.textColor = .label
+        
+        invalidCodeLabel.text = "invalidVerificationCode".localized
     }
     
     @IBAction func cancelButtonDidTap(_ sender: Any) {
