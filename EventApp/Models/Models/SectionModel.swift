@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct SectionModel {
-    
+class SectionModel {
     let titleHeader: String
-    let itemsInside: [SettingsCellType]
+    let itemsInside: [any ItemStateable]
+    
+    init(titleHeader: String, itemsInside: [any ItemStateable]) {
+        self.titleHeader = titleHeader
+        self.itemsInside = itemsInside
+    }
 }

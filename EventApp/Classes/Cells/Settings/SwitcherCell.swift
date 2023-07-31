@@ -10,7 +10,7 @@ import UIKit
 class SwitcherCell: UITableViewCell {
 
     @IBOutlet weak var backgroundViewSwitcher: UIView!
-    @IBOutlet weak var switcher: UILabel!
+    @IBOutlet weak var switcher: UISwitch!
     @IBOutlet weak var labelNotification: UILabel!
     
     
@@ -28,10 +28,10 @@ class SwitcherCell: UITableViewCell {
 
         
     }
-    
-    
    
-    func configure(text: String) {
-        labelNotification.text = text
+    func configure(model: SwitcherStateSectionModel) {
+        labelNotification.text = model.title
+        guard let state = model.stateModel.state as? Bool else { return }
+        switcher.isOn = state
     }
 }

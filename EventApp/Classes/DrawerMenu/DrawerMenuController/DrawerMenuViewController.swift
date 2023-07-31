@@ -151,6 +151,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             dismiss(animated: true)
             return
         }
+        NetworkManager.shared.logout()
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
     }

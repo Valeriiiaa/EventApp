@@ -199,6 +199,7 @@
                     </view>
                     <connections>
                         <outlet property="goToWebsiteButton" destination="F5Y-tN-ajB" id="5ra-qd-MvC"/>
+                        <outlet property="nameLabel" destination="TxY-5P-k9Z" id="c09-cF-BLG"/>
                         <outlet property="tableView" destination="yVP-h3-c26" id="H5B-wK-9tO"/>
                     </connections>
                 </viewController>

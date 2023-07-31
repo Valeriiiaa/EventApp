@@ -100,7 +100,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         container.register(UserManager.self, factory: { r in
             print("registered")
             return UserManager(token: token)
-        }).inObjectScope(.graph)
+        }).inObjectScope(.container)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

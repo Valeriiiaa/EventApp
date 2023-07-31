@@ -30,8 +30,8 @@ class MessagesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
-        fetchProfile()
         bind()
+        fetchProfile()
         
         goToWebsiteButton.setTitle("gooWebsite".localized, for: .normal)
     }
@@ -65,7 +65,6 @@ class MessagesViewController: UIViewController {
             }
         })
     }
-    
 }
 
 extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {

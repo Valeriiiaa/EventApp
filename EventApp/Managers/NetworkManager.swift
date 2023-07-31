@@ -73,6 +73,18 @@ class NetworkManager {
         task.resume()
     }
     
+    func logout() {
+        var url = URLRequest(url: URL(string: serverURL + "logout")!)
+        url.httpMethod = "GET"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            print(error)
+        }
+        task.resume()
+    }
+    
     func requestWithCode(phone: String, code: String, comletion: @escaping(Result<String, Error>) -> Void) {
         var url = URLRequest(url: URL(string: serverURL + "verify-code")!)
         url.httpMethod = "POST"

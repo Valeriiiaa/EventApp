@@ -60,7 +60,7 @@
             <connections>
                 <outlet property="backgroundViewSwitcher" destination="jce-IO-oHU" id="sBy-Lc-70R"/>
                 <outlet property="labelNotification" destination="cgZ-6l-f9y" id="b9u-n4-Wbv"/>
-                <outlet property="switcher" destination="cgZ-6l-f9y" id="Kcd-uz-2Wb"/>
+                <outlet property="switcher" destination="L03-L6-dHt" id="IJi-qY-zFT"/>
             </connections>
             <point key="canvasLocation" x="303" y="5"/>
         </tableViewCell>

@@ -8,10 +8,11 @@
 import UIKit
 
 class CustomFieldCell: UITableViewCell {
-   
+    
     @IBOutlet weak var textField: TextField!
     
     private var label: UILabel?
+    private var textFiledModel: TextFieldStateSectionModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,14 +29,23 @@ class CustomFieldCell: UITableViewCell {
         textField.leftViewMode = .always
         self.label = label
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-}
-    
-    func configure(text: String, keyboardType: UIKeyboardType) {
-        label?.text = text
-        textField.keyboardType = keyboardType
     }
-
+    
+    func configure(model: TextFieldStateSectionModel) {
+        label?.text = model.title
+        textField.keyboardType = model.keyboardType
+        guard let state = model.stateModel.state as? String else { return }
+        textField.text = state
+    }
+    
+    //    func configure<T>(model: StateModel<T>) {
+    //        guard model
+    //        label?.text = model.title
+    //        textField.keyboardType = model.keyboardType
+    //        textFiledModel = model
+    //    }
+    
 }

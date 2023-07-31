@@ -15,6 +15,11 @@
 		11769E262A72928A008237D6 /* LocalStorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E252A72928A008237D6 /* LocalStorageKey.swift */; };
 		11769E292A72979A008237D6 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 11769E282A72979A008237D6 /* Swinject */; };
 		11769E2B2A729A79008237D6 /* ProfileModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */; };
+		11769E3C2A76B5D4008237D6 /* SwitcherStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3B2A76B5D4008237D6 /* SwitcherStateSectionModel.swift */; };
+		11769E3E2A76B5E3008237D6 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3D2A76B5E3008237D6 /* StateModel.swift */; };
+		11769E402A76B604008237D6 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3F2A76B604008237D6 /* StateType.swift */; };
+		11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */; };
+		11D303722A77B34300BD7B27 /* TextFieldStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */; };
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
@@ -59,7 +64,6 @@
 		F685E72A2A55FE7400C7F457 /* ArchiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7292A55FE7400C7F457 /* ArchiveModel.swift */; };
 		F685E72C2A55FEC000C7F457 /* InformationMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E72B2A55FEC000C7F457 /* InformationMessageModel.swift */; };
 		F685E72E2A55FF1600C7F457 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E72D2A55FF1600C7F457 /* MessageModel.swift */; };
-		F685E7362A5889C800C7F457 /* TextFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685E7352A5889C800C7F457 /* TextFieldModel.swift */; };
 		F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */; };
 		F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */; };
 		F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */; };
@@ -72,8 +76,6 @@
 		F6ABCE9C2A48710A00ECFE16 /* SettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */; };
 		F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */; };
 		F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA12A48724200ECFE16 /* SectionModel.swift */; };
-		F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */; };
-		F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */; };
 		F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */; };
 		F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */; };
 		F6C5ADD12A617BBD0058C8AF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6C5ADD32A617BBD0058C8AF /* Localizable.strings */; };
@@ -132,6 +134,11 @@
 		11769E232A72927E008237D6 /* SecuredStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredStorage.swift; sourceTree = "<group>"; };
 		11769E252A72928A008237D6 /* LocalStorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKey.swift; sourceTree = "<group>"; };
 		11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelResponse.swift; sourceTree = "<group>"; };
+		11769E3B2A76B5D4008237D6 /* SwitcherStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherStateSectionModel.swift; sourceTree = "<group>"; };
+		11769E3D2A76B5E3008237D6 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		11769E3F2A76B604008237D6 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStateable.swift; sourceTree = "<group>"; };
+		11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStateSectionModel.swift; sourceTree = "<group>"; };
 		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
@@ -172,7 +179,6 @@
 		F685E7292A55FE7400C7F457 /* ArchiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveModel.swift; sourceTree = "<group>"; };
 		F685E72B2A55FEC000C7F457 /* InformationMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMessageModel.swift; sourceTree = "<group>"; };
 		F685E72D2A55FF1600C7F457 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
-		F685E7352A5889C800C7F457 /* TextFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModel.swift; sourceTree = "<group>"; };
 		F6ABCE812A46E3DA00ECFE16 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		F6ABCE832A46E42800ECFE16 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		F6ABCE862A46E47D00ECFE16 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
@@ -185,8 +191,6 @@
 		F6ABCE9B2A48710A00ECFE16 /* SettingsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderView.xib; sourceTree = "<group>"; };
 		F6ABCE9F2A48719400ECFE16 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		F6ABCEA12A48724200ECFE16 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
-		F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
-		F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherModel.swift; sourceTree = "<group>"; };
 		F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRequest.swift; sourceTree = "<group>"; };
 		F6C5ADD22A617BBD0058C8AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -292,6 +296,17 @@
 				11769E252A72928A008237D6 /* LocalStorageKey.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		11769E342A76B576008237D6 /* TableViewForm */ = {
+			isa = PBXGroup;
+			children = (
+				11769E3B2A76B5D4008237D6 /* SwitcherStateSectionModel.swift */,
+				11769E3D2A76B5E3008237D6 /* StateModel.swift */,
+				11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */,
+				11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */,
+			);
+			path = TableViewForm;
 			sourceTree = "<group>";
 		};
 		F659EFCD2A60023500ECE98A /* Ipad */ = {
@@ -447,14 +462,6 @@
 			path = Archive;
 			sourceTree = "<group>";
 		};
-		F685E7302A56060400C7F457 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				F6ABCEA42A48727C00ECFE16 /* SettingsCellType.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		F685E7312A56060D00C7F457 /* DrawerMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +558,7 @@
 		F6ABCE9E2A48717100ECFE16 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11769E342A76B576008237D6 /* TableViewForm */,
 				F659EFD42A600C3300ECE98A /* Fabrics */,
 				F685E7152A559D8C00C7F457 /* Views */,
 				F6ABCE8D2A486EC800ECFE16 /* Cells */,
@@ -566,7 +574,6 @@
 			isa = PBXGroup;
 			children = (
 				F685E7312A56060D00C7F457 /* DrawerMenu */,
-				F685E7302A56060400C7F457 /* Settings */,
 				F685E7282A55FE0400C7F457 /* Archive */,
 				F685E70B2A558AA500C7F457 /* Messages */,
 			);
@@ -586,12 +593,11 @@
 			isa = PBXGroup;
 			children = (
 				F6ABCEA12A48724200ECFE16 /* SectionModel.swift */,
-				F6ABCEA62A48735600ECFE16 /* SwitcherModel.swift */,
-				F685E7352A5889C800C7F457 /* TextFieldModel.swift */,
 				F655E2BE2A49C38A00C7C25A /* MenuModel.swift */,
 				F6CEEE982A53118900B2E1EE /* SelectionModel.swift */,
 				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
 				F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */,
+				11769E3F2A76B604008237D6 /* StateType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -916,6 +922,7 @@
 				F685E71F2A55F7B200C7F457 /* ArchiveMessagesCell.swift in Sources */,
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
 				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
+				11769E3E2A76B5E3008237D6 /* StateModel.swift in Sources */,
 				F6C5ADD82A631DAA0058C8AF /* ServerResponse.swift in Sources */,
 				F6ABCEA22A48724200ECFE16 /* SectionModel.swift in Sources */,
 				F685E7122A558BCD00C7F457 /* MessagesModel.swift in Sources */,
@@ -931,9 +938,12 @@
 				F659EFD82A600C5B00ECE98A /* StoryboardFabric.swift in Sources */,
 				F6ABCE8A2A46E4AC00ECFE16 /* DrawerPresentationController.swift in Sources */,
 				F6CEEE9C2A53216400B2E1EE /* TypeModel.swift in Sources */,
+				11D303722A77B34300BD7B27 /* TextFieldStateSectionModel.swift in Sources */,
 				F65CE1412A497B05003E4E3F /* TextField.swift in Sources */,
 				11769E182A7289B6008237D6 /* String+Localization.swift in Sources */,
+				11769E402A76B604008237D6 /* StateType.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
+				11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */,
 				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
 				F685E7192A55F74E00C7F457 /* ArchiveViewController.swift in Sources */,
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
@@ -941,6 +951,7 @@
 				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
 				F685E72E2A55FF1600C7F457 /* MessageModel.swift in Sources */,
 				F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */,
+				11769E3C2A76B5D4008237D6 /* SwitcherStateSectionModel.swift in Sources */,
 				11769E2B2A729A79008237D6 /* ProfileModelResponse.swift in Sources */,
 				F655E2BF2A49C38A00C7C25A /* MenuModel.swift in Sources */,
 				F6ABCE962A486F3A00ECFE16 /* CustomFieldCell.swift in Sources */,
@@ -953,13 +964,10 @@
 				F67741772A7168EC001A1D63 /* LeftMessagesCell.swift in Sources */,
 				F6DE8D9E2A45C7BA0026E1E5 /* SceneDelegate.swift in Sources */,
 				F6ABCE872A46E47D00ECFE16 /* DrawerSlideAnimation.swift in Sources */,
-				F6ABCEA52A48727C00ECFE16 /* SettingsCellType.swift in Sources */,
 				F685E72C2A55FEC000C7F457 /* InformationMessageModel.swift in Sources */,
 				F685E7102A558BA700C7F457 /* AlertMessagesModel.swift in Sources */,
 				11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */,
-				F685E7362A5889C800C7F457 /* TextFieldModel.swift in Sources */,
 				F685E70A2A55899500C7F457 /* MessagesCellType.swift in Sources */,
-				F6ABCEA72A48735600ECFE16 /* SwitcherModel.swift in Sources */,
 				11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */,
 				F6F71DB32A530FAD00BFAED4 /* SelectionCell.swift in Sources */,
 				F6CEEE992A53118900B2E1EE /* SelectionModel.swift in Sources */,
