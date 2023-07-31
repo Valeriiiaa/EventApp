@@ -31,8 +31,11 @@ class MainMessageCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-       
+    }
+    
+    public func configure(count: Int) {
+        amountMessages.text = "\(count) \("messages".localized)"
+        backgroundMessagesView.backgroundColor = count == 0 ? .white : .red
     }
 
 }

@@ -34,16 +34,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uPj-87-AnX">
-                                <rect key="frame" x="84" y="98.333333333333329" width="185" height="36.666666666666671"/>
+                                <rect key="frame" x="99" y="98.333333333333329" width="155" height="36.666666666666671"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cku-5U-UxR">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="36.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-L5-wSx">
-                                        <rect key="frame" x="30" y="0.0" width="155" height="36.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="36.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

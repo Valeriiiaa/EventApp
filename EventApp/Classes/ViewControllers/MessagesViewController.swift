@@ -8,6 +8,7 @@
 import UIKit
 import Swinject
 import Combine
+import IHProgressHUD
 
 class MessagesViewController: UIViewController {
     @IBOutlet weak var goToWebsiteButton: UIButton!
@@ -21,7 +22,7 @@ class MessagesViewController: UIViewController {
         return container.resolve(UserManager.self)
     }()
     
-    var messages = [MessagesModel(itemsInside: [.mainMessageCell]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "2 min ago"))]),MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "attentionMessage", label: true, text: "Lorem ipsum dolor sit amet,consectetur adipiscing elit.", data: "1 day ago"))]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "1 day ago"))]), MessagesModel(itemsInside: [.messageInfoCell(AlertMessagesModel(image: "attentionMessage", label: true, text: "Lorem ipsum dolor sit amet,consectetur adipiscing elit.", data: "2 day ago"))])]
+    var messages = [MessagesModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,6 @@ class MessagesViewController: UIViewController {
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
         bind()
         fetchProfile()
-        
         goToWebsiteButton.setTitle("gooWebsite".localized, for: .normal)
     }
     
@@ -42,6 +42,25 @@ class MessagesViewController: UIViewController {
             guard let model else { return }
             self.nameLabel.text = "\(model.name_first) \(model.name_last)"
         }).store(in: &subscriptions)
+    }
+    
+    private func configureMessages(notifications: [NotificationResponseModel]) {
+        messages = [MessagesModel(itemsInside: [.mainMessageCell(notifications.count)])]
+        let newMessages = notifications.map({ item in
+            var image = "warningMessage"
+            switch item.type {
+            case "Reminder":
+                image = "warningMessage"
+            case "News", "Personal":
+                image = "infoMessage"
+            default: image = "attentionMessage"
+            }
+            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, label: true, text: item.text, data: ""))])
+        })
+        messages.append(contentsOf: newMessages)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     @objc
@@ -54,12 +73,27 @@ class MessagesViewController: UIViewController {
         present(drawerController, animated: true)
     }
     
+    private func fetchMessages() {
+        IHProgressHUD.show()
+        NetworkManager.shared.loadNotifications(completion: { [weak self] result in
+            guard let self else { return }
+            IHProgressHUD.dismiss()
+            switch result {
+            case .success(let success):
+                self.configureMessages(notifications: success)
+            case .failure(let failure):
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+            }
+        })
+    }
+    
     private func fetchProfile() {
         NetworkManager.shared.getProfile(completion: { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let success):
                 self.userManager?.userModel = success
+                self.fetchMessages()
             case .failure(let failure):
                 print("[test] \(failure.localizedDescription)")
             }
@@ -77,7 +111,7 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return indexPath.row > 0
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -89,7 +123,6 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = messages[indexPath.row]
         switch item.itemsInside.first {
@@ -97,8 +130,9 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
             (cell as? MessageInfoCell)?.configure(data: messagesModel.data, text: messagesModel.text, labelAttention: messagesModel.label, image: messagesModel.image)
             return cell
-        case .mainMessageCell:
+        case .mainMessageCell(let count):
             let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MainMessageCell"), for: indexPath)
+            (cell as? MainMessageCell)?.configure(count: count)
             return cell
         default: return UITableViewCell()
         }

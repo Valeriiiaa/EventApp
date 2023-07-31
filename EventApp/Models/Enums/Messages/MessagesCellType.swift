@@ -8,7 +8,7 @@
 import Foundation
 
 enum MessagesCellType {
-    case mainMessageCell
+    case mainMessageCell(Int)
     case messageInfoCell(AlertMessagesModel)
     
     var reusedId: String {
