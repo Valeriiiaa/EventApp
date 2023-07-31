@@ -7,8 +7,7 @@
 
 import UIKit
 
-class AskQuestionViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
-    
+class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
     @IBOutlet weak var askQuestionLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var sendButton: UIButton!

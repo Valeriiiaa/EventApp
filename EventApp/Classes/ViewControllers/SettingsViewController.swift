@@ -8,19 +8,10 @@
 import UIKit
 import Combine
 
-class SettingsViewController: UIViewController {
-    
+class SettingsViewController: BaseViewController {
     var itemsSection = [SectionModel]()
-
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
-    private var subscriptions = Set<AnyCancellable>()
-    
-    lazy var userManger: UserManager? = {
-        let userManager = AppDelegate.contaienr.resolve(UserManager.self)
-        return userManager
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,18 +34,18 @@ class SettingsViewController: UIViewController {
             guard let text = valuable.value as? String else { return }
             guard let self else { return }
             let components = text.components(separatedBy: " ")
-            guard let userModel = self.userManger?.userModel else {
-                self.userManger?.userModel = .init(email: "", name_first: components.first ?? "", name_last: components.last ?? "", lang: "", phone: "")
+            guard let userModel = self.userManager?.userModel else {
+                self.userManager?.userModel = .init(email: "", name_first: components.first ?? "", name_last: components.last ?? "", lang: "", phone: "")
                 return
             }
             let userModelTmp = ProfileModelResponse(email: userModel.email, name_first: components.first ?? "", name_last: components.last ?? "", lang: userModel.lang, phone: userModel.phone)
-            self.userManger?.userModel = userModelTmp
+            self.userManager?.userModel = userModelTmp
         }).store(in: &subscriptions)
     }
     
     private func configureListData() {
-        let name = "\(userManger?.userModel?.name_first ?? "") \(userManger?.userModel?.name_last ?? "")"
-        let phone = userManger?.userModel?.phone ?? ""
+        let name = "\(userManager?.userModel?.name_first ?? "") \(userManager?.userModel?.name_last ?? "")"
+        let phone = userManager?.userModel?.phone ?? ""
         itemsSection.append(
             .init(titleHeader: "personalInformation".localized,
                   itemsInside: [

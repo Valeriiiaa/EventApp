@@ -290,6 +290,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="XxF-5Y-fGx" id="geA-Lh-IfP"/>
+                        <outlet property="nameLabel" destination="b36-b7-LxE" id="qul-Js-LW0"/>
                         <outlet property="tableView" destination="GTr-gb-fGn" id="w9c-4t-dLC"/>
                     </connections>
                 </viewController>
@@ -504,6 +505,7 @@
                         <outlet property="askQuestionLabel" destination="glb-uw-XgC" id="1oM-aR-Fqh"/>
                         <outlet property="backButton" destination="WI6-1l-bvi" id="GcO-b3-yQE"/>
                         <outlet property="backgroundTypeView" destination="TlC-KM-6hb" id="qRu-rH-pHf"/>
+                        <outlet property="nameLabel" destination="Pup-kd-eSt" id="nrW-df-muv"/>
                         <outlet property="scrollView" destination="3pi-MN-YDY" id="tSq-e9-QCm"/>
                         <outlet property="sendButton" destination="xed-wX-NvE" id="hDW-Ep-oDF"/>
                         <outlet property="sendMessageButton" destination="uMO-Ex-vKm" id="otY-x1-zcR"/>

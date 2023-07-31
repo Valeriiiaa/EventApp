@@ -111,6 +111,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="t8D-fB-f2Z" id="Ha3-7m-a7V"/>
+                        <outlet property="nameLabel" destination="ewN-ga-ZOh" id="RD1-jH-lk0"/>
                         <outlet property="tableView" destination="I21-vD-Yee" id="LaB-Fh-26k"/>
                     </connections>
                 </viewController>

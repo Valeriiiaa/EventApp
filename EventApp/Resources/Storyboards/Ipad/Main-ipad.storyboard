@@ -203,6 +203,7 @@
                     </view>
                     <connections>
                         <outlet property="goToWebsiteButton" destination="Z8u-OA-xam" id="F0K-Ij-OxG"/>
+                        <outlet property="nameLabel" destination="zOS-tm-Sfg" id="7hb-pI-3Co"/>
                         <outlet property="tableView" destination="Iwr-7S-5oe" id="jiG-Cf-mSr"/>
                     </connections>
                 </viewController>
@@ -419,6 +420,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundTypeView" destination="Pwl-RP-A23" id="F5t-tY-Lc0"/>
+                        <outlet property="nameLabel" destination="9Ke-vZ-Kjj" id="A2b-3y-5E1"/>
                         <outlet property="scrollView" destination="uYt-1u-ID2" id="4nz-lp-ER7"/>
                         <outlet property="sendButton" destination="xOf-Ye-GAv" id="ELv-Wh-ZfE"/>
                         <outlet property="sendMessageButton" destination="afL-bY-Jxs" id="oIC-tB-5Hf"/>
@@ -564,6 +566,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="fiR-LX-EqA" id="LeT-bN-FL8"/>
                         <outlet property="tableView" destination="LBQ-ML-YSK" id="Ca6-e0-ZKN"/>
                     </connections>
                 </viewController>

@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Vcu-C0-yq1" id="Ohl-H1-F5x"/>
+                        <outlet property="nameLabel" destination="1eg-Wx-FBR" id="oBU-c8-SxJ"/>
                         <outlet property="tableView" destination="38K-4E-jEa" id="7hd-iP-kfR"/>
                     </connections>
                 </viewController>

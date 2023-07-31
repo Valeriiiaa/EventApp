@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ArchiveViewController: UIViewController {
-
+class ArchiveViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
     

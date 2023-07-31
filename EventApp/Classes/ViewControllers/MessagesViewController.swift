@@ -10,17 +10,31 @@ import Swinject
 import Combine
 import IHProgressHUD
 
-class MessagesViewController: UIViewController {
-    @IBOutlet weak var goToWebsiteButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+class BaseViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+    public var subscriptions = Set<AnyCancellable>()
     
-    private var subscriptions = Set<AnyCancellable>()
-    
-    lazy var userManager: UserManager? = {
+    public lazy var userManager: UserManager? = {
         let container = AppDelegate.contaienr
         return container.resolve(UserManager.self)
     }()
+    
+    override func viewDidLoad() {
+        bind()
+    }
+    
+    private func bind() {
+        userManager?.$userModel.receive(on: RunLoop.main).sink(receiveValue: { [weak self] model in
+            guard let self else { return }
+            guard let model else { return }
+            self.nameLabel.text = "\(model.name_first) \(model.name_last)"
+        }).store(in: &subscriptions)
+    }
+}
+
+class MessagesViewController: BaseViewController {
+    @IBOutlet weak var goToWebsiteButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     var messages = [MessagesModel]()
     
@@ -31,17 +45,8 @@ class MessagesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
-        bind()
         fetchProfile()
         goToWebsiteButton.setTitle("gooWebsite".localized, for: .normal)
-    }
-    
-    private func bind() {
-        userManager?.$userModel.receive(on: RunLoop.main).sink(receiveValue: { [weak self] model in
-            guard let self else { return }
-            guard let model else { return }
-            self.nameLabel.text = "\(model.name_first) \(model.name_last)"
-        }).store(in: &subscriptions)
     }
     
     private func configureMessages(notifications: [NotificationResponseModel]) {
@@ -65,7 +70,7 @@ class MessagesViewController: UIViewController {
     
     @objc
     func goToWebSiteButtonDidTap(_ sender: AnyObject) {
-        UIApplication.shared.openURL(NSURL(string: "http://dev.effective-hc.com/")! as URL)
+        UIApplication.shared.openURL(NSURL(string: "http://effective-hc.com/")! as URL)
     }
     
     @IBAction func didTapMenu(_ sender: Any) {
