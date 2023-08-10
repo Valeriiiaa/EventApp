@@ -23,7 +23,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-}
+    }
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -42,7 +42,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }()
     
     @objc func closeButtonDidTap(_ sender: UIButton) {
-       dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     var menuItems = [MenuModel(header: "", itemsInside: MenuOptions.allCases)]
@@ -88,7 +88,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MenuHeaderView")
         return header
     }
-   
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 71
     }
@@ -115,7 +115,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         dismiss(animated: true)
     }
     
-    private func openHomeVC() {
+    public func openHomeVC() {
         let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
         guard !(drawerNavigationController?.viewControllers.last is MessagesViewController) else {
             dismiss(animated: true)

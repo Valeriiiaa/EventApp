@@ -36,6 +36,10 @@ class MessagesViewController: BaseViewController {
     @IBOutlet weak var goToWebsiteButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var refreshControl: UIRefreshControl = {
+        .init()
+    }()
+    
     var messages = [MessagesModel]()
     
     private var notifications = [NotificationResponseModel]()
@@ -49,6 +53,10 @@ class MessagesViewController: BaseViewController {
         goToWebsiteButton.addTarget(self, action: #selector(goToWebSiteButtonDidTap), for: .touchUpInside)
         fetchProfile()
         goToWebsiteButton.setTitle("gooWebsite".localized, for: .normal)
+        
+        refreshControl.addTarget(self, action: #selector(update), for: UIControl.Event.valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        tableView.addSubview(refreshControl)
     }
     
     private func configureMessages(notifications: [NotificationResponseModel]) {
@@ -90,6 +98,12 @@ class MessagesViewController: BaseViewController {
     }
     
     @objc
+    private func update(_ sender: AnyObject) {
+        refreshControl.beginRefreshing()
+        fetchMessages()
+    }
+    
+    @objc
     func goToWebSiteButtonDidTap(_ sender: AnyObject) {
         UIApplication.shared.openURL(NSURL(string: "http://effective-hc.com/")! as URL)
     }
@@ -103,13 +117,32 @@ class MessagesViewController: BaseViewController {
         IHProgressHUD.show()
         NetworkManager.shared.loadNotifications(completion: { [weak self] result in
             guard let self else { return }
+            defer {
+                DispatchQueue.main.async {
+                    self.refreshControl.endRefreshing()
+                }
+            }
             IHProgressHUD.dismiss()
             switch result {
             case .success(let success):
-                self.notifications = success
+                let showInformation = UserDefaultsStorage.shared.get(key: .showInformation, defaultValue: true)
+                let showAttention = UserDefaultsStorage.shared.get(key: .showAttention, defaultValue: true)
+                let showWarning = UserDefaultsStorage.shared.get(key: .showWarning, defaultValue: true)
+                self.notifications = success.compactMap({ item in
+                    if item.type == "Reminder" && !showWarning {
+                        return nil
+                    }
+                    if ["News", "Personal"].contains(item.type) && !showInformation {
+                        return nil
+                    } else if !showAttention {
+                        return nil
+                    }
+                    return item
+                })
                 self.configureMessages(notifications: success)
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
+                IHProgressHUD.dismissWithDelay(0.5)
             }
         })
     }

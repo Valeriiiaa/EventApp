@@ -143,6 +143,7 @@ class NetworkManager {
         url.httpMethod = "GET"
         url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        print("[bearer] \(user.token)")
         let session = URLSession.shared
         
         let task = session.dataTask(with: url) { data, response, error in
@@ -227,11 +228,13 @@ class NetworkManager {
     }
     
     func createTicket(text: String, typeId: Int, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
         var url = URLRequest(url: URL(string: serverURL + "tickets/create")!)
         url.httpMethod = "POST"
-        url.httpBody = try! JSONEncoder().encode(TicketCreateRequest(description: text, id: typeId.description))
+        url.httpBody = try! JSONEncoder().encode(TicketCreateRequest(description: text, type: typeId.description))
         url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         
         let task = session.dataTask(with: url) { data, response, error in

@@ -9,5 +9,5 @@ import Foundation
 
 struct TicketCreateRequest: Codable {
     public let description: String
-    public let id: String
+    public let type: String
 }

@@ -13,6 +13,10 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var storage: UserDefaultsStorage = {
+        UserDefaultsStorage()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureListData()
@@ -41,11 +45,34 @@ class SettingsViewController: BaseViewController {
             let userModelTmp = ProfileModelResponse(email: userModel.email, name_first: components.first ?? "", name_last: components.last ?? "", lang: userModel.lang, phone: userModel.phone)
             self.userManager?.userModel = userModelTmp
         }).store(in: &subscriptions)
+        let attentionState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.attentionSwitch.rawValue })
+        attentionState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+            guard let self else { return }
+            guard let value = value as? Bool else { return }
+            self.storage.set(key: .showAttention, value: value)
+        }).store(in: &subscriptions)
+        
+        let informationState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.informationSwitch.rawValue })
+        informationState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+            guard let self else { return }
+            guard let value = value as? Bool else { return }
+            self.storage.set(key: .showInformation, value: value)
+        }).store(in: &subscriptions)
+        
+        let warningState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.warningSwitch.rawValue })
+        warningState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+            guard let self else { return }
+            guard let value = value as? Bool else { return }
+            self.storage.set(key: .showWarning, value: value)
+        }).store(in: &subscriptions)
     }
     
     private func configureListData() {
         let name = "\(userManager?.userModel?.name_first ?? "") \(userManager?.userModel?.name_last ?? "")"
         let phone = userManager?.userModel?.phone ?? ""
+        let showInformation = storage.get(key: .showInformation, defaultValue: true)
+        let showAttention = storage.get(key: .showAttention, defaultValue: true)
+        let showWarning = storage.get(key: .showWarning, defaultValue: true)
         itemsSection.append(
             .init(titleHeader: "personalInformation".localized,
                   itemsInside: [
@@ -67,15 +94,15 @@ class SettingsViewController: BaseViewController {
                     SwitcherStateSectionModel(title: "informationMessanges".localized,
                                               type: .informationSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
-                                              state: true),
+                                              state: showInformation),
                     SwitcherStateSectionModel(title: "attentionMessanges".localized,
                                               type: .attentionSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
-                                              state: true),
+                                              state: showAttention),
                     SwitcherStateSectionModel(title: "warningMessanges".localized,
                                               type: .warningSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
-                                              state: true),
+                                              state: showWarning),
                   ]))
     }
     

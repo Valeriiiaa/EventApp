@@ -9,4 +9,7 @@ import Foundation
 
 enum LocalStorageKey: String {
     case token
+    case showAttention
+    case showWarning
+    case showInformation
 }

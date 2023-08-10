@@ -111,6 +111,7 @@ class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextF
                 IHProgressHUD.dismissWithDelay(0.3)
                 DispatchQueue.main.async {
                     self?.textViewWriteMessage.text = ""
+                    DrawerMenuViewController.shared.openHomeVC()
                 }
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
