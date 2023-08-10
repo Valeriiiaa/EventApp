@@ -50,12 +50,12 @@ class SettingsViewController: BaseViewController {
             .init(titleHeader: "personalInformation".localized,
                   itemsInside: [
                     TextFieldStateSectionModel(title: "name".localized,
-                                               reuseId: "CustomFieldCell",
+                                               reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: name,
                                                type: .name,
                                                keyboardType: .default),
                     TextFieldStateSectionModel(title: "login".localized,
-                                               reuseId: "CustomFieldCell",
+                                               reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: phone,
                                                type: .phone,
                                                keyboardType: .phonePad)
@@ -66,15 +66,15 @@ class SettingsViewController: BaseViewController {
                   itemsInside: [
                     SwitcherStateSectionModel(title: "informationMessanges".localized,
                                               type: .informationSwitch,
-                                              reuseId: "SwitcherCell",
+                                              reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: true),
                     SwitcherStateSectionModel(title: "attentionMessanges".localized,
                                               type: .attentionSwitch,
-                                              reuseId: "SwitcherCell",
+                                              reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: true),
                     SwitcherStateSectionModel(title: "warningMessanges".localized,
                                               type: .warningSwitch,
-                                              reuseId: "SwitcherCell",
+                                              reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: true),
                   ]))
     }

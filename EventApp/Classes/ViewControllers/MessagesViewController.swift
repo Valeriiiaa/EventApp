@@ -38,6 +38,8 @@ class MessagesViewController: BaseViewController {
     
     var messages = [MessagesModel]()
     
+    private var notifications = [NotificationResponseModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: CellManager.getCell(by: "MessageInfoCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MessageInfoCell"))
@@ -50,6 +52,25 @@ class MessagesViewController: BaseViewController {
     }
     
     private func configureMessages(notifications: [NotificationResponseModel]) {
+        messages = [MessagesModel(itemsInside: [.mainMessageCell(notifications.count)])]
+        let newMessages = notifications.map({ item in
+            var image = "warningMessage"
+            switch item.type {
+            case "Reminder":
+                image = "warningMessage"
+            case "News", "Personal":
+                image = "infoMessage"
+            default: image = "attentionMessage"
+            }
+            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, label: true, text: item.text, data: ""))])
+        })
+        messages.append(contentsOf: newMessages)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func reconfigureMessages() {
         messages = [MessagesModel(itemsInside: [.mainMessageCell(notifications.count)])]
         let newMessages = notifications.map({ item in
             var image = "warningMessage"
@@ -85,6 +106,7 @@ class MessagesViewController: BaseViewController {
             IHProgressHUD.dismiss()
             switch result {
             case .success(let success):
+                self.notifications = success
                 self.configureMessages(notifications: success)
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
@@ -104,9 +126,40 @@ class MessagesViewController: BaseViewController {
             }
         })
     }
+    
+    private func archive(id: Int) {
+        IHProgressHUD.show()
+        NetworkManager.shared.archiveNotification(id: id, completion: { result in
+            defer {
+                IHProgressHUD.dismiss()
+            }
+            switch result {
+            case .success:
+                IHProgressHUD.showSuccesswithStatus("Done")
+            case .failure(let failure):
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+            }
+        })
+    }
 }
 
 extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let archiveAction = UIContextualAction(style: .normal, title: "Archive", handler: { [weak self] _,_, completionHandler in
+            guard let self else { return }
+            self.tableView.beginUpdates()
+            self.messages.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .none)
+            self.tableView.endUpdates()
+            let id = self.notifications[indexPath.row - 1].id
+            self.archive(id: id)
+            self.notifications.remove(at: indexPath.row - 1)
+            completionHandler(true)
+            self.reconfigureMessages()
+        })
+        archiveAction.backgroundColor = .orange
+        return .init(actions: [archiveAction])
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         messages.count
@@ -119,13 +172,12 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         return indexPath.row > 0
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            tableView.beginUpdates()
-            messages.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .none)
-            tableView.endUpdates()
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row > 0 else { return }
+        let notification = notifications[indexPath.row - 1]
+        guard let link = notification.link,
+              let url = URL(string: link) else { return }
+        UIApplication.shared.open(url)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

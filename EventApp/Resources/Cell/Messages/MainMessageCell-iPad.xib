@@ -68,6 +68,7 @@
             <connections>
                 <outlet property="amountMessages" destination="CCZ-SS-gUd" id="MOa-cu-PAc"/>
                 <outlet property="backgroundMessagesView" destination="dct-Ss-NEk" id="3qP-Ns-bXX"/>
+                <outlet property="youHaveMessagesLabel" destination="orv-sJ-Oce" id="zp1-uA-QU4"/>
             </connections>
             <point key="canvasLocation" x="190.07633587786259" y="71.478873239436624"/>
         </tableViewCell>

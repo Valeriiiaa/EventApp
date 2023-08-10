@@ -6,13 +6,28 @@
 //
 
 import UIKit
+import IHProgressHUD
+
+struct ArchiveMessage {
+    let image: String
+    let text: String
+    let link: String?
+    let label: Bool
+    let type: MessageType
+}
+
+enum MessageType {
+    case informationMessage
+    case attentionMessage
+    case warningMessage
+}
 
 class ArchiveViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
     
-    var messages = [MessageModel(itemsInside: [.archiveMessage(ArchiveMessagesModel(image: "attentionMessage", label: true, text: "Lorem ipsum dolor sit amet,consectetur adipiscing elit.", data: "2 min ago"))]), MessageModel(itemsInside: [.warningMessage(InformationMessageModel(imageMessage: "infoMessage", textMessage: "You have received an", dataMessage: "5 min ago", infoMessage: "Information message."))]), MessageModel(itemsInside: [.archiveMessage(ArchiveMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "1 day ago"))]), MessageModel(itemsInside: [.archiveMessage(ArchiveMessagesModel(image: "warningMessage", label: false, text: "This is a very important message! Read it now!", data: "2 day ago"))])]
-   
+    var messages = [ArchiveMessage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: CellManager.getCell(by: "MessageInfoCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MessageInfoCell"))
@@ -20,11 +35,51 @@ class ArchiveViewController: BaseViewController {
         tableView.register(UINib(nibName: CellManager.getCell(by: "InformationMessagesCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "InformationMessagesCell"))
         tableView.dataSource = self
         tableView.delegate = self
-
+        
         backButton.setTitle("back".localized, for: .normal)
+        fetchArchive()
     }
     
-
+    private func fetchArchive() {
+        IHProgressHUD.show()
+        NetworkManager.shared.loadArhivedNotifications(completion: { [weak self] result in
+            guard let self else { return }
+            IHProgressHUD.dismiss()
+            switch result {
+            case .success(let success):
+                //                self.notifications = success
+                self.configureMessages(notifications: success)
+            case .failure(let failure):
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+            }
+        })
+    }
+    
+    private func configureMessages(notifications: [NotificationResponseModel]) {
+        let newMessages = notifications.map({ item in
+            var image = "warningMessage"
+            var type = MessageType.informationMessage
+            var label = false
+            switch item.type {
+            case "Reminder":
+                image = "warningMessage"
+                type = .warningMessage
+            case "News", "Personal":
+                image = "infoMessage"
+                type = .informationMessage
+            default:
+                image = "attentionMessage"
+                type = .attentionMessage
+                label = true
+            }
+            return ArchiveMessage(image: image, text: item.text, link: item.link, label: label, type: type)
+        })
+        messages.append(contentsOf: newMessages)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func backButtonDidTap(_ sender: Any) {
         DrawerMenuViewController.shared.back()
     }
@@ -33,11 +88,10 @@ class ArchiveViewController: BaseViewController {
         let drawerController = DrawerMenuViewController.shared
         present(drawerController, animated: true)
     }
-    
-    
 }
+
 extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         messages.count
     }
@@ -48,6 +102,13 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let notification = messages[indexPath.row]
+        guard let link = notification.link,
+              let url = URL(string: link) else { return }
+        UIApplication.shared.open(url)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -61,19 +122,17 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = messages[indexPath.row]
-        switch item.itemsInside.first {
-        case .archiveMessage(let archiveModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
-            (cell as? MessageInfoCell)?.configure(data: archiveModel.data, text: archiveModel.text, labelAttention: archiveModel.label, image: archiveModel.image)
-            return cell
-        case .warningMessage(let warningModel):
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "InformationMessagesCell"), for: indexPath)
-            (cell as? InformationMessagesCell)?.configure(data: warningModel.data, image: warningModel.image, text: warningModel.text, infoMessage: warningModel.info)
-            return cell
-        default: return UITableViewCell()
+        var cell = UITableViewCell()
+        switch item.type {
+        case .warningMessage:
+            let tmpCell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "InformationMessagesCell"), for: indexPath)
+            (tmpCell as? InformationMessagesCell)?.configure(data: "", image: item.image, text: item.text, infoMessage: "")
+            cell = tmpCell
+        case .informationMessage, .attentionMessage:
+            let tmpCell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
+            (tmpCell as? MessageInfoCell)?.configure(data: "", text: item.text, labelAttention: item.label, image: item.image)
+            cell = tmpCell
         }
+        return cell
     }
-
-    
-    
 }

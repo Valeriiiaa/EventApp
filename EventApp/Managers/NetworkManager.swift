@@ -83,7 +83,54 @@ class NetworkManager {
         let session = URLSession.shared
         
         let task = session.dataTask(with: url) { data, response, error in
-            print(error)
+        }
+        task.resume()
+    }
+    
+    func archiveNotification(id: Int, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        var url = URLRequest(url: URL(string: serverURL + "notifications/\(id)/archive")!)
+        url.httpMethod = "PUT"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { data, response, error in
+            guard let error else {
+                completion(.success(true))
+                return
+            }
+            completion(.failure(error))
+        }
+        task.resume()
+    }
+    
+    func loadArhivedNotifications(completion: @escaping(Result<[NotificationResponseModel], Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        guard let userModel = user.userModel else { return }
+        var url = URLRequest(url: URL(string: serverURL + "notifications/get-archive-notifications/\(userModel.lang)" )!)
+        url.httpMethod = "GET"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        print("[bearer] \(user.token)")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error {
+                completion(.failure(error))
+            }
+            
+            guard let responseData = data else {
+                completion(.failure(NetworkError.clientError("No response data")))
+                return
+            }
+            do {
+                let serverResponse = try JSONDecoder().decode([NotificationResponseModel].self, from: responseData)
+                completion(.success(serverResponse))
+            } catch {
+                completion(.failure(error))
+            }
         }
         task.resume()
     }
@@ -92,7 +139,7 @@ class NetworkManager {
         let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
         guard let user else { return }
         guard let userModel = user.userModel else { return }
-        var url = URLRequest(url: URL(string: serverURL + "get-notifications/\(userModel.lang)" )!)
+        var url = URLRequest(url: URL(string: serverURL + "notifications/\(userModel.lang)" )!)
         url.httpMethod = "GET"
         url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")

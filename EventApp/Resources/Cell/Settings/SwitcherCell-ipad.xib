@@ -32,7 +32,7 @@
                                 <color key="onTintColor" red="0.93333333330000001" green="0.33725490200000002" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-8b-KlM">
-                                <rect key="frame" x="30" y="30" width="74" height="43"/>
+                                <rect key="frame" x="30" y="30" width="66.333333333333329" height="43"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
             <connections>
                 <outlet property="backgroundViewSwitcher" destination="BQr-nY-IGW" id="Tyq-xQ-6PX"/>
                 <outlet property="labelNotification" destination="AXz-8b-KlM" id="rwl-oP-Jj4"/>
-                <outlet property="switcher" destination="AXz-8b-KlM" id="SDF-JS-KRH"/>
+                <outlet property="switcher" destination="nQl-Tb-oMz" id="mdb-Jn-h3V"/>
             </connections>
             <point key="canvasLocation" x="303" y="5"/>
         </tableViewCell>

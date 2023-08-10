@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -48,7 +49,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="110" id="gwn-X9-0iN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-ZP-HZS">
@@ -116,6 +117,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomContainerConstraint" destination="a02-Ne-pG9" id="s71-qx-da1"/>
+                        <outlet property="didNotGetCodeButton" destination="Eie-hW-iHr" id="gUb-fH-hkV"/>
                         <outlet property="getCodeButton" destination="wPd-ZP-HZS" id="Bxy-wW-zNT"/>
                         <outlet property="imageView" destination="nhJ-qG-ccs" id="YQs-5R-7WR"/>
                         <outlet property="labelText" destination="Rz3-kp-VYx" id="asg-cL-ejG"/>
@@ -419,6 +421,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="askQuestionLabel" destination="Llw-6J-SaI" id="uUB-s5-y4X"/>
+                        <outlet property="backButton" destination="jMD-Os-lgb" id="ZsJ-1I-EZb"/>
                         <outlet property="backgroundTypeView" destination="Pwl-RP-A23" id="F5t-tY-Lc0"/>
                         <outlet property="nameLabel" destination="9Ke-vZ-Kjj" id="A2b-3y-5E1"/>
                         <outlet property="scrollView" destination="uYt-1u-ID2" id="4nz-lp-ER7"/>
@@ -566,6 +570,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Od4-YA-33S" id="o9g-aP-7zz"/>
                         <outlet property="nameLabel" destination="fiR-LX-EqA" id="LeT-bN-FL8"/>
                         <outlet property="tableView" destination="LBQ-ML-YSK" id="Ca6-e0-ZKN"/>
                     </connections>

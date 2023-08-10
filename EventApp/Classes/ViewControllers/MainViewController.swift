@@ -20,6 +20,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var bottomContainerConstraint: NSLayoutConstraint!
     @IBOutlet var logoTopConstraint: NSLayoutConstraint!
     
+    private var labelFontSize: CGFloat = 20
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,34 +29,56 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         case .phone:
             phoneTextField.layer.cornerRadius = 12
             getCodeButton.layer.cornerRadius = 12
+            phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
             
-        default: phoneTextField.layer.cornerRadius = 24
-                 getCodeButton.layer.cornerRadius = 24
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
+            
+            let number = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: phoneTextField.frame.height))
+            number.text = "+1"
+            number.font = UIFont(name: "Montserrat-Light", size: labelFontSize)
+            leftView.addSubview(number)
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
+            label.text = "Phone"
+            label.textColor = UIColor(red: 152/255, green: 152/255, blue: 152/255, alpha: 152/255)
+            label.font = UIFont(name: "Montserrat-Light", size: labelFontSize)
+            leftView.addSubview(label)
+            
+            phoneTextField.leftView = leftView
+            
+        default:
+            phoneTextField.layer.cornerRadius = 24
+            getCodeButton.layer.cornerRadius = 24
+            
+            labelFontSize = 35
+            
+            let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 180, height: phoneTextField.frame.height))
+            
+            let number = UILabel(frame: CGRect(x: 120, y: 0, width: 80, height: phoneTextField.frame.height))
+            number.text = "+1"
+            number.font = UIFont(name: "Montserrat-Light", size: labelFontSize)
+            leftView.addSubview(number)
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 120, height: phoneTextField.frame.height))
+            label.text = "Phone"
+            label.textColor = UIColor(red: 152/255, green: 152/255, blue: 152/255, alpha: 152/255)
+            label.font = UIFont(name: "Montserrat-Light", size: labelFontSize)
+            leftView.addSubview(label)
+            phoneTextField.padding = .init(top: 0, left: 180, bottom: 0, right: 20)
+            phoneTextField.leftView = leftView
         }
       
         phoneTextField.layer.masksToBounds = true
         getCodeButton.layer.masksToBounds = true
         phoneTextField.delegate = self
         
-        phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
         didNotGetCodeButton.setTitle("didGetTheCode".localized, for: .normal)
         labelText.text = "effectiveHomeCareMassager".localized
         getCodeButton.setTitle("getTheCode".localized, for: .normal)
         
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
+        phoneTextField.font = UIFont(name: "Montserrat-Light", size: labelFontSize)
         
-        let number = UILabel(frame: CGRect(x: 80, y: 0, width: 100, height: phoneTextField.frame.height))
-        number.text = "+1"
-        number.font = UIFont(name: "Montserrat-Light", size: 20)
-        leftView.addSubview(number)
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
-        label.text = "Phone"
-        label.textColor = UIColor(red: 152/255, green: 152/255, blue: 152/255, alpha: 152/255)
-        label.font = UIFont(name: "Montserrat-Light", size: 20)
-        leftView.addSubview(label)
-        
-        phoneTextField.leftView = leftView
         phoneTextField.leftViewMode = .always
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -66,7 +90,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     private func showPopup() {
         let view = GetCodeView.fromNib()
-        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+            
+        default:
+            view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.5).isActive = true
+        }
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         view.okDidTap = { [weak self, weak view] in
             guard let view else { return }
