@@ -11,7 +11,7 @@ import SwiftEntryKit
 import Swinject
 
 class MainViewController: UIViewController, UITextFieldDelegate {
-   
+    
     @IBOutlet weak var didNotGetCodeButton: UIButton!
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -67,10 +67,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             phoneTextField.padding = .init(top: 0, left: 180, bottom: 0, right: 20)
             phoneTextField.leftView = leftView
         }
-      
+        
         phoneTextField.layer.masksToBounds = true
         getCodeButton.layer.masksToBounds = true
         phoneTextField.delegate = self
+        phoneTextField.returnKeyType = .done
         
         didNotGetCodeButton.setTitle("didGetTheCode".localized, for: .normal)
         labelText.text = "effectiveHomeCareMassager".localized
@@ -81,12 +82,32 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         phoneTextField.leftViewMode = .always
         
+        setupToolbar()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    func setupToolbar(){
+        let bar = UIToolbar()
+        
+        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(getCodeKeyoboard))
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        bar.items = [flexSpace, flexSpace, doneBtn]
+        bar.sizeToFit()
+        
+        phoneTextField.inputAccessoryView = bar
+    }
+    
+    @objc func getCodeKeyoboard(){
+        getCode()
+    }
+    
     
     private func showPopup() {
         let view = GetCodeView.fromNib()
@@ -157,13 +178,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    @objc func dismissKeyboardPhone(_ sender: UITapGestureRecognizer) {
-        let textFieldFrame = phoneTextField.convert(phoneTextField.bounds, to: view)
-        let tapLocation = sender.location(in: view)
-        
-        if !textFieldFrame.contains(tapLocation) {
-            view.endEditing(true)
-        }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        getCode()
+        return true
     }
     
     @IBAction func getCodeButtonDidTap(_ sender: Any) {

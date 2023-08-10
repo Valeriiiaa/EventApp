@@ -37,8 +37,7 @@ class GetCodeView: UIView {
         SwiftEntryKit.dismiss()
     }
     
-   
-    @IBAction func okButtonDidTap(_ sender: Any) {
+   @IBAction func okButtonDidTap(_ sender: Any) {
       
         guard pidCodeView.text?.isEmpty == false else {
             pidCodeView?.layer.borderColor = UIColor.red.cgColor
