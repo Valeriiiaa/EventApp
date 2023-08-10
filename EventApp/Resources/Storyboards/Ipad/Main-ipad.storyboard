@@ -381,7 +381,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="ngu-Tt-yrE" firstAttribute="leading" secondItem="eLh-xc-S4v" secondAttribute="leading" constant="32" id="1Gn-fe-2sT"/>
                                             <constraint firstItem="7dJ-hc-t7V" firstAttribute="top" secondItem="jkO-bO-fAi" secondAttribute="bottom" constant="15" id="2qG-PI-OQT"/>
@@ -398,7 +398,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="eLh-xc-S4v" firstAttribute="trailing" secondItem="9dZ-xT-3ZN" secondAttribute="trailing" id="0aA-t8-GXt"/>
                                     <constraint firstItem="eLh-xc-S4v" firstAttribute="leading" secondItem="9dZ-xT-3ZN" secondAttribute="leading" id="Dkg-m7-v3b"/>
@@ -430,6 +430,7 @@
                         <outlet property="sendMessageButton" destination="afL-bY-Jxs" id="oIC-tB-5Hf"/>
                         <outlet property="textFieldMessage" destination="DfJ-dc-07h" id="fM5-q9-3UH"/>
                         <outlet property="textViewWriteMessage" destination="KJb-Zy-13g" id="3cz-C3-LxK"/>
+                        <outlet property="typeNameLabel" destination="PAM-dz-BRn" id="ivb-Ee-gN8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGG-4L-LNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

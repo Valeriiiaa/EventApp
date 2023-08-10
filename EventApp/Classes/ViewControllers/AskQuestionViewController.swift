@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IHProgressHUD
 
 class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextFieldDelegate, UIScrollViewDelegate {
     @IBOutlet weak var askQuestionLabel: UILabel!
@@ -16,6 +17,11 @@ class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextF
     @IBOutlet weak var backgroundTypeView: UIView!
     @IBOutlet weak var textViewWriteMessage: UITextView!
     @IBOutlet weak var sendMessageButton: UIButton!
+    @IBOutlet weak var typeNameLabel: UILabel!
+    
+    private var ticketTypes = [TicketType]()
+    
+    private var selectedTicketTypeId: Int?
     
     var overlayView: OverlayView!
     
@@ -64,13 +70,53 @@ class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextF
         backButton.setTitle("back".localized, for: .normal)
         sendButton.setTitle("".localized, for: .normal)
         sendMessageButton.setTitle("sendMessage".localized, for: .normal)
-        
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableViewMessages.frame = CGRect(x: 50, y: view.safeAreaInsets.top, width: view.bounds.size.width, height: view.bounds.size.height)
+    }
+    
+    private func fetchTypes(completion: @escaping([TicketType]) -> Void) {
+        guard ticketTypes.isEmpty else {
+            completion(ticketTypes)
+            return
+        }
+        IHProgressHUD.show()
+        NetworkManager.shared.loadTicketTypes(completion: { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let success):
+                IHProgressHUD.dismiss()
+                DispatchQueue.main.async {
+                    self.ticketTypes = success
+                    completion(success)
+                }
+            case .failure(let failure):
+                completion([])
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+            }
+        })
+    }
+    
+    private func createTicket() {
+        guard let id = selectedTicketTypeId else { return }
+        guard let text = textViewWriteMessage.text,
+              !text.isEmpty else { return }
+        IHProgressHUD.show()
+        NetworkManager.shared.createTicket(text: text, typeId: id, completion: { [weak self] result in
+            switch result {
+            case .success(let success):
+                IHProgressHUD.showSuccesswithStatus("Done")
+                IHProgressHUD.dismissWithDelay(0.3)
+                DispatchQueue.main.async {
+                    self?.textViewWriteMessage.text = ""
+                }
+            case .failure(let failure):
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+                IHProgressHUD.dismissWithDelay(0.5)
+            }
+        })
     }
     
     func setupOverlayView() {
@@ -114,17 +160,23 @@ class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextF
     
     @objc
     @IBAction func typeDidTap(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SelectionViewController")
-        
-        (vc as? SelectionViewController)?.allItems = type.map({ .init(key: $0.key, name: $0.text, isSelected: false) })
-        
-        (vc as? SelectionViewController)?.dataDidSelect = { [weak self] selectedData in
+        fetchTypes { [weak self] items in
             guard let self else { return }
-            guard let type = self.type.first(where: { $0.key == selectedData.key }) else { return }
+            guard !items.isEmpty else { return }
             
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SelectionViewController")
+            
+            (vc as? SelectionViewController)?.allItems = items.map({ .init(key: $0.id.description, name: $0.name, isSelected: self.selectedTicketTypeId == $0.id) })
+            
+            (vc as? SelectionViewController)?.dataDidSelect = { [weak self] selectedData in
+                guard let self else { return }
+                self.selectedTicketTypeId = Int(selectedData.key)!
+                guard let type = self.ticketTypes.first(where: { $0.id == self.selectedTicketTypeId }) else { return }
+                self.typeNameLabel.text = type.name
+            }
+            self.present(vc, animated: true)
         }
-        present(vc, animated: true)
     }
     
     @objc
@@ -149,6 +201,7 @@ class AskQuestionViewController: BaseViewController, UITextViewDelegate, UITextF
     }
     
     @IBAction func sendMessageButtonDidTap(_ sender: Any) {
+        createTicket()
     }
 }
 

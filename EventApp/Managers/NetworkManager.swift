@@ -196,11 +196,53 @@ class NetworkManager {
         }
         task.resume()
     }
+    
+    func loadTicketTypes(completion: @escaping(Result<[TicketType], Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        guard let userModel = user.userModel else { return }
+        var url = URLRequest(url: URL(string: serverURL + "tickets/get-types")!)
+        url.httpMethod = "GET"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error {
+                completion(.failure(error))
+            }
+            
+            guard let responseData = data else {
+                completion(.failure(NetworkError.clientError("No response data")))
+                return
+            }
+            do {
+                let serverResponse = try JSONDecoder().decode([TicketType].self, from: responseData)
+                completion(.success(serverResponse))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
+    
+    func createTicket(text: String, typeId: Int, completion: @escaping(Result<Bool, Error>) -> Void) {
+        var url = URLRequest(url: URL(string: serverURL + "tickets/create")!)
+        url.httpMethod = "POST"
+        url.httpBody = try! JSONEncoder().encode(TicketCreateRequest(description: text, id: typeId.description))
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            completion(.success(true))
+        }
+        task.resume()
+    }
 }
-
-
-
-
-
-
-

@@ -8,7 +8,7 @@
 import UIKit
 
 class SelectionViewController: UIViewController {
-
+    
     private var previousSelectedItem: SelectionModel?
     
     public var dataDidSelect: ((SelectionModel) -> Void)?
@@ -24,37 +24,34 @@ class SelectionViewController: UIViewController {
     
     @IBOutlet weak var selectionTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectionTableView.dataSource = self
         selectionTableView.delegate = self
         selectionTableView.register(UINib(nibName: CellManager.getCell(by: SelectionCell.reuseIdentifier), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: SelectionCell.reuseIdentifier))
         searchBar.delegate = self
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-                view.addGestureRecognizer(tapGesture)
     }
-            
-        @objc func dismissKeyboard() {
+    
+    @objc func dismissKeyboard() {
         view.endEditing(true)
-   }
+    }
     
     @IBOutlet weak var searchBarDidTap: UISearchBar!
-  }
+}
 
 extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
-
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    items.count
-}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: SelectionCell.reuseIdentifier), for: indexPath)
-    let item = items[indexPath.row]
-    (cell as? SelectionCell)?.configure(isSelected: item.isSelected, selectionName: item.name)
-    return cell
-}
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: SelectionCell.reuseIdentifier), for: indexPath)
+        let item = items[indexPath.row]
+        (cell as? SelectionCell)?.configure(isSelected: item.isSelected, selectionName: item.name)
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         items[indexPath.row].isSelected = true
@@ -69,14 +66,11 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         items[indexPath.row].isSelected = false
     }
-
 }
 
 extension SelectionViewController: UISearchBarDelegate {
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.resignFirstResponder()
-        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

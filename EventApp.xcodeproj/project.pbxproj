@@ -21,6 +21,8 @@
 		11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */; };
 		11D303722A77B34300BD7B27 /* TextFieldStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */; };
 		11D303742A77F68600BD7B27 /* NotificationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */; };
+		11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */; };
+		11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF892A84F6380050EB2F /* TicketType.swift */; };
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
@@ -141,6 +143,8 @@
 		11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStateable.swift; sourceTree = "<group>"; };
 		11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStateSectionModel.swift; sourceTree = "<group>"; };
 		11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponseModel.swift; sourceTree = "<group>"; };
+		11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCreateRequest.swift; sourceTree = "<group>"; };
+		11F6FF892A84F6380050EB2F /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 			children = (
 				F6C5ADD92A6320700058C8AF /* CodeRequestVerify.swift */,
 				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
+				11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				F6CEEE9B2A53216400B2E1EE /* TypeModel.swift */,
 				F6CEEE9D2A53217600B2E1EE /* LanguageModel.swift */,
 				11769E3F2A76B604008237D6 /* StateType.swift */,
+				11F6FF892A84F6380050EB2F /* TicketType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -949,6 +955,8 @@
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
 				11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */,
 				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
+				11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */,
+				11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */,
 				F685E7192A55F74E00C7F457 /* ArchiveViewController.swift in Sources */,
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
 				F685E7272A55FDD900C7F457 /* ArchiveCellType.swift in Sources */,
@@ -1167,7 +1175,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
@@ -1199,7 +1207,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;

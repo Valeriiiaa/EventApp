@@ -47,7 +47,6 @@ class ArchiveViewController: BaseViewController {
             IHProgressHUD.dismiss()
             switch result {
             case .success(let success):
-                //                self.notifications = success
                 self.configureMessages(notifications: success)
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
@@ -101,7 +100,7 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return false
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
