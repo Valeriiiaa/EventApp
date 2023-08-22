@@ -9,13 +9,13 @@ import Foundation
 
 class AlertMessagesModel {
     let image: String
-    let label: Bool
+    let type: String
     let text: String
     let data: String
     
-    init(image: String, label: Bool, text: String, data: String) {
+    init(image: String, type: String, text: String, data: String) {
         self.image = image
-        self.label = label
+        self.type = type
         self.text = text
         self.data = data
     }

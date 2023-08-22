@@ -14,6 +14,7 @@ struct ArchiveMessage {
     let link: String?
     let label: Bool
     let type: MessageType
+    let textType: String
 }
 
 enum MessageType {
@@ -71,7 +72,7 @@ class ArchiveViewController: BaseViewController {
                 type = .attentionMessage
                 label = true
             }
-            return ArchiveMessage(image: image, text: item.text, link: item.link, label: label, type: type)
+            return ArchiveMessage(image: image, text: item.text, link: item.link, label: label, type: type, textType: item.type)
         })
         messages.append(contentsOf: newMessages)
         DispatchQueue.main.async {
@@ -129,7 +130,7 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
             cell = tmpCell
         case .informationMessage, .attentionMessage:
             let tmpCell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
-            (tmpCell as? MessageInfoCell)?.configure(data: "", text: item.text, labelAttention: item.label, image: item.image)
+            (tmpCell as? MessageInfoCell)?.configure(data: "", text: item.text, type: item.textType, image: item.image)
             cell = tmpCell
         }
         return cell

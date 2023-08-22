@@ -13,4 +13,5 @@ enum StateType: String {
     case warningSwitch
     case attentionSwitch
     case informationSwitch
+    case questionSwitch
 }

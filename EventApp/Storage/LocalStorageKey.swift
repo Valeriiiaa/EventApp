@@ -12,4 +12,5 @@ enum LocalStorageKey: String {
     case showAttention
     case showWarning
     case showInformation
+    case showAQuestion
 }

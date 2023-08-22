@@ -10,33 +10,15 @@ import Swinject
 import Combine
 import IHProgressHUD
 
-class BaseViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    public var subscriptions = Set<AnyCancellable>()
-    
-    public lazy var userManager: UserManager? = {
-        let container = AppDelegate.contaienr
-        return container.resolve(UserManager.self)
-    }()
-    
-    override func viewDidLoad() {
-        bind()
-    }
-    
-    private func bind() {
-        userManager?.$userModel.receive(on: RunLoop.main).sink(receiveValue: { [weak self] model in
-            guard let self else { return }
-            guard let model else { return }
-            self.nameLabel.text = "\(model.name_first) \(model.name_last)"
-        }).store(in: &subscriptions)
-    }
-}
-
 class MessagesViewController: BaseViewController {
     @IBOutlet weak var goToWebsiteButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     private lazy var refreshControl: UIRefreshControl = {
+        .init()
+    }()
+    
+    private lazy var notificationPermissionManager: NotificationPermissionManager = {
         .init()
     }()
     
@@ -57,6 +39,7 @@ class MessagesViewController: BaseViewController {
         refreshControl.addTarget(self, action: #selector(update), for: UIControl.Event.valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         tableView.addSubview(refreshControl)
+        notificationPermissionManager.request()
     }
     
     private func configureMessages(notifications: [NotificationResponseModel]) {
@@ -70,7 +53,7 @@ class MessagesViewController: BaseViewController {
                 image = "infoMessage"
             default: image = "attentionMessage"
             }
-            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, label: true, text: item.text, data: ""))])
+            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, type: item.type, text: item.text, data: ""))])
         })
         messages.append(contentsOf: newMessages)
         DispatchQueue.main.async {
@@ -89,7 +72,7 @@ class MessagesViewController: BaseViewController {
                 image = "infoMessage"
             default: image = "attentionMessage"
             }
-            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, label: true, text: item.text, data: ""))])
+            return MessagesModel(itemsInside: [.messageInfoCell(.init(image: image, type: item.type, text: item.text, data: ""))])
         })
         messages.append(contentsOf: newMessages)
         DispatchQueue.main.async {
@@ -128,18 +111,21 @@ class MessagesViewController: BaseViewController {
                 let showInformation = UserDefaultsStorage.shared.get(key: .showInformation, defaultValue: true)
                 let showAttention = UserDefaultsStorage.shared.get(key: .showAttention, defaultValue: true)
                 let showWarning = UserDefaultsStorage.shared.get(key: .showWarning, defaultValue: true)
+                let showQuestion = UserDefaultsStorage.shared.get(key: .showAQuestion, defaultValue: true)
                 self.notifications = success.compactMap({ item in
-                    if item.type == "Reminder" && !showWarning {
+                    if item.type == "Reminder" && !showAttention {
                         return nil
                     }
-                    if ["News", "Personal"].contains(item.type) && !showInformation {
+                    if ["News"].contains(item.type) && !showInformation {
                         return nil
-                    } else if !showAttention {
+                    } else if item.type == "Personal" && !showQuestion {
+                        return nil
+                    } else if !showWarning {
                         return nil
                     }
                     return item
                 })
-                self.configureMessages(notifications: success)
+                self.configureMessages(notifications: self.notifications)
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
                 IHProgressHUD.dismissWithDelay(0.5)
@@ -218,7 +204,7 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         switch item.itemsInside.first {
         case .messageInfoCell(let messagesModel):
             let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MessageInfoCell"), for: indexPath)
-            (cell as? MessageInfoCell)?.configure(data: messagesModel.data, text: messagesModel.text, labelAttention: messagesModel.label, image: messagesModel.image)
+            (cell as? MessageInfoCell)?.configure(data: messagesModel.data, text: messagesModel.text, type: messagesModel.type, image: messagesModel.image)
             return cell
         case .mainMessageCell(let count):
             let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "MainMessageCell"), for: indexPath)

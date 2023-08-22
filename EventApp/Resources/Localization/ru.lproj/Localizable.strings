@@ -27,6 +27,7 @@
 "informationMessanges" = "Информационные\nсообщения";
 "attentionMessanges" = "Важные сообщения";
 "warningMessanges" = "Предупреждающие\nсообщения";
+"questionMessanges" = "Личное сообщение";
 "attention" = "Внимание!";
 "youHaveReceived" = "Вы получили";
 "information message" = "Информационное сообщение.";

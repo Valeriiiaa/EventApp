@@ -58,12 +58,12 @@ class SettingsViewController: BaseViewController {
             guard let value = value as? Bool else { return }
             self.storage.set(key: .showInformation, value: value)
         }).store(in: &subscriptions)
+        let questionState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.questionSwitch.rawValue })
         
-        let warningState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.warningSwitch.rawValue })
-        warningState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+        questionState?.stateModel.$state.sink(receiveValue: { [weak self] value in
             guard let self else { return }
             guard let value = value as? Bool else { return }
-            self.storage.set(key: .showWarning, value: value)
+            self.storage.set(key: .showAQuestion, value: value)
         }).store(in: &subscriptions)
     }
     
@@ -73,6 +73,7 @@ class SettingsViewController: BaseViewController {
         let showInformation = storage.get(key: .showInformation, defaultValue: true)
         let showAttention = storage.get(key: .showAttention, defaultValue: true)
         let showWarning = storage.get(key: .showWarning, defaultValue: true)
+        let showQuestion = storage.get(key: .showAQuestion, defaultValue: true)
         itemsSection.append(
             .init(titleHeader: "personalInformation".localized,
                   itemsInside: [
@@ -103,6 +104,10 @@ class SettingsViewController: BaseViewController {
                                               type: .warningSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: showWarning),
+                    SwitcherStateSectionModel(title: "questionMessanges".localized,
+                                              type: .questionSwitch,
+                                              reuseId: CellManager.getCell(by: "SwitcherCell"),
+                                              state: showQuestion)
                   ]))
     }
     

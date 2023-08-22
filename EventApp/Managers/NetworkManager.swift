@@ -105,6 +105,31 @@ class NetworkManager {
         task.resume()
     }
     
+    func sendNotificationToken(token: String, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        var url = URLRequest(url: URL(string: serverURL + "save-device-token" )!)
+        url.httpMethod = "POST"
+        url.httpBody = try! JSONEncoder().encode(SaveTokenRequest(token: token))
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        print("[bearer] \(user.token)")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error {
+                completion(.failure(error))
+            }
+            
+            guard let _ = data else {
+                completion(.failure(NetworkError.clientError("No response data")))
+                return
+            }
+            completion(.success(true))
+        }
+        task.resume()
+    }
+    
     func loadArhivedNotifications(completion: @escaping(Result<[NotificationResponseModel], Error>) -> Void) {
         let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
         guard let user else { return }

@@ -29,6 +29,10 @@ class SwitcherCell: UITableViewCell {
     }
     
     @IBAction func valueDidChanged(_ sender: Any) {
+        guard model?.type != StateType.warningSwitch.rawValue else {
+            switcher.isOn = true
+            return
+        }
         model?.stateModel.state = switcher.isOn
     }
 }

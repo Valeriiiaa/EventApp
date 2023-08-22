@@ -27,6 +27,7 @@
 "informationMessanges" = "Information messages";
 "attentionMessanges" = "Attention messages";
 "warningMessanges" = "Warning messages";
+"questionMessanges" = "Question messages";
 "attention" = "Attention!";
 "youHaveReceived" = "You have received an";
 "information message" = "Information message.";

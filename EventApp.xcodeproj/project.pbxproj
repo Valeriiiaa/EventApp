@@ -18,6 +18,10 @@
 		11769E3C2A76B5D4008237D6 /* SwitcherStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3B2A76B5D4008237D6 /* SwitcherStateSectionModel.swift */; };
 		11769E3E2A76B5E3008237D6 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3D2A76B5E3008237D6 /* StateModel.swift */; };
 		11769E402A76B604008237D6 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E3F2A76B604008237D6 /* StateType.swift */; };
+		11B614062A8AB75C00834221 /* SaveTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B614052A8AB75C00834221 /* SaveTokenRequest.swift */; };
+		11B614082A8ABA6E00834221 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B614072A8ABA6E00834221 /* BaseViewController.swift */; };
+		11B6140A2A8ABA8B00834221 /* NotificationPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B614092A8ABA8B00834221 /* NotificationPermissionManager.swift */; };
+		11B6140D2A8B5A7300834221 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 11B6140C2A8B5A7300834221 /* FirebaseMessaging */; };
 		11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */; };
 		11D303722A77B34300BD7B27 /* TextFieldStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */; };
 		11D303742A77F68600BD7B27 /* NotificationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */; };
@@ -140,6 +144,10 @@
 		11769E3B2A76B5D4008237D6 /* SwitcherStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherStateSectionModel.swift; sourceTree = "<group>"; };
 		11769E3D2A76B5E3008237D6 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
 		11769E3F2A76B604008237D6 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		11B614042A8AB48B00834221 /* EventApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EventApp.entitlements; sourceTree = "<group>"; };
+		11B614052A8AB75C00834221 /* SaveTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTokenRequest.swift; sourceTree = "<group>"; };
+		11B614072A8ABA6E00834221 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		11B614092A8ABA8B00834221 /* NotificationPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionManager.swift; sourceTree = "<group>"; };
 		11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStateable.swift; sourceTree = "<group>"; };
 		11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStateSectionModel.swift; sourceTree = "<group>"; };
 		11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponseModel.swift; sourceTree = "<group>"; };
@@ -245,6 +253,7 @@
 			files = (
 				F659EFE62A601CEB00ECE98A /* SwiftEntryKit in Frameworks */,
 				F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */,
+				11B6140D2A8B5A7300834221 /* FirebaseMessaging in Frameworks */,
 				11769E212A72900C008237D6 /* KeychainSwift in Frameworks */,
 				F659EFCC2A5FFE0C00ECE98A /* IHProgressHUD in Frameworks */,
 				F659EFDE2A60186400ECE98A /* SGCodeTextField in Frameworks */,
@@ -283,6 +292,7 @@
 				F6C5ADD92A6320700058C8AF /* CodeRequestVerify.swift */,
 				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
 				11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */,
+				11B614052A8AB75C00834221 /* SaveTokenRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -593,6 +603,7 @@
 			children = (
 				F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */,
 				11769E1D2A728F3E008237D6 /* UserManager.swift */,
+				11B614092A8ABA8B00834221 /* NotificationPermissionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -642,6 +653,7 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
+				11B614042A8AB48B00834221 /* EventApp.entitlements */,
 				11769E222A729275008237D6 /* Storage */,
 				11769E162A7289AB008237D6 /* Extensions */,
 				F6DE8DA92A45C7BB0026E1E5 /* Info.plist */,
@@ -679,6 +691,7 @@
 				F6800C4B2A4974E7001FB2E5 /* AskQuestionViewController.swift */,
 				F685E7182A55F74E00C7F457 /* ArchiveViewController.swift */,
 				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
+				11B614072A8ABA6E00834221 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -768,6 +781,7 @@
 				F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */,
 				11769E202A72900C008237D6 /* KeychainSwift */,
 				11769E282A72979A008237D6 /* Swinject */,
+				11B6140C2A8B5A7300834221 /* FirebaseMessaging */,
 			);
 			productName = EventApp;
 			productReference = F6DE8D982A45C7BA0026E1E5 /* EventApp.app */;
@@ -851,6 +865,7 @@
 				F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				11769E1F2A72900C008237D6 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				11769E272A72979A008237D6 /* XCRemoteSwiftPackageReference "Swinject" */,
+				11B6140B2A8B5A7300834221 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F6DE8D992A45C7BA0026E1E5 /* Products */;
 			projectDirPath = "";
@@ -952,6 +967,7 @@
 				F65CE1412A497B05003E4E3F /* TextField.swift in Sources */,
 				11769E182A7289B6008237D6 /* String+Localization.swift in Sources */,
 				11769E402A76B604008237D6 /* StateType.swift in Sources */,
+				11B614062A8AB75C00834221 /* SaveTokenRequest.swift in Sources */,
 				F6DE8D9C2A45C7BA0026E1E5 /* AppDelegate.swift in Sources */,
 				11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */,
 				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
@@ -961,6 +977,7 @@
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,
 				F685E7272A55FDD900C7F457 /* ArchiveCellType.swift in Sources */,
 				F6E5827D2A45D9720041BD38 /* MessagesViewController.swift in Sources */,
+				11B614082A8ABA6E00834221 /* BaseViewController.swift in Sources */,
 				F685E72E2A55FF1600C7F457 /* MessageModel.swift in Sources */,
 				F655E2BD2A49C36300C7C25A /* MenuCellType.swift in Sources */,
 				11769E3C2A76B5D4008237D6 /* SwitcherStateSectionModel.swift in Sources */,
@@ -987,6 +1004,7 @@
 				11769E242A72927E008237D6 /* SecuredStorage.swift in Sources */,
 				F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */,
 				F685E7232A55FAFB00C7F457 /* InformationMessagesCell.swift in Sources */,
+				11B6140A2A8ABA8B00834221 /* NotificationPermissionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,8 +1192,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
@@ -1206,8 +1225,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
@@ -1367,6 +1387,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		11B6140B2A8B5A7300834221 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		F614B9252A668C89000289E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -1411,6 +1439,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 11769E272A72979A008237D6 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		11B6140C2A8B5A7300834221 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11B6140B2A8B5A7300834221 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
