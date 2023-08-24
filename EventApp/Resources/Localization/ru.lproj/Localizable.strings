@@ -15,6 +15,9 @@
 "gooWebsite" = "Перейти на вебсайт";
 "menu" = "МЕНЮ";
 "home" = "Главная";
+"success" = "Успех";
+"error" = "Ошибка";
+"phoneUpdated" = "Телефон обновлен";
 "askQestion" = "Задать вопрос";
 "archive" = "Архив";
 "settings" = "Настройки";

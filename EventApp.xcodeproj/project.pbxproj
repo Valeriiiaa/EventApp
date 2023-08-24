@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		111B90B02A974A7A0046593C /* NotificiationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90AF2A974A7A0046593C /* NotificiationManager.swift */; };
 		111B90B22A975D420046593C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 111B90B12A975D420046593C /* GoogleService-Info.plist */; };
+		111B90B42A976BC60046593C /* UpdatePhoneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B32A976BC60046593C /* UpdatePhoneRequest.swift */; };
+		111B90B62A976C8C0046593C /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B52A976C8C0046593C /* UIViewController+showAlert.swift */; };
 		11769E182A7289B6008237D6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E172A7289B6008237D6 /* String+Localization.swift */; };
 		11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */; };
 		11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1D2A728F3E008237D6 /* UserManager.swift */; };
@@ -140,6 +142,8 @@
 /* Begin PBXFileReference section */
 		111B90AF2A974A7A0046593C /* NotificiationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificiationManager.swift; sourceTree = "<group>"; };
 		111B90B12A975D420046593C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		111B90B32A976BC60046593C /* UpdatePhoneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhoneRequest.swift; sourceTree = "<group>"; };
+		111B90B52A976C8C0046593C /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
 		11769E172A7289B6008237D6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyResponse.swift; sourceTree = "<group>"; };
 		11769E1D2A728F3E008237D6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				11769E172A7289B6008237D6 /* String+Localization.swift */,
+				111B90B52A976C8C0046593C /* UIViewController+showAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				F6C5ADCC2A6045940058C8AF /* CodeRequest.swift */,
 				11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */,
 				11B614052A8AB75C00834221 /* SaveTokenRequest.swift */,
+				111B90B32A976BC60046593C /* UpdatePhoneRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -955,6 +961,7 @@
 				111B90B02A974A7A0046593C /* NotificiationManager.swift in Sources */,
 				F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */,
 				F685E71F2A55F7B200C7F457 /* ArchiveMessagesCell.swift in Sources */,
+				111B90B42A976BC60046593C /* UpdatePhoneRequest.swift in Sources */,
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
 				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
 				11769E3E2A76B5E3008237D6 /* StateModel.swift in Sources */,
@@ -984,6 +991,7 @@
 				11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */,
 				F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */,
 				11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */,
+				111B90B62A976C8C0046593C /* UIViewController+showAlert.swift in Sources */,
 				11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */,
 				F685E7192A55F74E00C7F457 /* ArchiveViewController.swift in Sources */,
 				F6ABCE842A46E42800ECFE16 /* DrawerTransitionManager.swift in Sources */,

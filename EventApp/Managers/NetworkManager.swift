@@ -223,10 +223,38 @@ class NetworkManager {
         task.resume()
     }
     
+    func updatePhone(phone: String, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        var url = URLRequest(url: URL(string: serverURL + "change-user-phone")!)
+        url.httpMethod = "PUT"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        url.httpBody = try! JSONEncoder().encode(UpdatePhoneRequest(phone: phone))
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+            guard let responseData = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(NetworkError.clientError("No response data")))
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(true))
+            }
+        }
+        task.resume()
+    }
+    
     func loadTicketTypes(completion: @escaping(Result<[TicketType], Error>) -> Void) {
         let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
         guard let user else { return }
-        guard let userModel = user.userModel else { return }
         var url = URLRequest(url: URL(string: serverURL + "tickets/get-types")!)
         url.httpMethod = "GET"
         url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

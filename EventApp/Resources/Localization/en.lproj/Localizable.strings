@@ -28,6 +28,9 @@
 "attentionMessanges" = "Attention messages";
 "warningMessanges" = "Warning messages";
 "questionMessanges" = "Question messages";
+"success" = "Success";
+"error" = "Error";
+"phoneUpdated" = "Phone number has updated";
 "attention" = "Attention!";
 "youHaveReceived" = "You have received an";
 "information message" = "Information message.";

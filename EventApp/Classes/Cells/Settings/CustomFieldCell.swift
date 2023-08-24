@@ -38,6 +38,7 @@ class CustomFieldCell: UITableViewCell {
     }
     
     func configure(model: TextFieldStateSectionModel) {
+        textFiledModel = model
         label?.text = model.title
         textField.keyboardType = model.keyboardType
         guard let state = model.stateModel.state as? String else { return }
@@ -48,6 +49,6 @@ class CustomFieldCell: UITableViewCell {
 
 extension CustomFieldCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        didEndEditing?(textField.text)
+        textFiledModel?.didEndEditing?(textField.text)
     }
 }

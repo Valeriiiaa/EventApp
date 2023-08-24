@@ -28,6 +28,9 @@
 "attentionMessanges" = "Mensajes de atención";
 "warningMessanges" = "Mensajes de advertencia";
 "questionMessanges" = "Localize me";
+"success" = "Localize me";
+"error" = "Localize me";
+"phoneUpdated" = "Localize me";
 "attention" = "Atención!";
 "youHaveReceived" = "Ha recibido un";
 "information message" = "Mensaje informativo.";

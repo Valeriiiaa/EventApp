@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import IHProgressHUD
 
 class SettingsViewController: BaseViewController {
     var itemsSection = [SectionModel]()
@@ -82,15 +83,31 @@ class SettingsViewController: BaseViewController {
                                                state: name,
                                                type: .name,
                                                isEditable: false,
-                                               didEndEditing: { [weak self] text in
-                                                   guard let self else { return }
-                                               },
                                                keyboardType: .default),
                     TextFieldStateSectionModel(title: "login".localized,
                                                reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: phone,
                                                type: .phone,
                                                isEditable: true,
+                                               didEndEditing: { [weak self] text in
+                                                   guard let self else { return }
+                                                   guard let text else { return }
+                                                   guard self.userManager?.userModel?.phone != text else { return }
+                                                   IHProgressHUD.show()
+                                                   NetworkManager.shared.updatePhone(phone: text, completion: { result in
+                                                       defer {
+                                                           IHProgressHUD.dismiss()
+                                                       }
+                                                       switch result {
+                                                       case .success(let success):
+                                                           self.showAlert(title: "success".localized, message: "phoneUpdated".localized, okAction: nil)
+                                                           self.userManager?.userModel?.phone = text
+                                                       case .failure(let failure):
+                                                           self.showAlert(title: "error".localized, message: "error".localized, okAction: nil)
+                                                           self.tableView.reloadData()
+                                                       }
+                                                   })
+                                               },
                                                keyboardType: .phonePad)
                   ])
         )
