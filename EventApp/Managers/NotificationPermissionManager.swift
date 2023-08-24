@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import FirebaseMessaging
+import Combine
 
-class NotificationPermissionManager {
+class NotificationPermissionManager: NSObject {
+    private let notificationManager: NotificationManagerProtocol
+    
+    init(notificationManager: NotificationManagerProtocol) {
+        self.notificationManager = notificationManager
+    }
+    
     public func request() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+        notificationManager.notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
-            print("Permission granted: \(granted)")
+            print("Permission grajkjjknted: \(granted)")
             // 1. Check if permission granted
             guard granted else { return }
             // 2. Attempt registration for remote notifications on the main thread

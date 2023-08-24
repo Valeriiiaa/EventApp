@@ -81,11 +81,16 @@ class SettingsViewController: BaseViewController {
                                                reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: name,
                                                type: .name,
+                                               isEditable: false,
+                                               didEndEditing: { [weak self] text in
+                                                   guard let self else { return }
+                                               },
                                                keyboardType: .default),
                     TextFieldStateSectionModel(title: "login".localized,
                                                reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: phone,
                                                type: .phone,
+                                               isEditable: true,
                                                keyboardType: .phonePad)
                   ])
         )

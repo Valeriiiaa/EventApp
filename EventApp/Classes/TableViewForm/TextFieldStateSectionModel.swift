@@ -18,15 +18,21 @@ class TextFieldStateSectionModel: ItemStateable {
     public var reuseId: String
     public var stateModel: StateModel
     public let keyboardType: UIKeyboardType
+    public var isEditable: Bool
+    public let didEndEditing: ((String?) -> Void)?
     
     var type: String {
         stateModel.type
     }
     
-    init(title: String, reuseId: String, state: String, type: StateType, keyboardType: UIKeyboardType) {
+    init(title: String, reuseId: String, state: String, type: StateType, isEditable: Bool,
+         didEndEditing: ((String?) -> Void)? = nil,
+         keyboardType: UIKeyboardType) {
         self.title = title
         self.reuseId = reuseId
         self.stateModel = .init(state: state, type: type.rawValue)
         self.keyboardType = keyboardType
+        self.isEditable = isEditable
+        self.didEndEditing = didEndEditing
     }
 }

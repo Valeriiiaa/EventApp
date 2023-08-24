@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111B90B02A974A7A0046593C /* NotificiationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90AF2A974A7A0046593C /* NotificiationManager.swift */; };
+		111B90B22A975D420046593C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 111B90B12A975D420046593C /* GoogleService-Info.plist */; };
 		11769E182A7289B6008237D6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E172A7289B6008237D6 /* String+Localization.swift */; };
 		11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */; };
 		11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1D2A728F3E008237D6 /* UserManager.swift */; };
@@ -135,6 +137,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111B90AF2A974A7A0046593C /* NotificiationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificiationManager.swift; sourceTree = "<group>"; };
+		111B90B12A975D420046593C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11769E172A7289B6008237D6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyResponse.swift; sourceTree = "<group>"; };
 		11769E1D2A728F3E008237D6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -604,6 +608,7 @@
 				F6C5ADC92A603CD70058C8AF /* NetworkManager.swift */,
 				11769E1D2A728F3E008237D6 /* UserManager.swift */,
 				11B614092A8ABA8B00834221 /* NotificationPermissionManager.swift */,
+				111B90AF2A974A7A0046593C /* NotificiationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 		F6DE8D9A2A45C7BA0026E1E5 /* EventApp */ = {
 			isa = PBXGroup;
 			children = (
+				111B90B12A975D420046593C /* GoogleService-Info.plist */,
 				11B614042A8AB48B00834221 /* EventApp.entitlements */,
 				11769E222A729275008237D6 /* Storage */,
 				11769E162A7289AB008237D6 /* Extensions */,
@@ -918,6 +924,7 @@
 				F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */,
 				F685E7212A55FAE800C7F457 /* InformationMessagesCell.xib in Resources */,
 				F6ABCE902A486F0400ECFE16 /* CustomFieldCell.xib in Resources */,
+				111B90B22A975D420046593C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111B90B02A974A7A0046593C /* NotificiationManager.swift in Sources */,
 				F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */,
 				F685E71F2A55F7B200C7F457 /* ArchiveMessagesCell.swift in Sources */,
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,

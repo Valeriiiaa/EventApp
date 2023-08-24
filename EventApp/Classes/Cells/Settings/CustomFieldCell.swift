@@ -14,6 +14,8 @@ class CustomFieldCell: UITableViewCell {
     private var label: UILabel?
     private var textFiledModel: TextFieldStateSectionModel?
     
+    public var didEndEditing: ((String?) -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textField.layer.cornerRadius = 12
@@ -28,6 +30,7 @@ class CustomFieldCell: UITableViewCell {
         textField.leftView = label
         textField.leftViewMode = .always
         self.label = label
+        self.textField.delegate = self
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,13 +42,12 @@ class CustomFieldCell: UITableViewCell {
         textField.keyboardType = model.keyboardType
         guard let state = model.stateModel.state as? String else { return }
         textField.text = state
+        textField.isEnabled = model.isEditable
     }
-    
-    //    func configure<T>(model: StateModel<T>) {
-    //        guard model
-    //        label?.text = model.title
-    //        textField.keyboardType = model.keyboardType
-    //        textFiledModel = model
-    //    }
-    
+}
+
+extension CustomFieldCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        didEndEditing?(textField.text)
+    }
 }

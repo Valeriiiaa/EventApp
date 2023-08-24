@@ -9,6 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import Swinject
 import FirebaseCore
+import FirebaseMessaging
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let contaienr = Container()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         IQKeyboardManager.shared.enable = true
         registerDependency()
         FirebaseApp.configure()
@@ -26,13 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Self.contaienr.register(Storage.self) { r in
             SecuredStorage()
         }
+        Self.contaienr.register(NotificationManagerProtocol.self) { r in
+            NotificationManager()
+        }
     }
     
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
+        // Use this method to select a configuration to create the new scene with.Э-
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
     
@@ -43,17 +49,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        // 1. Convert device token to string
-        let tokenParts = deviceToken.map { data -> String in
-            return String(format: "%02.2hhx", data)
+        Messaging.messaging().apnsToken = deviceToken
+        Messaging.messaging().delegate = self
+        Messaging.messaging().token { token,         error in
+          if let error = error {
+            print("Error fetching FCM registration token: \(error)")
+          } else if let token = token {
+              NetworkManager.shared.sendNotificationToken(token: token, completion: { [weak self] result in
+                  print("[log] \(result)")
+              })
+          }
         }
-        let token = tokenParts.joined()
-        NetworkManager.shared.sendNotificationToken(token: token, completion: { [weak self] result in
-            guard let self else { return }
-            print("[log] \(result)")
-        })
-        // 2. Print device token to use for PNs payloads
-        print("Device Token: \(token)")
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -62,3 +68,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        guard let fcmToken else { return }
+        NetworkManager.shared.sendNotificationToken(token: fcmToken, completion: { [weak self] result in
+            print("[log] \(result)")
+        })
+    }
+}

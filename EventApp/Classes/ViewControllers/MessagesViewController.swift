@@ -19,7 +19,8 @@ class MessagesViewController: BaseViewController {
     }()
     
     private lazy var notificationPermissionManager: NotificationPermissionManager = {
-        .init()
+        let notificationManager = AppDelegate.contaienr.resolve(NotificationManagerProtocol.self)!
+        return .init(notificationManager: notificationManager)
     }()
     
     var messages = [MessagesModel]()
