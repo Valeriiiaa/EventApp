@@ -194,13 +194,11 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row > 0 else { return }
-        
+        let notification = notifications[indexPath.row - 1]
+
         let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertMessageViewController")
+        (entrance as? AlertMessageViewController)?.message = notification
         navigationController?.pushViewController(entrance, animated: true)
-//        let notification = notifications[indexPath.row - 1]
-//        guard let link = notification.link,
-//              let url = URL(string: link) else { return }
-//        UIApplication.shared.open(url)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

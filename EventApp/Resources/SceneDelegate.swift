@@ -40,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         DrawerMenuViewController.shared.drawerNavigationController = navigationController
+        DrawerMenuViewController.shared.previousVC = splashStoryboard
     }
     
     

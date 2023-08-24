@@ -13,4 +13,5 @@ struct NotificationResponseModel: Codable {
     public let title: String
     public let link: String?
     public let type: String
+    public let created_at: String
 }

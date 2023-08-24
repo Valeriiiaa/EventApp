@@ -13,7 +13,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     public weak var drawerNavigationController: UINavigationController?
     
-    private var previousVC: UIViewController?
+    public var previousVC: UIViewController?
     
     let transitionManager = DrawerTransitionManager()
     init() {

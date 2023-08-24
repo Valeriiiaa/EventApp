@@ -602,7 +602,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                         <connections>
-                                            <action selector="backButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="5m3-JA-PnE"/>
+                                            <action selector="backButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="dEf-TA-6lZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-E5-HYV">
@@ -617,10 +617,10 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e20-nY-6gd">
-                                        <rect key="frame" x="20" y="52.333333333333343" width="353" height="504.66666666666663"/>
+                                        <rect key="frame" x="20" y="52.333333333333343" width="353" height="496.66666666666663"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-n2-wAY">
-                                                <rect key="frame" x="10" y="9.9999999999999716" width="333" height="484.66666666666663"/>
+                                                <rect key="frame" x="10" y="9.9999999999999716" width="333" height="446.66666666666663"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -628,7 +628,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.08.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-PF-Jz1">
-                                                <rect key="frame" x="252.33333333333329" y="468.66666666666663" width="90.666666666666657" height="21"/>
+                                                <rect key="frame" x="252.33333333333329" y="460.66666666666663" width="90.666666666666657" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -639,17 +639,19 @@
                                             <constraint firstAttribute="bottom" secondItem="dUN-PF-Jz1" secondAttribute="bottom" constant="15" id="GU2-7z-KqX"/>
                                             <constraint firstAttribute="trailing" secondItem="dUN-PF-Jz1" secondAttribute="trailing" constant="10" id="IPw-oE-gUO"/>
                                             <constraint firstAttribute="trailing" secondItem="gcc-n2-wAY" secondAttribute="trailing" constant="10" id="XDd-qU-O4e"/>
-                                            <constraint firstAttribute="bottom" secondItem="gcc-n2-wAY" secondAttribute="bottom" constant="10" id="avz-Xw-7l2"/>
+                                            <constraint firstAttribute="bottom" secondItem="gcc-n2-wAY" secondAttribute="bottom" constant="40" id="avz-Xw-7l2"/>
                                             <constraint firstItem="gcc-n2-wAY" firstAttribute="leading" secondItem="e20-nY-6gd" secondAttribute="leading" constant="10" id="m6j-xM-RCk"/>
                                             <constraint firstItem="gcc-n2-wAY" firstAttribute="top" secondItem="e20-nY-6gd" secondAttribute="top" constant="10" id="puv-Uu-KNO"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-sX-6vR">
-                                        <rect key="frame" x="144" y="577" width="105" height="39"/>
+                                        <rect key="frame" x="134" y="569" width="125" height="47"/>
+                                        <color key="backgroundColor" red="0.14901960784313725" green="0.36078431372549019" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Go to link">
-                                            <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="goToLinkButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="6E3-ZR-hiD"/>
@@ -707,8 +709,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="h5a-E5-HYV" id="NFo-4D-ecn"/>
                         <outlet property="backgroundMessageView" destination="e20-nY-6gd" id="CTe-Fk-MRx"/>
                         <outlet property="dateMessageLabel" destination="dUN-PF-Jz1" id="raZ-TU-f4q"/>
+                        <outlet property="goToLinkButton" destination="p5l-sX-6vR" id="2lf-a8-Z4Y"/>
                         <outlet property="nameLabel" destination="rSY-Gx-nX7" id="460-9P-Wmv"/>
                         <outlet property="textMessageView" destination="gcc-n2-wAY" id="UjG-ER-6bo"/>
                     </connections>
