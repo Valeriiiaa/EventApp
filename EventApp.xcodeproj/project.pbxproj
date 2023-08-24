@@ -29,6 +29,7 @@
 		11D303742A77F68600BD7B27 /* NotificationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */; };
 		11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */; };
 		11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF892A84F6380050EB2F /* TicketType.swift */; };
+		F61165EC2A976AE500FE5EA2 /* AlertMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */; };
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
@@ -157,6 +158,7 @@
 		11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponseModel.swift; sourceTree = "<group>"; };
 		11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCreateRequest.swift; sourceTree = "<group>"; };
 		11F6FF892A84F6380050EB2F /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
+		F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageViewController.swift; sourceTree = "<group>"; };
 		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 				F685E7182A55F74E00C7F457 /* ArchiveViewController.swift */,
 				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
 				11B614072A8ABA6E00834221 /* BaseViewController.swift */,
+				F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 				F67741792A7168F8001A1D63 /* RightMessagesCell.swift in Sources */,
 				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
 				F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */,
+				F61165EC2A976AE500FE5EA2 /* AlertMessageViewController.swift in Sources */,
 				F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
 				11769E262A72928A008237D6 /* LocalStorageKey.swift in Sources */,

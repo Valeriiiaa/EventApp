@@ -585,6 +585,138 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
+        <!--Alert Message View Controller-->
+        <scene sceneID="wjO-fm-00D">
+            <objects>
+                <viewController storyboardIdentifier="AlertMessageViewController" id="X5v-Su-RGR" customClass="AlertMessageViewController" customModule="EventApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xU0-nM-iyC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3t-WW-RJU">
+                                <rect key="frame" x="0.0" y="196" width="393" height="656"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFI-JR-ENu">
+                                        <rect key="frame" x="30" y="10" width="13" height="22"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="5m3-JA-PnE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-E5-HYV">
+                                        <rect key="frame" x="58" y="4.3333333333333428" width="43" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="GXC-5g-GdT"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e20-nY-6gd">
+                                        <rect key="frame" x="20" y="52.333333333333343" width="353" height="504.66666666666663"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-n2-wAY">
+                                                <rect key="frame" x="10" y="9.9999999999999716" width="333" height="484.66666666666663"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.08.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-PF-Jz1">
+                                                <rect key="frame" x="252.33333333333329" y="468.66666666666663" width="90.666666666666657" height="21"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BackgroundView"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dUN-PF-Jz1" secondAttribute="bottom" constant="15" id="GU2-7z-KqX"/>
+                                            <constraint firstAttribute="trailing" secondItem="dUN-PF-Jz1" secondAttribute="trailing" constant="10" id="IPw-oE-gUO"/>
+                                            <constraint firstAttribute="trailing" secondItem="gcc-n2-wAY" secondAttribute="trailing" constant="10" id="XDd-qU-O4e"/>
+                                            <constraint firstAttribute="bottom" secondItem="gcc-n2-wAY" secondAttribute="bottom" constant="10" id="avz-Xw-7l2"/>
+                                            <constraint firstItem="gcc-n2-wAY" firstAttribute="leading" secondItem="e20-nY-6gd" secondAttribute="leading" constant="10" id="m6j-xM-RCk"/>
+                                            <constraint firstItem="gcc-n2-wAY" firstAttribute="top" secondItem="e20-nY-6gd" secondAttribute="top" constant="10" id="puv-Uu-KNO"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-sX-6vR">
+                                        <rect key="frame" x="144" y="577" width="105" height="39"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Go to link">
+                                            <color key="titleColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToLinkButtonDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="6E3-ZR-hiD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="e20-nY-6gd" firstAttribute="top" secondItem="h5a-E5-HYV" secondAttribute="bottom" constant="15" id="44d-Kn-Pc7"/>
+                                    <constraint firstItem="MFI-JR-ENu" firstAttribute="leading" secondItem="S3t-WW-RJU" secondAttribute="leading" constant="30" id="FsJ-cG-PpZ"/>
+                                    <constraint firstItem="h5a-E5-HYV" firstAttribute="leading" secondItem="MFI-JR-ENu" secondAttribute="trailing" constant="15" id="PZB-kG-lsP"/>
+                                    <constraint firstItem="MFI-JR-ENu" firstAttribute="top" secondItem="S3t-WW-RJU" secondAttribute="top" constant="10" id="Xxq-1U-EJu"/>
+                                    <constraint firstItem="p5l-sX-6vR" firstAttribute="top" secondItem="e20-nY-6gd" secondAttribute="bottom" constant="20" id="bqg-sO-JR0"/>
+                                    <constraint firstAttribute="trailing" secondItem="e20-nY-6gd" secondAttribute="trailing" constant="20" id="efw-Pb-OKR"/>
+                                    <constraint firstItem="h5a-E5-HYV" firstAttribute="centerY" secondItem="MFI-JR-ENu" secondAttribute="centerY" id="hwT-fc-Kue"/>
+                                    <constraint firstAttribute="bottom" secondItem="p5l-sX-6vR" secondAttribute="bottom" constant="40" id="lgF-4d-oRz"/>
+                                    <constraint firstItem="e20-nY-6gd" firstAttribute="leading" secondItem="S3t-WW-RJU" secondAttribute="leading" constant="20" id="nfj-kO-uzJ"/>
+                                    <constraint firstItem="p5l-sX-6vR" firstAttribute="centerX" secondItem="S3t-WW-RJU" secondAttribute="centerX" id="uIy-HY-i6k"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PZP-Hr-beZ">
+                                <rect key="frame" x="70" y="94" width="253" height="97"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-b5-NaP">
+                                <rect key="frame" x="33" y="69" width="31" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="leftPopUp"/>
+                                <connections>
+                                    <action selector="menuDidTap:" destination="X5v-Su-RGR" eventType="touchUpInside" id="VTG-bU-6Mq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joseph Rodriguez " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSY-Gx-nX7">
+                                <rect key="frame" x="232.33333333333337" y="74.666666666666671" width="146.66666666666663" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vE1-Xq-Joz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S3t-WW-RJU" firstAttribute="top" secondItem="PZP-Hr-beZ" secondAttribute="bottom" constant="5" id="4o4-X6-Ek2"/>
+                            <constraint firstItem="S3t-WW-RJU" firstAttribute="height" secondItem="xU0-nM-iyC" secondAttribute="height" multiplier="0.77" id="58L-qj-lmw"/>
+                            <constraint firstItem="S3t-WW-RJU" firstAttribute="leading" secondItem="vE1-Xq-Joz" secondAttribute="leading" id="8xV-rZ-Wyj"/>
+                            <constraint firstItem="rSY-Gx-nX7" firstAttribute="top" secondItem="vE1-Xq-Joz" secondAttribute="top" constant="15.67" id="GSz-QV-j8S"/>
+                            <constraint firstItem="PZP-Hr-beZ" firstAttribute="top" secondItem="rSY-Gx-nX7" secondAttribute="bottom" constant="0.67000000000000004" id="H2v-oS-KTs"/>
+                            <constraint firstItem="vE1-Xq-Joz" firstAttribute="trailing" secondItem="S3t-WW-RJU" secondAttribute="trailing" id="H32-XO-ENQ"/>
+                            <constraint firstItem="rSY-Gx-nX7" firstAttribute="centerY" secondItem="67V-b5-NaP" secondAttribute="centerY" id="IBy-er-Lyj"/>
+                            <constraint firstAttribute="bottom" secondItem="S3t-WW-RJU" secondAttribute="bottom" id="J09-Pb-och"/>
+                            <constraint firstItem="vE1-Xq-Joz" firstAttribute="trailing" secondItem="PZP-Hr-beZ" secondAttribute="trailing" constant="70" id="MHr-mX-xbj"/>
+                            <constraint firstItem="67V-b5-NaP" firstAttribute="leading" secondItem="vE1-Xq-Joz" secondAttribute="leading" constant="33" id="P9d-Vz-Kou"/>
+                            <constraint firstItem="vE1-Xq-Joz" firstAttribute="trailing" secondItem="rSY-Gx-nX7" secondAttribute="trailing" constant="14" id="PlP-De-DdG"/>
+                            <constraint firstItem="67V-b5-NaP" firstAttribute="top" secondItem="vE1-Xq-Joz" secondAttribute="top" constant="10" id="X4y-Mc-dts"/>
+                            <constraint firstItem="PZP-Hr-beZ" firstAttribute="leading" secondItem="vE1-Xq-Joz" secondAttribute="leading" constant="70" id="jEt-AG-N3J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundMessageView" destination="e20-nY-6gd" id="CTe-Fk-MRx"/>
+                        <outlet property="dateMessageLabel" destination="dUN-PF-Jz1" id="raZ-TU-f4q"/>
+                        <outlet property="nameLabel" destination="rSY-Gx-nX7" id="460-9P-Wmv"/>
+                        <outlet property="textMessageView" destination="gcc-n2-wAY" id="UjG-ER-6bo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4F-Vg-vx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037" y="699"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="449.66665649414062" height="306"/>
