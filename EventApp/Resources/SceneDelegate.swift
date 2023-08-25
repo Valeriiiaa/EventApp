@@ -30,7 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let response = connectionOptions.notificationResponse else { return }
         let userInfo = response.notification.request.content.userInfo
         print(userInfo)
-        let notificationId = response.notification.request.content.userInfo["notificationID"] as? Int ?? 5
+        let notificationIdString = userInfo["gcm.notification.id"] as? String ?? ""
+        let notificationId = Int(notificationIdString) ?? 0
+        guard userInfo["gcm.notification.type"] as? String == "Ticket" else { return }
         DispatchQueue.main.async {
             DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notificationId)
         }

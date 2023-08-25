@@ -145,6 +145,7 @@ class MessagesViewController: BaseViewController {
                 }
                 self.fetchMessages()
             case .failure(let failure):
+                self.showAlert(title: "error".localized, message: failure.localizedDescription, okAction: nil)
                 print("[test] \(failure.localizedDescription)")
             }
         })
