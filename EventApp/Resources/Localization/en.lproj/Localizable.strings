@@ -40,4 +40,5 @@
 "writeMessage" = "Write your message";
 "sendMessage" = "Send a message";
 "invalidVerificationCode" = "Invalid verification code";
+"goToLink" = "Go to link";
 

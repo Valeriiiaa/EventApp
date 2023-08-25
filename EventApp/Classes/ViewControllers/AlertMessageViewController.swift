@@ -20,13 +20,23 @@ class AlertMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundMessageView.layer.cornerRadius = 20
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundMessageView.layer.cornerRadius = 20
+            goToLinkButton.layer.cornerRadius = 20
+        default:
+            backgroundMessageView.layer.cornerRadius = 20
+            goToLinkButton.layer.cornerRadius = 20
+        }
+        
         backgroundMessageView.layer.masksToBounds = true
         textMessageView.text = message.text
         dateMessageLabel.text = message.created_at.components(separatedBy: "T").first ?? ""
-        goToLinkButton.layer.cornerRadius = 20
         goToLinkButton.layer.masksToBounds = true
         backButton.setTitle("back".localized, for: .normal)
+        goToLinkButton.setTitle("".localized, for: .normal)
+        
+       
     }
     
     @IBAction func goToLinkButtonDidTap(_ sender: Any) {

@@ -40,3 +40,4 @@
 "writeMessage" = "Напишите сообщение";
 "sendMessage" = "Отправить сообщение";
 "invalidVerificationCode" = "Неправильный код";
+"goToLink" = "Перейти по ссылке";

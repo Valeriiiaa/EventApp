@@ -26,8 +26,8 @@ class AskQuestionChatViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatTableView.register(UINib(nibName: "LeftMessagesCell", bundle: nil), forCellReuseIdentifier: "LeftMessagesCell")
-        chatTableView.register(UINib(nibName: "RightMessagesCell", bundle: nil), forCellReuseIdentifier: "RightMessagesCell")
+        chatTableView.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))
+        chatTableView.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
         chatTableView.delegate = self
         chatTableView.dataSource = self
         sendButton.layer.cornerRadius = 10
@@ -109,7 +109,7 @@ extension AskQuestionChatViewController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = messages[indexPath.row]
-        let cellIdentifier = message.isUserMessage ? "RightMessagesCell" : "LeftMessagesCell"
+        let cellIdentifier = message.isUserMessage ? CellManager.getCell(by: "RightMessagesCell") : CellManager.getCell(by: "LeftMessagesCell")
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let date = message.date.components(separatedBy: "T").first ?? ""
         (cell as? MessageCell)?.configure(text: message.text, time: date)

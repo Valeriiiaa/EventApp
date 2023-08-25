@@ -36,6 +36,8 @@
 		11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */; };
 		11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF892A84F6380050EB2F /* TicketType.swift */; };
 		F61165EC2A976AE500FE5EA2 /* AlertMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */; };
+		F61165EE2A98A3B400FE5EA2 /* LeftMessagesCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61165ED2A98A3B400FE5EA2 /* LeftMessagesCell-ipad.xib */; };
+		F61165F02A98A3BC00FE5EA2 /* RightMessagesCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61165EF2A98A3BC00FE5EA2 /* RightMessagesCell-ipad.xib */; };
 		F614B9272A668C89000289E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F614B9262A668C89000289E3 /* IQKeyboardManagerSwift */; };
 		F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */; };
 		F655E2BB2A49C2A100C7C25A /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */; };
@@ -171,6 +173,8 @@
 		11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCreateRequest.swift; sourceTree = "<group>"; };
 		11F6FF892A84F6380050EB2F /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageViewController.swift; sourceTree = "<group>"; };
+		F61165ED2A98A3B400FE5EA2 /* LeftMessagesCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "LeftMessagesCell-ipad.xib"; sourceTree = "<group>"; };
+		F61165EF2A98A3BC00FE5EA2 /* RightMessagesCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "RightMessagesCell-ipad.xib"; sourceTree = "<group>"; };
 		F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		F655E2BA2A49C2A100C7C25A /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		F655E2BC2A49C36300C7C25A /* MenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellType.swift; sourceTree = "<group>"; };
@@ -387,6 +391,8 @@
 			children = (
 				F67741712A7168B0001A1D63 /* LeftMessagesCell.xib */,
 				F67741732A7168BE001A1D63 /* RightMessagesCell.xib */,
+				F61165ED2A98A3B400FE5EA2 /* LeftMessagesCell-ipad.xib */,
+				F61165EF2A98A3BC00FE5EA2 /* RightMessagesCell-ipad.xib */,
 			);
 			path = MassagesCell;
 			sourceTree = "<group>";
@@ -914,6 +920,7 @@
 				F6800C562A497A0E001FB2E5 /* Montserrat-Regular.ttf in Resources */,
 				F6D5D9692A72932F00A8053B /* SwitcherCell-ipad.xib in Resources */,
 				F65CE1432A49C11B003E4E3F /* MenuHeaderView.xib in Resources */,
+				F61165F02A98A3BC00FE5EA2 /* RightMessagesCell-ipad.xib in Resources */,
 				F6F71DAA2A4F2C1500BFAED4 /* MenuCell.xib in Resources */,
 				F6800C592A497A0E001FB2E5 /* Montserrat-ExtraLight.ttf in Resources */,
 				F6D5D96F2A72945000A8053B /* MenuCell-ipad.xib in Resources */,
@@ -942,6 +949,7 @@
 				F6800C552A497A0E001FB2E5 /* Montserrat-Medium.ttf in Resources */,
 				F6D5D9712A7294AD00A8053B /* Archive-ipad.storyboard in Resources */,
 				F659EFD12A60079D00ECE98A /* MessageInfoCell-ipad.xib in Resources */,
+				F61165EE2A98A3B400FE5EA2 /* LeftMessagesCell-ipad.xib in Resources */,
 				F6800C582A497A0E001FB2E5 /* Montserrat-Bold.ttf in Resources */,
 				F685E7212A55FAE800C7F457 /* InformationMessagesCell.xib in Resources */,
 				F6ABCE902A486F0400ECFE16 /* CustomFieldCell.xib in Resources */,
@@ -1229,11 +1237,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q2MGN75352;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -1253,7 +1260,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eventApp.oleg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kyrylo Chernov";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1266,11 +1272,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q2MGN75352;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -1290,7 +1295,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eventApp.oleg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kyrylo Chernov";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
