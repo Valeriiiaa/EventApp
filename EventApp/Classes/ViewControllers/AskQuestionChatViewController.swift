@@ -83,7 +83,9 @@ class AskQuestionChatViewController: BaseViewController {
             }
             switch result {
             case .success:
-                self.messages.append(.init(text: text, date: "", isUserMessage: true))
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                self.messages.append(.init(text: text, date: dateFormatter.string(from: Date()), isUserMessage: true))
                 self.chatTableView.reloadData()
                 self.chatTableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0), at: .bottom, animated: true)
             case .failure(let error):
