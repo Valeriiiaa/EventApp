@@ -57,6 +57,7 @@ class AskQuestionChatViewController: BaseViewController {
                 self.messages = success.map({ .init(text: $0.text, date: $0.date, isUserMessage: $0.isUserMessage) })
                     .reversed()
                 self.chatTableView.reloadData()
+                self.chatTableView.scrollToRow(at: IndexPath(row: self.messages.count - 1, section: 0), at: .bottom, animated: false)
             case .failure(let failure):
                 self.showAlert(title: "error".localized, message: failure.localizedDescription, okAction: nil)
             }

@@ -41,23 +41,9 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse) async {
         let userInfo = response.notification.request.content.userInfo
         print(userInfo)
+        let notificationId = response.notification.request.content.userInfo["notificationID"] as? Int ?? 5
+        DispatchQueue.main.async {
+            DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notificationId)
+        }
     }
-    func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async
-      -> UIBackgroundFetchResult {
-      // If you are receiving a notification message while your app is in the background,
-      // this callback will not be fired till the user taps on the notification launching the application.
-      // TODO: Handle data of notification
-
-      // With swizzling disabled you must let Messaging know about the message, for Analytics
-      // Messaging.messaging().appDidReceiveMessage(userInfo)
-
-      // Print message ID.
-
-      // Print full message.
-//      print(userInfo)
-
-      return UIBackgroundFetchResult.newData
-    }
-
 }

@@ -16,6 +16,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     public var previousVC: UIViewController?
     
     let transitionManager = DrawerTransitionManager()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .custom
@@ -41,6 +42,11 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         return button
     }()
     
+    private lazy var notificationPermissionManager: NotificationPermissionManager = {
+        let notificationManager = AppDelegate.contaienr.resolve(NotificationManagerProtocol.self)!
+        return .init(notificationManager: notificationManager)
+    }()
+    
     @objc func closeButtonDidTap(_ sender: UIButton) {
         dismiss(animated: true)
     }
@@ -62,6 +68,10 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     public func back() {
+        guard let previousVC else {
+            openHomeVC()
+            return
+        }
         drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
     }
     
@@ -105,21 +115,23 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    private func openAskQuestionVC() {
-//        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
-//        guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
-//            dismiss(animated: true)
-//            return
-//        }
-//        drawerNavigationController?.viewControllers = [entrance]
-//        dismiss(animated: true)
+    public func openChatAskAQuestion(chatId: Int) {
         let entrance = StoryboardFabric.getStoryboard(by: "Main")
             .instantiateViewController(withIdentifier: "AskQuestionChatViewController")
         guard !(drawerNavigationController?.viewControllers.last is AskQuestionChatViewController) else {
             dismiss(animated: true)
             return
         }
-        (entrance as? AskQuestionChatViewController)?.chatId = 5
+        (entrance as? AskQuestionChatViewController)?.chatId = chatId
+        drawerNavigationController?.viewControllers = [entrance]
+    }
+    
+    private func openAskQuestionVC() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
+        guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
+            dismiss(animated: true)
+            return
+        }
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
     }
@@ -161,6 +173,8 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             return
         }
         NetworkManager.shared.logout()
+        UserDefaultsStorage.shared.clear(key: .token)
+        notificationPermissionManager.cancelNotification()
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
     }

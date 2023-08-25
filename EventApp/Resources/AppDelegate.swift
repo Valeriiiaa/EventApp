@@ -17,8 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let contaienr = Container()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         IQKeyboardManager.shared.enable = true
         registerDependency()
         FirebaseApp.configure()

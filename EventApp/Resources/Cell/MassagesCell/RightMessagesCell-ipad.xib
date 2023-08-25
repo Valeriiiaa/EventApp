@@ -40,7 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1u4-xV-84d" firstAttribute="leading" secondItem="ftB-I3-VBP" secondAttribute="leading" constant="50" id="D3T-0B-YdG"/>
+                            <constraint firstItem="1u4-xV-84d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ftB-I3-VBP" secondAttribute="leading" constant="10" id="D3T-0B-YdG"/>
                             <constraint firstAttribute="trailing" secondItem="Ix0-ob-vFZ" secondAttribute="trailing" constant="30" id="Dew-YO-YBW"/>
                             <constraint firstItem="Ix0-ob-vFZ" firstAttribute="top" secondItem="ftB-I3-VBP" secondAttribute="top" constant="10" id="MX6-xC-jnS"/>
                             <constraint firstAttribute="trailing" secondItem="1u4-xV-84d" secondAttribute="trailing" constant="5" id="hpA-5k-9hn"/>

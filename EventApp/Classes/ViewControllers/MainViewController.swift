@@ -149,6 +149,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     private func registerDependency(token: String) {
         let container = AppDelegate.contaienr
+        UserDefaultsStorage.shared.set(key: .token, value: token)
         container.register(UserManager.self, factory: { r in
             print("registered")
             return UserManager(token: token)

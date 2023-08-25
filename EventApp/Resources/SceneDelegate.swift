@@ -16,35 +16,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-//<<<<<<< Updated upstream
-//            
-//            
-//            
-//
-//            let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
-//            let navigationController = UINavigationController(rootViewController: splashStoryboard)
-//            navigationController.isNavigationBarHidden = true
-//            navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
-//            window?.rootViewController = navigationController
-//            window?.makeKeyAndVisible()
-//        DrawerMenuViewController.shared.drawerNavigationController = navigationController
-//        }
-//    
-//=======
-//>>>>>>> Stashed changes
-        
-        let splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
+        var splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
+        if let token: String = UserDefaultsStorage.shared.get(key: .token) {
+            registerDependency(token: token)
+            splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
+        }
         let navigationController = UINavigationController(rootViewController: splashStoryboard)
         navigationController.isNavigationBarHidden = true
         navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         DrawerMenuViewController.shared.drawerNavigationController = navigationController
-        DrawerMenuViewController.shared.previousVC = splashStoryboard
+        guard let response = connectionOptions.notificationResponse else { return }
+        let userInfo = response.notification.request.content.userInfo
+        print(userInfo)
+        let notificationId = response.notification.request.content.userInfo["notificationID"] as? Int ?? 5
+        DispatchQueue.main.async {
+            DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notificationId)
+        }
     }
-    
-    
-    
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -74,6 +64,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
+    private func registerDependency(token: String) {
+        let container = AppDelegate.contaienr
+        container.register(UserManager.self, factory: { r in
+            print("registered")
+            return UserManager(token: token)
+        }).inObjectScope(.container)
+    }
     
 }
 

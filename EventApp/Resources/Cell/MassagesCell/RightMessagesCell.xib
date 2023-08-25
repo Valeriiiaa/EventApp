@@ -40,6 +40,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eOo-gf-G5B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KoM-oO-HDk" secondAttribute="leading" constant="10" id="HYW-M3-9oI"/>
                             <constraint firstAttribute="bottom" secondItem="eOo-gf-G5B" secondAttribute="bottom" constant="10" id="YRW-i7-VZL"/>
                             <constraint firstItem="MtY-WG-xj6" firstAttribute="leading" secondItem="KoM-oO-HDk" secondAttribute="leading" constant="10" id="bti-oK-hmd"/>
                             <constraint firstAttribute="trailing" secondItem="MtY-WG-xj6" secondAttribute="trailing" constant="30" id="d1t-ku-SDB"/>

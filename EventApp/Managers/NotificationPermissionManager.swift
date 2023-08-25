@@ -28,4 +28,8 @@ class NotificationPermissionManager: NSObject {
             }
         }
     }
+    
+    public func cancelNotification() {
+        UIApplication.shared.unregisterForRemoteNotifications()
+    }
 }

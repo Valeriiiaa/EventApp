@@ -135,11 +135,14 @@ class MessagesViewController: BaseViewController {
     }
     
     private func fetchProfile() {
+//        guard self.userManager?.userModel == nil else { return }
         NetworkManager.shared.getProfile(completion: { [weak self] result in
             guard let self else { return }
             switch result {
             case .success(let success):
-                self.userManager?.userModel = success
+                if self.userManager?.userModel == nil {
+                    self.userManager?.userModel = success
+                }
                 self.fetchMessages()
             case .failure(let failure):
                 print("[test] \(failure.localizedDescription)")
@@ -196,7 +199,7 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         guard indexPath.row > 0 else { return }
         let notification = notifications[indexPath.row - 1]
 
-        let entrance = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertMessageViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AlertMessageViewController")
         (entrance as? AlertMessageViewController)?.message = notification
         navigationController?.pushViewController(entrance, animated: true)
     }

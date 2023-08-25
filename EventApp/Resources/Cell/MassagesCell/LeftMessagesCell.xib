@@ -22,16 +22,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y6-Ld-oOP">
-                        <rect key="frame" x="10" y="10" width="69.666666666666671" height="70"/>
+                        <rect key="frame" x="10" y="10" width="73" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-E5-y89">
-                                <rect key="frame" x="10.000000000000002" y="9.9999999999999982" width="29.666666666666671" height="29.333333333333329"/>
+                                <rect key="frame" x="10" y="10" width="33" height="29"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="17:53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xb-hf-RV9">
-                                <rect key="frame" x="42" y="49.333333333333336" width="22.666666666666671" height="10.666666666666664"/>
+                                <rect key="frame" x="47.333333333333336" y="49" width="20.666666666666664" height="11"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,6 +45,7 @@
                             <constraint firstItem="4Nj-E5-y89" firstAttribute="leading" secondItem="0y6-Ld-oOP" secondAttribute="leading" constant="10" id="r82-WQ-dRj"/>
                             <constraint firstAttribute="trailing" secondItem="0Xb-hf-RV9" secondAttribute="trailing" constant="5" id="t2I-8p-xFB"/>
                             <constraint firstAttribute="bottom" secondItem="0Xb-hf-RV9" secondAttribute="bottom" constant="10" id="yqR-7m-bNR"/>
+                            <constraint firstItem="0Xb-hf-RV9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0y6-Ld-oOP" secondAttribute="leading" constant="10" id="zyt-mf-ITp"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -7,12 +7,10 @@
 
 import UIKit
 
-class AlertMessageViewController: UIViewController {
-    
+class AlertMessageViewController: BaseViewController {
     @IBOutlet weak var dateMessageLabel: UILabel!
     @IBOutlet weak var textMessageView: UITextView!
     @IBOutlet weak var backgroundMessageView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var goToLinkButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
@@ -34,9 +32,8 @@ class AlertMessageViewController: UIViewController {
         dateMessageLabel.text = message.created_at.components(separatedBy: "T").first ?? ""
         goToLinkButton.layer.masksToBounds = true
         backButton.setTitle("back".localized, for: .normal)
-        goToLinkButton.setTitle("".localized, for: .normal)
-        
-       
+        goToLinkButton.setTitle("goToLink".localized, for: .normal)
+        goToLinkButton.isHidden = message.link == nil
     }
     
     @IBAction func goToLinkButtonDidTap(_ sender: Any) {
