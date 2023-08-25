@@ -11,6 +11,9 @@
 		111B90B22A975D420046593C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 111B90B12A975D420046593C /* GoogleService-Info.plist */; };
 		111B90B42A976BC60046593C /* UpdatePhoneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B32A976BC60046593C /* UpdatePhoneRequest.swift */; };
 		111B90B62A976C8C0046593C /* UIViewController+showAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B52A976C8C0046593C /* UIViewController+showAlert.swift */; };
+		111B90B82A9783FF0046593C /* AskQuestionChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B72A9783FF0046593C /* AskQuestionChatViewController.swift */; };
+		111B90BA2A9795940046593C /* ChatMessageModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90B92A9795940046593C /* ChatMessageModelResponse.swift */; };
+		111B90BC2A9795A30046593C /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111B90BB2A9795A30046593C /* ChatMessageModel.swift */; };
 		11769E182A7289B6008237D6 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E172A7289B6008237D6 /* String+Localization.swift */; };
 		11769E1C2A728DE1008237D6 /* CodeVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */; };
 		11769E1E2A728F3E008237D6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11769E1D2A728F3E008237D6 /* UserManager.swift */; };
@@ -29,6 +32,7 @@
 		11D303702A77AF2400BD7B27 /* ItemStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */; };
 		11D303722A77B34300BD7B27 /* TextFieldStateSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */; };
 		11D303742A77F68600BD7B27 /* NotificationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */; };
+		11E714272A9895C500B3C6EA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E714262A9895C500B3C6EA /* MessageCell.swift */; };
 		11F6FF882A84F58A0050EB2F /* TicketCreateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */; };
 		11F6FF8A2A84F6380050EB2F /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF892A84F6380050EB2F /* TicketType.swift */; };
 		F61165EC2A976AE500FE5EA2 /* AlertMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */; };
@@ -144,6 +148,9 @@
 		111B90B12A975D420046593C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		111B90B32A976BC60046593C /* UpdatePhoneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePhoneRequest.swift; sourceTree = "<group>"; };
 		111B90B52A976C8C0046593C /* UIViewController+showAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showAlert.swift"; sourceTree = "<group>"; };
+		111B90B72A9783FF0046593C /* AskQuestionChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestionChatViewController.swift; sourceTree = "<group>"; };
+		111B90B92A9795940046593C /* ChatMessageModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModelResponse.swift; sourceTree = "<group>"; };
+		111B90BB2A9795A30046593C /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
 		11769E172A7289B6008237D6 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyResponse.swift; sourceTree = "<group>"; };
 		11769E1D2A728F3E008237D6 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -160,6 +167,7 @@
 		11D3036F2A77AF2400BD7B27 /* ItemStateable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStateable.swift; sourceTree = "<group>"; };
 		11D303712A77B34300BD7B27 /* TextFieldStateSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStateSectionModel.swift; sourceTree = "<group>"; };
 		11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationResponseModel.swift; sourceTree = "<group>"; };
+		11E714262A9895C500B3C6EA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		11F6FF872A84F58A0050EB2F /* TicketCreateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCreateRequest.swift; sourceTree = "<group>"; };
 		11F6FF892A84F6380050EB2F /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +323,7 @@
 				11769E1B2A728DE1008237D6 /* CodeVerifyResponse.swift */,
 				11769E2A2A729A79008237D6 /* ProfileModelResponse.swift */,
 				11D303732A77F68600BD7B27 /* NotificationResponseModel.swift */,
+				111B90B92A9795940046593C /* ChatMessageModelResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 			children = (
 				F67741762A7168EC001A1D63 /* LeftMessagesCell.swift */,
 				F67741782A7168F8001A1D63 /* RightMessagesCell.swift */,
+				11E714262A9895C500B3C6EA /* MessageCell.swift */,
 			);
 			path = MessagesCell;
 			sourceTree = "<group>";
@@ -570,6 +580,7 @@
 				F6ABCEA32A48727400ECFE16 /* Enums */,
 				F6C5ADD72A631DAA0058C8AF /* ServerResponse.swift */,
 				F61C2E9A2A7172DB00CC77A2 /* ChatModel.swift */,
+				111B90BB2A9795A30046593C /* ChatMessageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -707,6 +718,7 @@
 				F6CEEE962A53110F00B2E1EE /* SelectionViewController.swift */,
 				11B614072A8ABA6E00834221 /* BaseViewController.swift */,
 				F61165EB2A976AE500FE5EA2 /* AlertMessageViewController.swift */,
+				111B90B72A9783FF0046593C /* AskQuestionChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -961,6 +973,8 @@
 				111B90B02A974A7A0046593C /* NotificiationManager.swift in Sources */,
 				F6C5ADCD2A6045940058C8AF /* CodeRequest.swift in Sources */,
 				F685E71F2A55F7B200C7F457 /* ArchiveMessagesCell.swift in Sources */,
+				111B90BA2A9795940046593C /* ChatMessageModelResponse.swift in Sources */,
+				11E714272A9895C500B3C6EA /* MessageCell.swift in Sources */,
 				111B90B42A976BC60046593C /* UpdatePhoneRequest.swift in Sources */,
 				F6800C4C2A4974E7001FB2E5 /* AskQuestionViewController.swift in Sources */,
 				F6ABCEA02A48719400ECFE16 /* SettingsHeaderView.swift in Sources */,
@@ -974,6 +988,7 @@
 				F6DE8DA02A45C7BA0026E1E5 /* MainViewController.swift in Sources */,
 				F61C2E9B2A7172DB00CC77A2 /* ChatModel.swift in Sources */,
 				F61165EC2A976AE500FE5EA2 /* AlertMessageViewController.swift in Sources */,
+				111B90B82A9783FF0046593C /* AskQuestionChatViewController.swift in Sources */,
 				F6CEEE9E2A53217600B2E1EE /* LanguageModel.swift in Sources */,
 				F6ABCE822A46E3DA00ECFE16 /* DrawerMenuViewController.swift in Sources */,
 				11769E262A72928A008237D6 /* LocalStorageKey.swift in Sources */,
@@ -1025,6 +1040,7 @@
 				F6C5ADCA2A603CD70058C8AF /* NetworkManager.swift in Sources */,
 				F685E7232A55FAFB00C7F457 /* InformationMessagesCell.swift in Sources */,
 				11B6140A2A8ABA8B00834221 /* NotificationPermissionManager.swift in Sources */,
+				111B90BC2A9795A30046593C /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,9 +1229,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q2MGN75352;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -1232,8 +1250,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.EventApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventApp.oleg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kyrylo Chernov";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1246,9 +1266,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EventApp/EventApp.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q2MGN75352;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EventApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -1265,8 +1287,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.EventApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventApp.oleg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Kyrylo Chernov";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

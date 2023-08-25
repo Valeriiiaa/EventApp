@@ -22,6 +22,10 @@ enum NetworkError: Error {
     }
 }
 
+struct SendMessageModelRequest: Codable {
+    let text: String
+}
+
 class NetworkManager {
     static let shared = NetworkManager()
     private let serverURL = "http://dev.effective-hc.com/api/"
@@ -280,6 +284,8 @@ class NetworkManager {
         task.resume()
     }
     
+    //MARK: Messages
+    
     func createTicket(text: String, typeId: Int, completion: @escaping(Result<Bool, Error>) -> Void) {
         let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
         guard let user else { return }
@@ -298,6 +304,68 @@ class NetworkManager {
             }
             
             completion(.success(true))
+        }
+        task.resume()
+    }
+    
+    func sendMessage(chatId: Int, message: String, completion: @escaping(Result<Bool, Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        var url = URLRequest(url: URL(string: serverURL + "tickets/\(chatId)/messages")!)
+        url.httpMethod = "POST"
+        url.httpBody = try! JSONEncoder().encode(SendMessageModelRequest(text: message))
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(.success(true))
+                }
+                completion(.failure(error))
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(true))
+            }
+        }
+        task.resume()
+    }
+    
+    func getMessages(chatId: Int, completion: @escaping(Result<[ChatMessageModelResponse], Error>) -> Void) {
+        let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
+        guard let user else { return }
+        var url = URLRequest(url: URL(string: serverURL + "tickets/\(chatId)/get-messages")!)
+        url.httpMethod = "GET"
+        url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            if let error {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+            
+            guard let responseData = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(NetworkError.clientError("No response data")))
+                }
+                return
+            }
+            do {
+                let serverResponse = try JSONDecoder().decode([ChatMessageModelResponse].self, from: responseData)
+                DispatchQueue.main.async {
+                    completion(.success(serverResponse))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
         }
         task.resume()
     }

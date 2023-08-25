@@ -106,11 +106,20 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openAskQuestionVC() {
-        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
-        guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
+//        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AskQuestionViewController")
+//        guard !(drawerNavigationController?.viewControllers.last is AskQuestionViewController) else {
+//            dismiss(animated: true)
+//            return
+//        }
+//        drawerNavigationController?.viewControllers = [entrance]
+//        dismiss(animated: true)
+        let entrance = StoryboardFabric.getStoryboard(by: "Main")
+            .instantiateViewController(withIdentifier: "AskQuestionChatViewController")
+        guard !(drawerNavigationController?.viewControllers.last is AskQuestionChatViewController) else {
             dismiss(animated: true)
             return
         }
+        (entrance as? AskQuestionChatViewController)?.chatId = 5
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
     }

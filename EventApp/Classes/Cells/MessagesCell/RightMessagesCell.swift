@@ -7,8 +7,7 @@
 
 import UIKit
 
-class RightMessagesCell: UITableViewCell {
-
+class RightMessagesCell: UITableViewCell, MessageCell {
     @IBOutlet weak var backgroundViewMessages: UIView!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var textMessaging: UILabel!
@@ -17,17 +16,10 @@ class RightMessagesCell: UITableViewCell {
         super.awakeFromNib()
         backgroundViewMessages.layer.cornerRadius = 20
         backgroundViewMessages.layer.masksToBounds = true
-   
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-       
-    }
+    
     func configure(text: String, time: String) {
         textMessaging.text = text
         durationLabel.text = time
     }
-    
 }

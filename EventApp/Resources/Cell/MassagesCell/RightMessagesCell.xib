@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,16 +23,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-oO-HDk">
-                        <rect key="frame" x="320" y="0.0" width="73" height="120"/>
+                        <rect key="frame" x="310" y="10" width="73" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtY-WG-xj6">
-                                <rect key="frame" x="10" y="10" width="33" height="100"/>
+                                <rect key="frame" x="10" y="10" width="33" height="59"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-gf-G5B">
-                                <rect key="frame" x="46" y="41" width="22" height="42.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="17:58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-gf-G5B">
+                                <rect key="frame" x="46.666666666666686" y="79" width="21.333333333333329" height="11"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,23 +40,24 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="MtY-WG-xj6" secondAttribute="bottom" constant="10" id="Hyc-Fv-tqc"/>
-                            <constraint firstItem="eOo-gf-G5B" firstAttribute="top" secondItem="KoM-oO-HDk" secondAttribute="top" constant="41" id="avb-j4-enW"/>
+                            <constraint firstAttribute="bottom" secondItem="eOo-gf-G5B" secondAttribute="bottom" constant="10" id="YRW-i7-VZL"/>
                             <constraint firstItem="MtY-WG-xj6" firstAttribute="leading" secondItem="KoM-oO-HDk" secondAttribute="leading" constant="10" id="bti-oK-hmd"/>
                             <constraint firstAttribute="trailing" secondItem="MtY-WG-xj6" secondAttribute="trailing" constant="30" id="d1t-ku-SDB"/>
                             <constraint firstItem="MtY-WG-xj6" firstAttribute="top" secondItem="KoM-oO-HDk" secondAttribute="top" constant="10" id="kra-B2-CZi"/>
-                            <constraint firstAttribute="bottom" secondItem="eOo-gf-G5B" secondAttribute="bottom" constant="36.670000000000002" id="n6q-au-TMf"/>
+                            <constraint firstItem="eOo-gf-G5B" firstAttribute="top" secondItem="MtY-WG-xj6" secondAttribute="bottom" constant="10" id="vb8-dU-JsC"/>
                             <constraint firstAttribute="trailing" secondItem="eOo-gf-G5B" secondAttribute="trailing" constant="5" id="y6C-yT-K1k"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="KoM-oO-HDk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mj0-cE-8PN" secondAttribute="leading" constant="20" id="3EO-nf-YK7"/>
-                    <constraint firstItem="KoM-oO-HDk" firstAttribute="top" secondItem="mj0-cE-8PN" secondAttribute="top" id="cdi-GQ-2YL"/>
-                    <constraint firstAttribute="trailing" secondItem="KoM-oO-HDk" secondAttribute="trailing" id="giz-d8-1sK"/>
-                    <constraint firstAttribute="bottom" secondItem="KoM-oO-HDk" secondAttribute="bottom" id="kvS-i3-iM8"/>
+                    <constraint firstItem="KoM-oO-HDk" firstAttribute="top" secondItem="mj0-cE-8PN" secondAttribute="top" constant="10" id="cdi-GQ-2YL"/>
+                    <constraint firstAttribute="trailing" secondItem="KoM-oO-HDk" secondAttribute="trailing" constant="10" id="giz-d8-1sK"/>
+                    <constraint firstAttribute="bottom" secondItem="KoM-oO-HDk" secondAttribute="bottom" constant="10" id="kvS-i3-iM8"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backgroundViewMessages" destination="KoM-oO-HDk" id="coH-PN-BXt"/>
                 <outlet property="durationLabel" destination="eOo-gf-G5B" id="cIn-iJ-gLF"/>
