@@ -53,11 +53,11 @@ class SettingsViewController: BaseViewController {
             self.storage.set(key: .showAttention, value: value)
         }).store(in: &subscriptions)
         
-        let informationState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.informationSwitch.rawValue })
-        informationState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+        let newsState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.newsSwitch.rawValue })
+        newsState?.stateModel.$state.sink(receiveValue: { [weak self] value in
             guard let self else { return }
             guard let value = value as? Bool else { return }
-            self.storage.set(key: .showInformation, value: value)
+            self.storage.set(key: .showNews, value: value)
         }).store(in: &subscriptions)
         let questionState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.questionSwitch.rawValue })
         
@@ -66,14 +66,22 @@ class SettingsViewController: BaseViewController {
             guard let value = value as? Bool else { return }
             self.storage.set(key: .showAQuestion, value: value)
         }).store(in: &subscriptions)
+        
+        let personalState = itemsSection[1].itemsInside.first(where: { $0.type == StateType.personalSwitch.rawValue })
+        personalState?.stateModel.$state.sink(receiveValue: { [weak self] value in
+            guard let self else { return }
+            guard let value = value as? Bool else { return }
+            self.storage.set(key: .showPersonal, value: value)
+        }).store(in: &subscriptions)
     }
     
     private func configureListData() {
         let name = "\(userManager?.userModel?.name_first ?? "") \(userManager?.userModel?.name_last ?? "")"
         let phone = userManager?.userModel?.phone ?? ""
-        let showInformation = storage.get(key: .showInformation, defaultValue: true)
+        let showNews = storage.get(key: .showNews, defaultValue: true)
         let showAttention = storage.get(key: .showAttention, defaultValue: true)
-        let showWarning = storage.get(key: .showWarning, defaultValue: true)
+        let showAlarm = storage.get(key: .showAlarm, defaultValue: true)
+        let showPersonal = storage.get(key: .showPersonal, defaultValue: true)
         let showQuestion = storage.get(key: .showAQuestion, defaultValue: true)
         itemsSection.append(
             .init(titleHeader: "personalInformation".localized,
@@ -88,7 +96,7 @@ class SettingsViewController: BaseViewController {
                                                reuseId: CellManager.getCell(by: "CustomFieldCell"),
                                                state: phone,
                                                type: .phone,
-                                               isEditable: true,
+                                               isEditable: false,
                                                didEndEditing: { [weak self] text in
                                                    guard let self else { return }
                                                    guard let text else { return }
@@ -115,18 +123,22 @@ class SettingsViewController: BaseViewController {
             .init(titleHeader: "notification".localized,
                   itemsInside: [
                     SwitcherStateSectionModel(title: "informationMessanges".localized,
-                                              type: .informationSwitch,
+                                              type: .newsSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
-                                              state: showInformation),
-                    SwitcherStateSectionModel(title: "attentionMessanges".localized,
+                                              state: showNews),
+                    SwitcherStateSectionModel(title: "warningMessanges".localized,
                                               type: .attentionSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: showAttention),
-                    SwitcherStateSectionModel(title: "warningMessanges".localized,
-                                              type: .warningSwitch,
+                    SwitcherStateSectionModel(title: "attentionMessanges".localized,
+                                              type: .alarmSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
-                                              state: showWarning),
+                                              state: showAlarm),
                     SwitcherStateSectionModel(title: "questionMessanges".localized,
+                                              type: .personalSwitch,
+                                              reuseId: CellManager.getCell(by: "SwitcherCell"),
+                                              state: showPersonal),
+                    SwitcherStateSectionModel(title: "askQuestionMessanges".localized,
                                               type: .questionSwitch,
                                               reuseId: CellManager.getCell(by: "SwitcherCell"),
                                               state: showQuestion)

@@ -14,6 +14,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     public weak var drawerNavigationController: UINavigationController?
     
     public var previousVC: UIViewController?
+    public var isFirstOpen = true
     
     let transitionManager = DrawerTransitionManager()
     
@@ -68,11 +69,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     public func back() {
-        guard let previousVC else {
-            openHomeVC()
-            return
-        }
-        drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
+        openHomeVC()
     }
     
     override func viewDidLayoutSubviews() {
@@ -166,7 +163,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         dismiss(animated: true)
     }
     
-    private func openMainVC() {
+    public func openMainVC() {
         let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
         guard !(drawerNavigationController?.viewControllers.last is MainViewController) else {
             dismiss(animated: true)

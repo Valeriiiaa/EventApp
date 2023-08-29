@@ -11,6 +11,7 @@ import Swinject
 enum NetworkError: Error {
     case serverError(String)
     case clientError(String)
+    case notAuthorized
     
     var errorDescription: String {
         switch self {
@@ -18,6 +19,8 @@ enum NetworkError: Error {
             return string
         case .clientError(let string):
             return string
+        case .notAuthorized:
+            return "Unauthorized"
         }
     }
 }
@@ -59,19 +62,32 @@ class NetworkManager {
         let session = URLSession.shared
         let task = session.dataTask(with: url) { data, response, error in
             if let error {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
             }
             
             guard let responseData = data else {
-                completion(.failure(NetworkError.clientError("No response data")))
+                DispatchQueue.main.async {
+                    completion(.failure(NetworkError.clientError("No response data")))
+                }
                 return
             }
             
             do {
                 let profileResponse = try JSONDecoder().decode(ProfileModelResponse.self, from: responseData)
-                completion(.success(profileResponse))
+                DispatchQueue.main.async {
+                    completion(.success(profileResponse))
+                }
+               
             } catch {
-                completion(.failure(error))
+                DispatchQueue.main.async {
+                    guard (response as? HTTPURLResponse)?.statusCode != 401 else {
+                        completion(.failure(NetworkError.notAuthorized))
+                        return
+                    }
+                    completion(.failure(error))
+                }
             }
         }
         task.resume()
@@ -178,6 +194,7 @@ class NetworkManager {
         let task = session.dataTask(with: url) { data, response, error in
             if let error {
                 completion(.failure(error))
+                return
             }
             
             guard let responseData = data else {

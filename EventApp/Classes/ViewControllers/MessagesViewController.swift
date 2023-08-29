@@ -27,6 +27,10 @@ class MessagesViewController: BaseViewController {
     
     private var notifications = [NotificationResponseModel]()
     
+    public var isFirstOpen: Bool {
+        DrawerMenuViewController.shared.isFirstOpen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: CellManager.getCell(by: "MessageInfoCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MessageInfoCell"))
@@ -44,7 +48,9 @@ class MessagesViewController: BaseViewController {
     }
     
     private func configureMessages(notifications: [NotificationResponseModel]) {
-        messages = [MessagesModel(itemsInside: [.mainMessageCell(notifications.count)])]
+        let readedIs = UserDefaultsStorage.shared.get(key: .readedNotification, defaultValue: [Int]())
+        let countNonReaded = notifications.filter({ !readedIs.contains($0.id) }).count
+        messages = [MessagesModel(itemsInside: [.mainMessageCell(countNonReaded)])]
         let newMessages = notifications.map({ item in
             var image = "warningMessage"
             switch item.type {
@@ -63,7 +69,9 @@ class MessagesViewController: BaseViewController {
     }
     
     private func reconfigureMessages() {
-        messages = [MessagesModel(itemsInside: [.mainMessageCell(notifications.count)])]
+        let readedIs = UserDefaultsStorage.shared.get(key: .readedNotification, defaultValue: [Int]())
+        let countNonReaded = notifications.filter({ !readedIs.contains($0.id) }).count
+        messages = [MessagesModel(itemsInside: [.mainMessageCell(countNonReaded)])]
         let newMessages = notifications.map({ item in
             var image = "warningMessage"
             switch item.type {
@@ -109,28 +117,15 @@ class MessagesViewController: BaseViewController {
             IHProgressHUD.dismiss()
             switch result {
             case .success(let success):
-                let showInformation = UserDefaultsStorage.shared.get(key: .showInformation, defaultValue: true)
-                let showAttention = UserDefaultsStorage.shared.get(key: .showAttention, defaultValue: true)
-                let showWarning = UserDefaultsStorage.shared.get(key: .showWarning, defaultValue: true)
-                let showQuestion = UserDefaultsStorage.shared.get(key: .showAQuestion, defaultValue: true)
-                self.notifications = success.compactMap({ item in
-                    if item.type == "Reminder" && !showAttention {
-                        return nil
-                    }
-                    if ["News"].contains(item.type) && !showInformation {
-                        return nil
-                    } else if item.type == "Personal" && !showQuestion {
-                        return nil
-                    } else if !showWarning {
-                        return nil
-                    }
-                    return item
-                })
+                self.notifications = success
                 self.configureMessages(notifications: self.notifications)
             case .failure(let failure):
                 IHProgressHUD.showError(withStatus: failure.localizedDescription)
                 IHProgressHUD.dismissWithDelay(0.5)
             }
+            DispatchQueue.global().asyncAfter(deadline: .now() + 30, execute: { [weak self] in
+                self?.fetchMessages()
+            })
         })
     }
     
@@ -140,11 +135,17 @@ class MessagesViewController: BaseViewController {
             guard let self else { return }
             switch result {
             case .success(let success):
-                if self.userManager?.userModel == nil {
+                if self.userManager?.userModel == nil || isFirstOpen {
                     self.userManager?.userModel = success
+                    DrawerMenuViewController.shared.isFirstOpen = false
                 }
                 self.fetchMessages()
             case .failure(let failure):
+                if let networkError = failure as? NetworkError,
+                   networkError.errorDescription == NetworkError.notAuthorized.errorDescription {
+                    DrawerMenuViewController.shared.openMainVC()
+                    return
+                }
                 self.showAlert(title: "error".localized, message: failure.localizedDescription, okAction: nil)
                 print("[test] \(failure.localizedDescription)")
             }
@@ -203,6 +204,8 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
         let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AlertMessageViewController")
         (entrance as? AlertMessageViewController)?.message = notification
         navigationController?.pushViewController(entrance, animated: true)
+        UserDefaultsStorage.shared.add(key: .readedNotification, value: notification.id)
+        reconfigureMessages()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -10,8 +10,9 @@ import Foundation
 enum StateType: String {
     case name
     case phone
-    case warningSwitch
+    case alarmSwitch
     case attentionSwitch
-    case informationSwitch
+    case newsSwitch
+    case personalSwitch
     case questionSwitch
 }

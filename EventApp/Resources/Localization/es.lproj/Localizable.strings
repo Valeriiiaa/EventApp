@@ -24,10 +24,11 @@
 "name" = "Nombre";
 "login" = "Login";
 "notification" = "Notificación";
-"informationMessanges" = "Mensajes de información";
-"attentionMessanges" = "Mensajes de atención";
+"informationMessanges" = "Notificaciones de noticias";
+"attentionMessanges" = "Avisos importantes";
 "warningMessanges" = "Mensajes de advertencia";
-"questionMessanges" = "Localize me";
+"questionMessanges" = "Notificaciones personales";
+"askQuestionMessanges" = "Hacer una pregunta de notificación";
 "success" = "Localize me";
 "error" = "Localize me";
 "phoneUpdated" = "Localize me";

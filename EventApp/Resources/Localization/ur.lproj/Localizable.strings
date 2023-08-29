@@ -24,10 +24,11 @@
 "name" = "Name";
 "login" = "Login";
 "notification" = "Notification";
-"informationMessanges" = "Information messages";
-"attentionMessanges" = "Attention messages";
-"warningMessanges" = "Warning messages";
-"questionMessanges" = "Localize me";
+"informationMessanges" = "خبروں کی اطلاعات";
+"attentionMessanges" = "اہم نوٹس";
+"warningMessanges" = "انتباہی پیغامات";
+"questionMessanges" = "ذاتی اطلاعات";
+"askQuestionMessanges" = "اطلاع سے متعلق سوال پوچھیں";
 "success" = "Localize me";
 "error" = "Localize me";
 "phoneUpdated" = "Localize me";

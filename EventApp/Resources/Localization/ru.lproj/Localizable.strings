@@ -27,10 +27,11 @@
 "name" = "Имя";
 "login" = "Логин";
 "notification" = "Уведомления";
-"informationMessanges" = "Информационные\nсообщения";
-"attentionMessanges" = "Важные сообщения";
-"warningMessanges" = "Предупреждающие\nсообщения";
-"questionMessanges" = "Личное сообщение";
+"informationMessanges" = "Новостные уведомления";
+"attentionMessanges" = "Важные уведомления";
+"warningMessanges" = "Предупреждающие уведомления";
+"questionMessanges" = "Личное уведомления";
+"askQuestionMessanges" = "Задать вопрос уведомления";
 "attention" = "Внимание!";
 "youHaveReceived" = "Вы получили";
 "information message" = "Информационное сообщение.";

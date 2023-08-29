@@ -24,10 +24,11 @@
 "name" = "Name";
 "login" = "Login";
 "notification" = "Notification";
-"informationMessanges" = "Information messages";
-"attentionMessanges" = "Attention messages";
-"warningMessanges" = "Warning messages";
-"questionMessanges" = "Question messages";
+"informationMessanges" = "News Notifications";
+"attentionMessanges" = "Important Notifications";
+"warningMessanges" = "Warning Notifications";
+"questionMessanges" = "Personal Notifications";
+"askQuestionMessanges" = "Ask a Question Notification";
 "success" = "Success";
 "error" = "Error";
 "phoneUpdated" = "Phone number has updated";
