@@ -64,6 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 1. Print out error if PNs registration not successful
         print("Failed to register for remote notifications with error: \(error)")
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
+        return .newData
+    }
 }
 
 extension AppDelegate: MessagingDelegate {

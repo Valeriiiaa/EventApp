@@ -30,6 +30,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             phoneTextField.layer.cornerRadius = 12
             getCodeButton.layer.cornerRadius = 12
             phoneTextField.font = UIFont(name: "Montserrat-Light", size: 20)
+            imageView.layer.cornerRadius = 12
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: phoneTextField.frame.height))
             
@@ -49,7 +50,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         default:
             phoneTextField.layer.cornerRadius = 24
             getCodeButton.layer.cornerRadius = 24
-            
+            imageView.layer.cornerRadius = 24
             labelFontSize = 35
             
             let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 180, height: phoneTextField.frame.height))
@@ -67,7 +68,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             phoneTextField.padding = .init(top: 0, left: 180, bottom: 0, right: 20)
             phoneTextField.leftView = leftView
         }
-        
+        imageView.layer.masksToBounds = true
         phoneTextField.layer.masksToBounds = true
         getCodeButton.layer.masksToBounds = true
         phoneTextField.delegate = self

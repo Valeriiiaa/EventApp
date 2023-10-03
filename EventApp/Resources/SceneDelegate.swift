@@ -11,29 +11,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        var splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
-        if let token: String = UserDefaultsStorage.shared.get(key: .token) {
-            registerDependency(token: token)
-            splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
-        }
-        let navigationController = UINavigationController(rootViewController: splashStoryboard)
-        navigationController.isNavigationBarHidden = true
-        navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        DrawerMenuViewController.shared.drawerNavigationController = navigationController
-        guard let response = connectionOptions.notificationResponse else { return }
-        let userInfo = response.notification.request.content.userInfo
-        print(userInfo)
-        let notificationIdString = userInfo["gcm.notification.id"] as? String ?? ""
-        let notificationId = Int(notificationIdString) ?? 0
-        guard userInfo["gcm.notification.type"] as? String == "Ticket" else { return }
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [unowned self] in
+            guard let windowScene = (scene as? UIWindowScene) else { return }
+            window = UIWindow(windowScene: windowScene)
+            var splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MainViewController")
+            if let token: String = UserDefaultsStorage.shared.get(key: .token) {
+                registerDependency(token: token)
+                splashStoryboard = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "MessagesViewController")
+            }
+            let navigationController = UINavigationController(rootViewController: splashStoryboard)
+            navigationController.isNavigationBarHidden = true
+            navigationController.navigationBar.tintColor = UIColor(named: "TintColor")
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            DrawerMenuViewController.shared.drawerNavigationController = navigationController
+            guard let response = connectionOptions.notificationResponse else { return }
+            let userInfo = response.notification.request.content.userInfo
+            print(userInfo)
+            let notificationIdString = userInfo["gcm.notification.id"] as? String ?? ""
+            let notificationId = Int(notificationIdString) ?? 0
+            guard userInfo["gcm.notification.type"] as? String == "Ticket" else { return }
             DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notificationId)
         }
     }

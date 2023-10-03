@@ -184,7 +184,7 @@ class NetworkManager {
         let user: UserManager? = AppDelegate.contaienr.resolve(UserManager.self)
         guard let user else { return }
         guard let userModel = user.userModel else { return }
-        var url = URLRequest(url: URL(string: serverURL + "notifications/\(userModel.lang)" )!)
+        var url = URLRequest(url: URL(string: serverURL + "get-actual-activity" )!)
         url.httpMethod = "GET"
         url.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         url.setValue("Bearer \(user.token)", forHTTPHeaderField: "Authorization")

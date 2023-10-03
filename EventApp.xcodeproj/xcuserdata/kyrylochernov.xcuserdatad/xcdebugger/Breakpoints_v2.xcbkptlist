@@ -14,103 +14,10 @@
             filePath = "EventApp/Classes/ViewControllers/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "logout()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814 - ae1a1838ca621d35"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.requestWithCode(phone: Swift.String, code: Swift.String, comletion: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1276">
-               </Location>
-               <Location
-                  uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814 - 8c6ba425b787565e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.requestWithCode(phone: Swift.String, code: Swift.String, comletion: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814 - b90397a8568c0b6a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.logout() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "1356">
-               </Location>
-               <Location
-                  uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814 - b90397a8568c0b6a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.logout() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "1440">
-               </Location>
-               <Location
-                  uuid = "7430486A-F1EC-4676-A7E7-8AFBAF925814 - b90397a8568c0bee"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.logout() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "1356">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -269,7 +176,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "274"
             endingLineNumber = "274"
-            landmarkName = "loadTicketTypes(completion:)"
+            landmarkName = "updatePhone(phone:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -332,6 +239,21 @@
                   endingLineNumber = "274"
                   offsetFromSymbolStart = "316">
                </Location>
+               <Location
+                  uuid = "C1CED8C0-0466-44C5-88B6-6DFC4D57809E - b9e845bb3880a9fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.NetworkManager.updatePhone(phone: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "274"
+                  endingLineNumber = "274"
+                  offsetFromSymbolStart = "2172">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -347,7 +269,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "270"
             endingLineNumber = "270"
-            landmarkName = "loadTicketTypes(completion:)"
+            landmarkName = "updatePhone(phone:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -395,179 +317,20 @@
                   endingLineNumber = "270"
                   offsetFromSymbolStart = "180">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AA0B06C6-D6B8-47CB-BED9-EDEFD592A3BD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
-            landmarkName = "createTicket(text:typeId:completion:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "AA0B06C6-D6B8-47CB-BED9-EDEFD592A3BD - 4a8b9be8476dabd8"
+                  uuid = "53645698-7AAC-4E1B-8A66-EC2A2A7F3E43 - 768fff058f08b156"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #3 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.updatePhone(phone: Swift.String, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "EventApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  uuid = "AA0B06C6-D6B8-47CB-BED9-EDEFD592A3BD - 4a8b9be8476dabd8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "296">
-               </Location>
-               <Location
-                  uuid = "AA0B06C6-D6B8-47CB-BED9-EDEFD592A3BD - 4a8b9be8476dac16"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "302"
-                  endingLineNumber = "302"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "929236B2-D0B8-46D0-A52D-7CBDE739B875"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
-            landmarkName = "createTicket(text:typeId:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "929236B2-D0B8-46D0-A52D-7CBDE739B875 - 4a8b9be8476dac54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "300"
-                  endingLineNumber = "300"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "929236B2-D0B8-46D0-A52D-7CBDE739B875 - 4a8b9be8476dac92"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "306"
-                  endingLineNumber = "306"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A0FFDA5-3400-46BD-82C1-C3CAEDA80F55"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "createTicket(text:typeId:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4A0FFDA5-3400-46BD-82C1-C3CAEDA80F55 - 4a8b9be8476dabf9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "295"
-                  endingLineNumber = "295"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "4A0FFDA5-3400-46BD-82C1-C3CAEDA80F55 - 4a8b9be8476dab1e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "294"
-                  endingLineNumber = "294"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "4A0FFDA5-3400-46BD-82C1-C3CAEDA80F55 - 4a8b9be8476dac54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "300"
-                  endingLineNumber = "300"
-                  offsetFromSymbolStart = "112">
+                  startingLineNumber = "270"
+                  endingLineNumber = "270"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -584,71 +347,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "176"
             endingLineNumber = "176"
-            landmarkName = "loadNotifications(completion:)"
+            landmarkName = "loadArhivedNotifications(completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "051B50C0-8EE6-4F22-A3F4-01650FA88993"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Managers/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
-            landmarkName = "createTicket(text:typeId:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "051B50C0-8EE6-4F22-A3F4-01650FA88993 - 4a8b9be8476dab5c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "292"
-                  endingLineNumber = "292"
-                  offsetFromSymbolStart = "908">
-               </Location>
-               <Location
-                  uuid = "051B50C0-8EE6-4F22-A3F4-01650FA88993 - 8f793aed07de7c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "291"
-                  endingLineNumber = "291"
-                  offsetFromSymbolStart = "1892">
-               </Location>
-               <Location
-                  uuid = "051B50C0-8EE6-4F22-A3F4-01650FA88993 - 8f793aed07de703"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EventApp.NetworkManager.createTicket(text: Swift.String, typeId: Swift.Int, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "297"
-                  endingLineNumber = "297"
-                  offsetFromSymbolStart = "1892">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -741,7 +441,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
             endingLineNumber = "236"
-            landmarkName = "updatePhone(phone:completion:)"
+            landmarkName = "requestWithCode(phone:code:comletion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -774,101 +474,20 @@
                   endingLineNumber = "236"
                   offsetFromSymbolStart = "1112">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "17E60096-3358-4AA8-9E52-C6B2ECDA5336"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Classes/ViewControllers/SettingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "configureListData()"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "17E60096-3358-4AA8-9E52-C6B2ECDA5336 - 265e08c9539ee300"
+                  uuid = "358A0B08-769C-4816-BC1B-50C3400A3BFB - 8c6ba425b78765c5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EventApp.SettingsViewController.configureListData() -&gt; ()"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EventApp.NetworkManager.requestWithCode(phone: Swift.String, code: Swift.String, comletion: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "EventApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/SettingsViewController.swift"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NetworkManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "280">
-               </Location>
-               <Location
-                  uuid = "17E60096-3358-4AA8-9E52-C6B2ECDA5336 - 265e08c9539ee300"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EventApp.SettingsViewController.configureListData() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/SettingsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "256">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0BDA123E-D6C1-4B36-94A8-B76F00C792D3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EventApp/Classes/ViewControllers/SettingsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "configureListData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0BDA123E-D6C1-4B36-94A8-B76F00C792D3 - 265e08c9539ee35f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EventApp.SettingsViewController.configureListData() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/SettingsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "916">
-               </Location>
-               <Location
-                  uuid = "0BDA123E-D6C1-4B36-94A8-B76F00C792D3 - 265e08c9539ee35f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in EventApp.SettingsViewController.configureListData() -&gt; ()"
-                  moduleName = "EventApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/SettingsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "892">
+                  startingLineNumber = "236"
+                  endingLineNumber = "236"
+                  offsetFromSymbolStart = "1328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -917,6 +536,36 @@
                   startingLineNumber = "40"
                   endingLineNumber = "40"
                   offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "58EE74A2-86B9-4F61-B542-F2557226042A - 507b33e98185305a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.AlertMessageViewController.goToLinkButtonDidTap(Any) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/AlertMessageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "58EE74A2-86B9-4F61-B542-F2557226042A - 507b33e98185305a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.AlertMessageViewController.goToLinkButtonDidTap(Any) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Classes/ViewControllers/AlertMessageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "516">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1079,6 +728,402 @@
             endingLineNumber = "116"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B6222D8-DBAA-4D0F-B75D-3C21EF6151B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Managers/NotificiationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "NotificationManager"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "5B6222D8-DBAA-4D0F-B75D-3C21EF6151B2 - 20fd9e5f6ce38fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "5B6222D8-DBAA-4D0F-B75D-3C21EF6151B2 - 20fd9e5f6ce38fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "648">
+               </Location>
+               <Location
+                  uuid = "5B6222D8-DBAA-4D0F-B75D-3C21EF6151B2 - 20fd9e5f6ce38fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA214949-4626-43C1-9829-AAFC90982479"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Managers/NotificiationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "userNotificationCenter(_:didReceive:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AA214949-4626-43C1-9829-AAFC90982479 - 8f91caf78735492d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "2748">
+               </Location>
+               <Location
+                  uuid = "AA214949-4626-43C1-9829-AAFC90982479 - 5ab28b5023265ab5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "AA214949-4626-43C1-9829-AAFC90982479 - 8f91caf78735492d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "208AE269-82DE-4AE7-B795-56D96ED09C1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Managers/NotificiationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "NotificationManager"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "208AE269-82DE-4AE7-B795-56D96ED09C1D - 20fd9e5f6ce38f83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "208AE269-82DE-4AE7-B795-56D96ED09C1D - 20fd9e5f6ce38f83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C65C09B-BDF5-45FA-9EA3-856E41F1F4BA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Managers/NotificiationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "NotificationManager"
+            landmarkType = "21">
+            <Locations>
+               <Location
+                  uuid = "9C65C09B-BDF5-45FA-9EA3-856E41F1F4BA - 20fd9e5f6ce388e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "3364">
+               </Location>
+               <Location
+                  uuid = "9C65C09B-BDF5-45FA-9EA3-856E41F1F4BA - 20fd9e5f6ce388e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification) async -&gt; __C.UNNotificationPresentationOptions"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "3068">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "090A996C-C730-4A3D-A711-8AFBCF570BEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Managers/NotificiationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "userNotificationCenter(_:didReceive:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "090A996C-C730-4A3D-A711-8AFBCF570BEA - 5ab28b5023265a94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "090A996C-C730-4A3D-A711-8AFBCF570BEA - 8f91caf78735494e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "596">
+               </Location>
+               <Location
+                  uuid = "090A996C-C730-4A3D-A711-8AFBCF570BEA - 8f91caf78735494e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Managers/NotificiationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "924">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFEFEC0B-C72F-4A3A-93CA-D550BA0FF5B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Resources/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "application(_:didReceiveRemoteNotification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EFEFEC0B-C72F-4A3A-93CA-D550BA0FF5B0 - 91f7f32073a3abf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.AppDelegate.messaging(_: __C.FIRMessaging, didReceiveRegistrationToken: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Resources/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "EFEFEC0B-C72F-4A3A-93CA-D550BA0FF5B0 - 672d66f3644be936"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EventApp.AppDelegate.application(_: __C.UIApplication, didReceiveRemoteNotification: Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;) async -&gt; __C.UIBackgroundFetchResult"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Resources/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0688265-2A06-4834-A54A-33B7D7884524"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EventApp/Resources/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "messaging(_:didReceiveRegistrationToken:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A0688265-2A06-4834-A54A-33B7D7884524 - 91f7f32073a3ab5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.AppDelegate.messaging(_: __C.FIRMessaging, didReceiveRegistrationToken: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Resources/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "A0688265-2A06-4834-A54A-33B7D7884524 - 91f7f32073a3ab5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EventApp.AppDelegate.messaging(_: __C.FIRMessaging, didReceiveRegistrationToken: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Resources/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "A0688265-2A06-4834-A54A-33B7D7884524 - 73dedc408d997cbf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; () in EventApp.AppDelegate.messaging(_: __C.FIRMessaging, didReceiveRegistrationToken: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "EventApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/EventApp/EventApp/Resources/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

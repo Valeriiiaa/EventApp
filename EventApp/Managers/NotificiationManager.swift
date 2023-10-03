@@ -29,6 +29,7 @@ class NotificationManager: NSObject, NotificationManagerProtocol {
 }
 
 extension NotificationManager: UNUserNotificationCenterDelegate {
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async
     -> UNNotificationPresentationOptions {
@@ -59,6 +60,10 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
         default: break
         }
         return [[.banner, .sound]]
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
+        
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,

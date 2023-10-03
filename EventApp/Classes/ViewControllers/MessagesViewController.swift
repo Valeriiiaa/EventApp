@@ -200,12 +200,22 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row > 0 else { return }
         let notification = notifications[indexPath.row - 1]
+        
+        defer {
+            UserDefaultsStorage.shared.add(key: .readedNotification, value: notification.id)
+            reconfigureMessages()
+        }
+        
+        UserDefaultsStorage.shared.add(key: .readedNotification, value: notification.id)
+        guard notification.type != "Ticket" else {
+            DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notification.id)
+            return
+        }
 
         let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AlertMessageViewController")
         (entrance as? AlertMessageViewController)?.message = notification
         navigationController?.pushViewController(entrance, animated: true)
-        UserDefaultsStorage.shared.add(key: .readedNotification, value: notification.id)
-        reconfigureMessages()
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
