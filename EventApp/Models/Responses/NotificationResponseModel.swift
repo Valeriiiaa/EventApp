@@ -9,6 +9,7 @@ import Foundation
 
 struct NotificationResponseModel: Codable {
     public let id: Int
+    public let idMessage: Int?
     public let text: String
     public let title: String
     public let link: String?

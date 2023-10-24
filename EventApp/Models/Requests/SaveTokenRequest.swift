@@ -9,4 +9,10 @@ import Foundation
 
 struct SaveTokenRequest: Codable {
     let token: String
+    let deviceType: String
+    
+    init(token: String, deviceType: String = "ios") {
+        self.token = token
+        self.deviceType = deviceType
+    }
 }

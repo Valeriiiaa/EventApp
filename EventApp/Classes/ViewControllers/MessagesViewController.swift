@@ -152,6 +152,23 @@ class MessagesViewController: BaseViewController {
         })
     }
     
+    private func archiveTicket(id: Int?) {
+        guard let id else { return }
+        IHProgressHUD.show()
+        NetworkManager.shared.archiveTicket(id: id, completion: { result in
+            defer {
+                IHProgressHUD.dismiss()
+            }
+            
+            switch result {
+            case .success:
+                IHProgressHUD.showSuccesswithStatus("Done")
+            case .failure(let failure):
+                IHProgressHUD.showError(withStatus: failure.localizedDescription)
+            }
+        })
+    }
+    
     private func archive(id: Int) {
         IHProgressHUD.show()
         NetworkManager.shared.archiveNotification(id: id, completion: { result in
@@ -176,8 +193,13 @@ extension MessagesViewController: UITableViewDelegate, UITableViewDataSource {
             self.messages.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .none)
             self.tableView.endUpdates()
-            let id = self.notifications[indexPath.row - 1].id
-            self.archive(id: id)
+            let notification = self.notifications[indexPath.row - 1]
+            let id = notification.id
+            if notification.type == "Ticket" {
+                self.archiveTicket(id: notification.idMessage)
+            } else {
+                self.archive(id: id)
+            }
             self.notifications.remove(at: indexPath.row - 1)
             completionHandler(true)
             self.reconfigureMessages()

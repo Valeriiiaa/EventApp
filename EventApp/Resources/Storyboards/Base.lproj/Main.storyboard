@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -575,16 +575,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTh-8u-UId">
-                                <rect key="frame" x="33" y="69" width="55" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="leftPopUp"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTh-8u-UId">
+                                <rect key="frame" x="33" y="69" width="31" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="leftPopUp"/>
                                 <connections>
                                     <action selector="menuDidTap:" destination="2MZ-vA-dLs" eventType="touchUpInside" id="ab0-oS-3Ci"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5O-Fe-Ja4">
-                                <rect key="frame" x="374.66666666666669" y="74" width="4.3333333333333144" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5O-Fe-Ja4">
+                                <rect key="frame" x="379" y="74" width="0.0" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -656,7 +656,7 @@
                         <constraints>
                             <constraint firstItem="HZt-bz-McF" firstAttribute="trailing" secondItem="kaa-ml-YuD" secondAttribute="trailing" constant="70" id="5D9-uB-ZwS"/>
                             <constraint firstItem="HZt-bz-McF" firstAttribute="trailing" secondItem="keJ-QY-cRw" secondAttribute="trailing" id="SY1-6A-9Gf"/>
-                            <constraint firstItem="n5O-Fe-Ja4" firstAttribute="top" secondItem="HZt-bz-McF" secondAttribute="top" constant="15" id="W7J-es-qZt"/>
+                            <constraint firstItem="kaa-ml-YuD" firstAttribute="top" secondItem="n5O-Fe-Ja4" secondAttribute="bottom" id="Usn-TY-IIL"/>
                             <constraint firstItem="HZt-bz-McF" firstAttribute="bottom" secondItem="jFZ-4b-XgZ" secondAttribute="bottom" constant="10" id="Y96-v4-kEr"/>
                             <constraint firstItem="keJ-QY-cRw" firstAttribute="height" secondItem="6Sv-1q-4qO" secondAttribute="height" multiplier="0.77" id="ZJO-dT-W0g"/>
                             <constraint firstItem="tTh-8u-UId" firstAttribute="leading" secondItem="HZt-bz-McF" secondAttribute="leading" constant="33" id="cZ4-fg-gHJ"/>
@@ -667,6 +667,7 @@
                             <constraint firstItem="kaa-ml-YuD" firstAttribute="leading" secondItem="HZt-bz-McF" secondAttribute="leading" constant="70" id="uWm-YR-bQi"/>
                             <constraint firstItem="tTh-8u-UId" firstAttribute="top" secondItem="HZt-bz-McF" secondAttribute="top" constant="10" id="vV2-vE-d2w"/>
                             <constraint firstItem="keJ-QY-cRw" firstAttribute="top" secondItem="kaa-ml-YuD" secondAttribute="bottom" constant="5" id="vj6-HR-Uxy"/>
+                            <constraint firstItem="n5O-Fe-Ja4" firstAttribute="top" secondItem="HZt-bz-McF" secondAttribute="top" constant="15" id="wbR-Mm-ecQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -799,7 +800,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSY-Gx-nX7">
-                                <rect key="frame" x="374.66666666666669" y="74.666666666666671" width="4.3333333333333144" height="18.666666666666671"/>
+                                <rect key="frame" x="374.66666666666669" y="74" width="4.3333333333333144" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -811,8 +812,8 @@
                             <constraint firstItem="S3t-WW-RJU" firstAttribute="top" secondItem="PZP-Hr-beZ" secondAttribute="bottom" constant="5" id="4o4-X6-Ek2"/>
                             <constraint firstItem="S3t-WW-RJU" firstAttribute="height" secondItem="xU0-nM-iyC" secondAttribute="height" multiplier="0.77" id="58L-qj-lmw"/>
                             <constraint firstItem="S3t-WW-RJU" firstAttribute="leading" secondItem="vE1-Xq-Joz" secondAttribute="leading" id="8xV-rZ-Wyj"/>
-                            <constraint firstItem="rSY-Gx-nX7" firstAttribute="top" secondItem="vE1-Xq-Joz" secondAttribute="top" constant="15.67" id="GSz-QV-j8S"/>
-                            <constraint firstItem="PZP-Hr-beZ" firstAttribute="top" secondItem="rSY-Gx-nX7" secondAttribute="bottom" constant="0.67000000000000004" id="H2v-oS-KTs"/>
+                            <constraint firstItem="rSY-Gx-nX7" firstAttribute="top" secondItem="vE1-Xq-Joz" secondAttribute="top" constant="15" id="GSz-QV-j8S"/>
+                            <constraint firstItem="PZP-Hr-beZ" firstAttribute="top" secondItem="rSY-Gx-nX7" secondAttribute="bottom" id="H2v-oS-KTs"/>
                             <constraint firstItem="vE1-Xq-Joz" firstAttribute="trailing" secondItem="S3t-WW-RJU" secondAttribute="trailing" id="H32-XO-ENQ"/>
                             <constraint firstItem="rSY-Gx-nX7" firstAttribute="centerY" secondItem="67V-b5-NaP" secondAttribute="centerY" id="IBy-er-Lyj"/>
                             <constraint firstAttribute="bottom" secondItem="S3t-WW-RJU" secondAttribute="bottom" id="J09-Pb-och"/>
@@ -838,7 +839,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="449.66665649414062" height="306"/>
+        <image name="Image" width="1280" height="853"/>
         <image name="Logo" width="366" height="97"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>

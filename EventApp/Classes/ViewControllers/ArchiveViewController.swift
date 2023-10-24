@@ -9,12 +9,16 @@ import UIKit
 import IHProgressHUD
 
 struct ArchiveMessage {
+    let id: Int
     let image: String
+    let idMessage: Int?
+    let title: String
     let text: String
     let link: String?
     let label: Bool
     let type: MessageType
     let textType: String
+    let created_at: String
 }
 
 enum MessageType {
@@ -72,7 +76,7 @@ class ArchiveViewController: BaseViewController {
                 type = .attentionMessage
                 label = true
             }
-            return ArchiveMessage(image: image, text: item.text, link: item.link, label: label, type: type, textType: item.type)
+            return ArchiveMessage(id: item.id, image: image, idMessage: item.idMessage, title: item.title, text: item.text, link: item.link, label: label, type: type, textType: item.type, created_at: item.created_at)
         })
         messages.append(contentsOf: newMessages)
         DispatchQueue.main.async {
@@ -106,9 +110,14 @@ extension ArchiveViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notification = messages[indexPath.row]
-        guard let link = notification.link,
-              let url = URL(string: link) else { return }
-        UIApplication.shared.open(url)
+        guard notification.textType != "Ticket" else {
+            DrawerMenuViewController.shared.openChatAskAQuestion(chatId: notification.id)
+            return
+        }
+
+        let entrance = StoryboardFabric.getStoryboard(by: "Main").instantiateViewController(withIdentifier: "AlertMessageViewController")
+        (entrance as? AlertMessageViewController)?.message = .init(id: notification.id, idMessage: notification.idMessage, text: notification.text, title: notification.title, link: notification.link, type: notification.textType, created_at: notification.created_at)
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
