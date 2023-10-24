@@ -43,7 +43,12 @@ class MessageInfoCell: UITableViewCell {
     func configure(data: String, text: String, type: String, image: String) {
         meesageTime.text = data
         textMessageView.text = text
-        labelAttention.text = type
+        if type == "Ticket" {
+            labelAttention.text = "Ask a question"
+        } else {
+            labelAttention.text = type
+        }
+        
         messageImage.image = UIImage(named: image)
         
         if !self.labelAttention.isHidden {
