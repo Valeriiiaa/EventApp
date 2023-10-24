@@ -31,7 +31,7 @@ struct SendMessageModelRequest: Codable {
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private let serverURL = "http://dev.effective-hc.com/api/"
+    private let serverURL = "https://effective-hc.com/api/"
     
     public func requestCode(phone: String, completion: @escaping(Bool) -> Void) {
         var urlRequest = URLRequest(url: URL(string: serverURL + "send-code")!)
